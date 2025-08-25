@@ -208,46 +208,55 @@ const MyPortfolio = () => {
         <section id="tech-skills" className="w-full min-h-screen">
           <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faScrewdriverWrench} className="text-3xl" />
-            Tech Skills
+            Habilidades
           </h2>
 
           {/* Desarrollo Web */}
-          <div className="border-2 border-gray-300 mx-5 pb-4">
-            <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-              Desarrollo Web
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
-              {[
-                "html",
-                "css",
-                "javascript",
-                "react",
-                "tailwind-css",
-                "sql_server",
-                "vue-js",
-                "git",
-                "figma",
-                "github",
-              ].map((tech, index) => {
-                const techExtension =
-                  tech === "github" ? ".png" : ".svg"; // Aquí identificamos el tipo de archivo
-                return (
-                  <div
-                    key={index}
-                    className="group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
-                  >
-                    <img
-                      src={`./src/assets/${tech}${techExtension}`} // Se agrega la extensión
-                      alt={tech}
-                      className="self-center aspect-square"
-                      width={60}
-                      height={120}
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+{/* Desarrollo Web */}
+<div className="border-2 border-gray-300 mx-5 pb-4">
+  <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
+    Desarrollo Web
+  </h3>
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
+    {[
+      "html",
+      "css",
+      "javascript",
+      "react",
+      "tailwind-css",
+      "sql_server",
+      "vue-js",
+      "git",
+      "figma",
+      "github",
+    ].map((tech, index) => {
+      const techExtension = tech === "github" ? ".png" : ".svg";
+      const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
+      return (
+<div
+  key={index}
+  className="relative group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
+>
+  <img
+    src={`./src/assets/${tech}${techExtension}`}
+    alt={techName}
+    className="self-center aspect-square"
+    width={60}
+    height={120}
+  />
+  {/* Tooltip estilizado encima */}
+  <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    {techName}
+  </span>
+</div>
+
+      );
+    })}
+  </div>
+  
+</div>
+
+
 
           {/* Análisis de Datos */}
           <div className="border-2 border-gray-300 mx-5 pb-4 mt-5">

@@ -25,22 +25,20 @@ const NavBar =()  => {
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><a>SOBRE MI</a></li>
-              <li><a>EDUCACIÓN</a></li>
               <li><a>EXPERIENCIA</a></li>
               <li><a>HABILIDADES</a></li>
               <li><a>PROYECTOS</a></li>
+              <li><a>SOBRE MI</a></li>
             </ul>
           </div>
 
         </div>
         <div className="navbar-center hidden lg:flex  justify-center ">
           <ul className="menu menu-horizontal px-1">
-            <li><a className="hover:text-red-500 font-semibold  ">SOBRE MI</a></li>
-            <li><a className="hover:text-red-500 font-semibold">EDUCACIÓN</a></li>
             <li><a className="hover:text-red-500 font-semibold">EXPERIENCIA</a></li>
             <li><a className="hover:text-red-500 font-semibold">HABILIDADES</a></li>
             <li><a className="hover:text-red-500 font-semibold">PROYECTOS</a></li>
+            <li><a className="hover:text-red-500 font-semibold  ">SOBRE MI</a></li>
           </ul>
         </div>
         <div className="navbar-end px-6">
