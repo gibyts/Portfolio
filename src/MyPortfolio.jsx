@@ -205,58 +205,54 @@ const MyPortfolio = () => {
           </ol>
         </section>
 
-        <section id="tech-skills" className="w-full min-h-screen">
+        <section id="skills" className="w-full min-h-screen">
           <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faScrewdriverWrench} className="text-3xl" />
             Habilidades
           </h2>
 
           {/* Desarrollo Web */}
-{/* Desarrollo Web */}
-<div className="border-2 border-gray-300 mx-5 pb-4">
-  <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-    Desarrollo Web
-  </h3>
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
-    {[
-      "html",
-      "css",
-      "javascript",
-      "react",
-      "tailwind-css",
-      "sql_server",
-      "vue-js",
-      "git",
-      "figma",
-      "github",
-    ].map((tech, index) => {
-      const techExtension = tech === "github" ? ".png" : ".svg";
-      const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
-      return (
-<div
-  key={index}
-  className="relative group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
->
-  <img
-    src={`./src/assets/${tech}${techExtension}`}
-    alt={techName}
-    className="self-center aspect-square"
-    width={60}
-    height={120}
-  />
-  {/* Tooltip estilizado encima */}
-  <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-    {techName}
-  </span>
-</div>
-
-      );
-    })}
-  </div>
-  
-</div>
-
-
+          {/* Desarrollo Web */}
+          <div className="border-2 border-gray-300 mx-5 pb-4">
+            <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
+              Desarrollo Web
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
+              {[
+                "html",
+                "css",
+                "javascript",
+                "react",
+                "tailwind-css",
+                "sql_server",
+                "vue-js",
+                "git",
+                "figma",
+                "github",
+              ].map((tech, index) => {
+                const techExtension = tech === "github" ? ".png" : ".svg";
+                const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
+                return (
+                  <div
+                    key={index}
+                    className="relative group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
+                  >
+                    <img
+                      src={`./src/assets/${tech}${techExtension}`}
+                      alt={techName}
+                      className="self-center aspect-square"
+                      width={60}
+                      height={120}
+                    />
+                    {/* Tooltip estilizado encima */}
+                    <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {techName}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
 
           {/* Análisis de Datos */}
           <div className="border-2 border-gray-300 mx-5 pb-4 mt-5">
@@ -274,8 +270,7 @@ const MyPortfolio = () => {
                 "flask",
                 "selenium",
               ].map((tech, index) => {
-                const techExtension =
-                  tech === "selenium"  ? ".png" : ".svg"; // Aquí identificamos el tipo de archivo
+                const techExtension = tech === "selenium" ? ".png" : ".svg"; // Aquí identificamos el tipo de archivo
                 return (
                   <div
                     key={index}
@@ -375,7 +370,7 @@ const MyPortfolio = () => {
               </div>
               <div className="w-full md:w-1/2 md:max-w-lg">
                 <h3 className="text-2xl font-bold text-white-800 dark:text-gray-100 mb-5">
-                  La Once - Página Web 
+                  La Once - Página Web
                 </h3>
                 <div className="text max-2xl font-bold ">
                   <ul className="flex flex-row mb-2 gap-x-2">
@@ -401,12 +396,14 @@ const MyPortfolio = () => {
                     </li>
                   </ul>
                   <div className="mt-2 text-white-700 dark:text-gray-400">
-                    Proyecto de una página web para para un negocio online de venta de humitas y tamales
+                    Proyecto de una página web para para un negocio online de
+                    venta de humitas y tamales
                   </div>
                   <footer className="flex items-end justify-start mt-4 gap-x-4">
                     <a
                       href="https://la-once.vercel.app/"
-                      target="_blank" rel="noopener noreferrer"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
                     >
                       Demo
@@ -425,7 +422,7 @@ const MyPortfolio = () => {
         </section>
 
         <section
-          id="about me"
+          id="about"
           className="scroll-m-20 mx-auto container px-4 lg:max-w-4xl md:max-w-2xl pt-20"
         >
           <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">

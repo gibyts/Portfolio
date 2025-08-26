@@ -35,10 +35,10 @@ const NavBar =()  => {
         </div>
         <div className="navbar-center hidden lg:flex  justify-center ">
           <ul className="menu menu-horizontal px-1">
-            <li><a className="hover:text-red-500 font-semibold">EXPERIENCIA</a></li>
-            <li><a className="hover:text-red-500 font-semibold">HABILIDADES</a></li>
-            <li><a className="hover:text-red-500 font-semibold">PROYECTOS</a></li>
-            <li><a className="hover:text-red-500 font-semibold  ">SOBRE MI</a></li>
+            <li><a href='#experience' className="hover:text-red-500 font-semibold">EXPERIENCIA</a></li>
+            <li><a href='#skills' className="hover:text-red-500 font-semibold">HABILIDADES</a></li>
+            <li><a href='#projects' className="hover:text-red-500 font-semibold">PROYECTOS</a></li>
+            <li><a href='#about' className="hover:text-red-500 font-semibold  ">SOBRE MI</a></li>
           </ul>
         </div>
         <div className="navbar-end px-6">

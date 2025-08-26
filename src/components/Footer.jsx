@@ -31,11 +31,11 @@ const Footer = () => {
                     <FontAwesomeIcon icon={faFacebook} className='px-3 text-3xl icon-red' />
                 </a>
                 <a 
-                    href="https://twitter.com/gibran.tarrillo" 
+                    href="https://x.com/GibyCode" 
                     className='text-xl text-red-400' 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    aria-label="Twitter"
+                    aria-label="X"
                 >
                     <FontAwesomeIcon icon={faXTwitter} className='px-3 text-3xl icon-red' />
                 </a>
