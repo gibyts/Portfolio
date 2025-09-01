@@ -236,7 +236,7 @@ const MyPortfolio = () => {
                     className="relative group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
                   >
                     <img
-                      src={`./public/assets/${tech}${techExtension}`}
+                      src={`/assets/${tech}${techExtension}`}
                       alt={techName}
                       className="self-center aspect-square"
                       width={60}
@@ -276,7 +276,7 @@ const MyPortfolio = () => {
                     className="group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
                   >
                     <img
-                      src={`./public/assets/${tech}${techExtension}`} // Se agrega la extensión
+                      src={`/assets/${tech}${techExtension}`} // Se agrega la extensión
                       alt={tech}
                       className="self-center aspect-square"
                       width={60}
@@ -306,7 +306,7 @@ const MyPortfolio = () => {
               <div className="w-full md:w-1/2">
                 <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
                   <img
-                    src="./public/assets/projectRCC.png"
+                    src="/assets/projectRCC.png"
                     alt=""
                     className="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
                   />
@@ -321,7 +321,7 @@ const MyPortfolio = () => {
                     <li>
                       <span className="flex gap-x-2 rounded-full text-xs bg-white text-black py-1 px-2">
                         <img
-                          src="./public/assets/python.svg"
+                          src="/assets/python.svg"
                           alt=""
                           className=" size-4"
                         />
@@ -331,7 +331,7 @@ const MyPortfolio = () => {
                     <li>
                       <span className="flex gap-x-2 rounded-full text-xs bg-blue-50 text-black py-1 px-2">
                         <img
-                          src="./src/assets/tkinter.png"
+                          src="/assets/tkinter.png"
                           alt=""
                           className=" size-4"
                         />
@@ -365,7 +365,7 @@ const MyPortfolio = () => {
               <div className="w-full md:w-1/2">
                 <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
                   <img
-                    src="./src/assets/projectRCC.png"
+                    src="/assets/projectRCC.png"
                     alt=""
                     className="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
                   />
@@ -380,7 +380,7 @@ const MyPortfolio = () => {
                     <li>
                       <span className="flex gap-x-2 rounded-full text-xs bg-white text-black py-1 px-2">
                         <img
-                          src="./src/assets/react.svg"
+                          src="/assets/react.svg"
                           alt=""
                           className=" size-4"
                         />
@@ -390,7 +390,7 @@ const MyPortfolio = () => {
                     <li>
                       <span className="flex gap-x-2 rounded-full text-xs bg-blue-50 text-black py-1 px-2">
                         <img
-                          src="./src/assets/tkinter.png"
+                          src="/assets/tkinter.png"
                           alt=""
                           className=" size-4"
                         />
