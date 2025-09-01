@@ -28,7 +28,7 @@ const MyPortfolio = () => {
         </div>
 
         <p className="py-6 text-xl md:text-2xl mt-2">
-          Egresado de ingeniería de Software.
+          Ingeniero de Software
           <br />
           <span className="text-xl md:text-2xl mt-2">
             Apasionado por la tecnología y crear soluciones innovadoras
@@ -63,7 +63,6 @@ const MyPortfolio = () => {
           >
             <FontAwesomeIcon
               icon={faGithub}
-              j
               className="px-3 text-3xl icon-red"
             />
             Github

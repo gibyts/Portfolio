@@ -2,7 +2,7 @@
   /* Primary Accent Colors */
   --accent: #2337ff;            /* Primary accent color */
   --accent-dark: #000d8a;       /* Darker shade of accent */
-  --accent-red: #ff4b4b;   
+  --accent-red: #ff3131;   
 
   /* Basic Colors in RGB for flexibility */
   --black: 15, 18, 25;          /* Black in RGB */
@@ -27,9 +27,10 @@
 /* Usage Example */
 body {
   color: var(--font-color);
-  background-color: var(--background-color);
+  background-color: transparent; /* ahora transparente */
   box-shadow: var(--box-shadow);
 }
+
 
 .card {
   background: var(--card-bg);

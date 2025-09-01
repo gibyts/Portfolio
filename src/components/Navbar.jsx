@@ -1,56 +1,108 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import {
+  faInstagram,
+  faFacebook,
+  faXTwitter,
+  faGithub,
+  faDiscord,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleHalfStroke }  from '@fortawesome/free-solid-svg-icons';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+const NavBar = () => {
+  return (
+    <div
+      className="fixed top-4 left-1/2 transform -translate-x-1/2 
+                    w-[90%] 
+                    bg-gray-800 rounded-2xl shadow-lg z-50 
+                    flex items-center justify-between px-6 py-4 
+                    border border-gray-700"
+    >
+      {/* Logo */}
+      <div className="flex items-center space-x-2 text-2xl">
+        <span className="icon-red font-bold">❮⦢𝑖𝑏𝑦𝑐𝑜𝑑𝑒</span>
+      </div>
 
-const NavBar =()  => {
-    return (
-      <div className="navbar  bg-gray-800  fixed top-0 left-0 w-full z-50">
-        <div className="navbar-start  bg-gray-800">
-          <div className="dropdown ">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16" />
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><a>EXPERIENCIA</a></li>
-              <li><a>HABILIDADES</a></li>
-              <li><a>PROYECTOS</a></li>
-              <li><a>SOBRE MI</a></li>
-            </ul>
-          </div>
+      {/* Links */}
+      <div className="hidden md:flex space-x-6 text-gray-300 text-lg">
+        <a href="#home" className="hover:text-[#ff3131]">
+          inicio
+        </a>
+        <a href="#blog" className="hover:text-[#ff3131]">
+          blog
+        </a>
+        <a href="#projects" className="hover:text-[#ff3131]">
+          proyectos
+        </a>
+      </div>
 
+      {/* Social Icons */}
+      <div className="flex items-center space-x-8 text-xl text-gray-300">
+        <a href="https://www.facebook.com/gibran.tarrillo/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon
+            icon={faFacebook}
+            className="hover:text-blue-400 cursor-pointer"
+          />
+        </a>
+        <a href="https://x.com/GibyCode"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon
+            icon={faXTwitter}
+            className="hover:text-blue-400 cursor-pointer"
+          />
+        </a>
+        <a href="https://www.instagram.com/gibran.tarrillo/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon
+            icon={faInstagram}
+            className="hover:text-gray-100 cursor-pointer"
+          />
+        </a>
+        <a href="https://discord.com/invite/your-invite-code"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon
+            icon={faDiscord}
+            className="hover:text-indigo-400 cursor-pointer"
+          />
+        </a>
+        <a href="https://www.youtube.com/@gibycode"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon
+            icon={faYoutube}
+            className="hover:text-red-500 cursor-pointer"
+          />
+        </a>
+        <a href="">
+          <FontAwesomeIcon
+            icon={faGithub}
+            className="hover:text-gray-100 cursor-pointer"
+          />
+        </a>
+        <div className="border-l border-gray-700 pl-4 space-x-4 text-xl">
+          <FontAwesomeIcon
+            icon={faGlobe}
+            className="hover:text-green-400 cursor-pointer"
+          />
+          <FontAwesomeIcon
+            icon={faCircleHalfStroke}
+            className="hover:text-yellow-400 cursor-pointer"
+          />
         </div>
-        <div className="navbar-center hidden lg:flex  justify-center ">
-          <ul className="menu menu-horizontal px-1">
-            <li><a href='#experience' className="hover:text-red-500 font-semibold">EXPERIENCIA</a></li>
-            <li><a href='#skills' className="hover:text-red-500 font-semibold">HABILIDADES</a></li>
-            <li><a href='#projects' className="hover:text-red-500 font-semibold">PROYECTOS</a></li>
-            <li><a href='#about' className="hover:text-red-500 font-semibold  ">SOBRE MI</a></li>
-          </ul>
-        </div>
-        <div className="navbar-end px-6">
-          <div className='px-6'>
-            <FontAwesomeIcon icon={faGlobe}  className='px-2'/>
-            ES
-          </div>
-          <a ><FontAwesomeIcon icon={faCircleHalfStroke} /></a>
-        </div>
-
-      </div>       
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default NavBar;
