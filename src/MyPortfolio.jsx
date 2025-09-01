@@ -18,7 +18,7 @@ const MyPortfolio = () => {
       <section className="text-center min-h-screen flex flex-col items-center justify-center pt-20 md:pt-24">
         <div className="flex flex-col md:flex-row items-center gap-4">
           <img
-            src="/public/assets/photo_profile.jpg"
+            src="/assets/photo_profile.jpg"
             alt="Gibran Tarrillo"
             className="rounded-full shadow-lg w-24 h-24 md:w-40 md:h-40"
           />
