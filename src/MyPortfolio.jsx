@@ -213,20 +213,17 @@ const MyPortfolio = () => {
           {/* Desarrollo Web */}
           <div className="border-2 border-gray-300 mx-5 pb-4">
             <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-              Desarrollo Web
+              Lenguajes
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
               {[
                 "html",
                 "css",
                 "javascript",
-                "react",
-                "tailwind-css",
+                "python",
                 "sql_server",
-                "vue-js",
                 "git",
                 "figma",
-                "github",
               ].map((tech, index) => {
                 const techExtension = tech === "github" ? ".png" : ".svg";
                 const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
@@ -255,13 +252,51 @@ const MyPortfolio = () => {
           {/* Análisis de Datos */}
           <div className="border-2 border-gray-300 mx-5 pb-4 mt-5">
             <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-              ANÁLISIS DE DATOS
+              Frameworks y librerías
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
               {[
                 "excel",
-                "python",
+                "vite",
                 "sql_server",
+                "tailwind-css",
+                "vue-js",
+                "flask",
+                "selenium",
+              ].map((tech, index) => {
+                const techExtension = tech === "selenium" ? ".png" : ".svg"; // Aquí identificamos el tipo de archivo
+                const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
+                return (
+                  <div
+                    key={index}
+                    className="group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
+                  >
+                    <img
+                      src={`/assets/${tech}${techExtension}`} // Se agrega la extensión
+                      alt={tech}
+                      className="self-center aspect-square"
+                      width={60}
+                      height={120}
+                    />
+                    {/* Tooltip estilizado encima */}
+                    <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {techName}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="border-2 border-gray-300 mx-5 pb-4 mt-5">
+            <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
+              Herramientas
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
+              {[
+                "visual-studio-code",
+                "trello",
+                "git",
                 "visual-studio",
                 "jupyter",
                 "power-bi",
@@ -291,6 +326,45 @@ const MyPortfolio = () => {
               })}
             </div>
           </div>
+
+          <div className="border-2 border-gray-300 mx-5 pb-4 mt-5">
+            <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
+              Nube y proveedores
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
+
+              {[
+                "aws",
+                "azure",
+                "google-cloud",
+                "heroku",
+                "vercel",
+                "github",
+              ].map((tech, index) => {
+                const techExtension = tech === "heroku" ? ".png" : ".svg"; // Aquí identificamos el tipo de archivo
+                const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
+                return (
+                  <div
+                    key={index}
+                    className="group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
+                  >
+                    <img
+                      src={`/assets/${tech}${techExtension}`} // Se agrega la extensión
+                      alt={tech}
+                      className="self-center aspect-square"
+                      width={60}
+                      height={120}
+                    />
+                    {/* Tooltip estilizado encima */}
+                    <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {techName}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
         </section>
 
         <section

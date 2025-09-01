@@ -31,11 +31,12 @@ const NavBar = () => {
           inicio
         </a>
         <a href="#blog" className="hover:text-[#ff3131]">
-          blog
+          habilidades
         </a>
         <a href="#projects" className="hover:text-[#ff3131]">
           proyectos
         </a>
+        <a href="about" className="hover:text-[#ff3131]">Acerca de mi</a>
       </div>
 
       {/* Social Icons */}
@@ -121,10 +122,13 @@ const NavBar = () => {
             inicio
           </a>
           <a href="#blog" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
-            blog
+            habilidades
           </a>
           <a href="#projects" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
             proyectos
+          </a>
+          <a href="#about" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
+            Acerca de mi
           </a>
 
           {/* Mobile Social Icons */}
