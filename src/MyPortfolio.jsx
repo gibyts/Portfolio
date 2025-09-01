@@ -211,7 +211,6 @@ const MyPortfolio = () => {
           </h2>
 
           {/* Desarrollo Web */}
-          {/* Desarrollo Web */}
           <div className="border-2 border-gray-300 mx-5 pb-4">
             <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
               Desarrollo Web
@@ -270,6 +269,7 @@ const MyPortfolio = () => {
                 "selenium",
               ].map((tech, index) => {
                 const techExtension = tech === "selenium" ? ".png" : ".svg"; // Aquí identificamos el tipo de archivo
+                const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
                 return (
                   <div
                     key={index}
@@ -282,6 +282,10 @@ const MyPortfolio = () => {
                       width={60}
                       height={120}
                     />
+                    {/* Tooltip estilizado encima */}
+                    <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {techName}
+                    </span>
                   </div>
                 );
               })}
