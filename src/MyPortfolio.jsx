@@ -222,7 +222,6 @@ const MyPortfolio = () => {
                 "javascript",
                 "python",
                 "sql_server",
-                "git",
                 "figma",
               ].map((tech, index) => {
                 const techExtension = tech === "github" ? ".png" : ".svg";
@@ -258,7 +257,6 @@ const MyPortfolio = () => {
               {[
                 "excel",
                 "vite",
-                "sql_server",
                 "tailwind-css",
                 "vue-js",
                 "flask",
@@ -300,7 +298,6 @@ const MyPortfolio = () => {
                 "visual-studio",
                 "jupyter",
                 "power-bi",
-                "flask",
                 "selenium",
               ].map((tech, index) => {
                 const techExtension = tech === "selenium" ? ".png" : ".svg"; // Aquí identificamos el tipo de archivo

@@ -36,7 +36,6 @@ const NavBar = () => {
         <a href="#projects" className="hover:text-[#ff3131]">
           proyectos
         </a>
-        <a href="about" className="hover:text-[#ff3131]">Acerca de mi</a>
       </div>
 
       {/* Social Icons */}
@@ -89,12 +88,6 @@ const NavBar = () => {
           <FontAwesomeIcon
             icon={faYoutube}
             className="hover:text-red-500 cursor-pointer"
-          />
-        </a>
-        <a href="">
-          <FontAwesomeIcon
-            icon={faGithub}
-            className="hover:text-gray-100 cursor-pointer"
           />
         </a>
         <div className="border-l border-gray-700 pl-4 text-xl">
