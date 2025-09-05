@@ -262,6 +262,8 @@ const MyPortfolio = () => {
                 "vue-js",
                 "flask",
                 "selenium",
+                "node-js",
+                "astro"
               ].map((tech, index) => {
                 const techExtension = tech === "selenium" ? ".png" : ".svg"; // Aquí identificamos el tipo de archivo
                 const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
@@ -334,9 +336,6 @@ const MyPortfolio = () => {
 
               {[
                 "aws",
-                "azure",
-                "google-cloud",
-                "heroku",
                 "vercel",
                 "github",
               ].map((tech, index) => {
