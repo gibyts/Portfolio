@@ -222,7 +222,8 @@ const MyPortfolio = () => {
                 "javascript",
                 "python",
                 "sql_server",
-                "figma",
+                ".NET",
+                "C++",
               ].map((tech, index) => {
                 const techExtension = tech === "github" ? ".png" : ".svg";
                 const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
@@ -255,7 +256,7 @@ const MyPortfolio = () => {
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
               {[
-                "excel",
+                "react",
                 "vite",
                 "tailwind-css",
                 "vue-js",
@@ -298,6 +299,7 @@ const MyPortfolio = () => {
                 "visual-studio",
                 "jupyter",
                 "power-bi",
+                "figma",
                 "selenium",
               ].map((tech, index) => {
                 const techExtension = tech === "selenium" ? ".png" : ".svg"; // Aquí identificamos el tipo de archivo
