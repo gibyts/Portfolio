@@ -30,9 +30,6 @@ const MyPortfolio = () => {
         <p className="py-6 text-xl md:text-2xl mt-2">
           Ingeniero de Software
           <br />
-          <span className="text-xl md:text-2xl mt-2">
-            Apasionado por la tecnología y crear soluciones innovadoras
-          </span>
         </p>
         <div className="mb-3 py-2">
           <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg text-md font-semibold">
