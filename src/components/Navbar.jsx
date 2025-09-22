@@ -3,9 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagram,
-  faFacebook,
   faXTwitter,
-  faGithub,
   faDiscord,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
@@ -40,16 +38,6 @@ const NavBar = () => {
 
       {/* Social Icons */}
       <div className="hidden md:flex items-center space-x-8 text-xl text-gray-300">
-        <a
-          href="https://www.facebook.com/gibran.tarrillo/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon
-            icon={faFacebook}
-            className="hover:text-blue-400 cursor-pointer"
-          />
-        </a>
         <a
           href="https://x.com/GibyCode"
           target="_blank"
@@ -126,9 +114,6 @@ const NavBar = () => {
 
           {/* Mobile Social Icons */}
           <div className="flex space-x-6 text-xl pt-4 border-t border-gray-700">
-            <a href="https://www.facebook.com/gibran.tarrillo/" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faFacebook} className="hover:text-blue-400" />
-            </a>
             <a href="https://x.com/GibyCode" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faXTwitter} className="hover:text-blue-400" />
             </a>
@@ -137,9 +122,6 @@ const NavBar = () => {
             </a>
             <a href="https://www.youtube.com/@gibycode" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faYoutube} className="hover:text-red-500" />
-            </a>
-            <a href="">
-              <FontAwesomeIcon icon={faGithub} className="hover:text-gray-100" />
             </a>
           </div>
         </div>

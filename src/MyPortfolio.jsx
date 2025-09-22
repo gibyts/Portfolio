@@ -114,26 +114,6 @@ const MyPortfolio = () => {
                   🚀 Implementación de modelos predictivos para evaluación de
                   clientes.
                 </p>
-
-                <div className="mt-4">
-                  <h4 className="text-lg font-semibold">
-                    Tecnologías utilizadas:
-                  </h4>
-                  {[
-                    { name: "SQL", width: "w-4/5", color: "bg-blue-500" },
-                    { name: "Python", width: "w-3/5", color: "bg-green-500" },
-                    { name: ".NET", width: "w-2/5", color: "bg-yellow-500" },
-                  ].map((tech, index) => (
-                    <div key={index} className="mt-2">
-                      <p className="text-sm">{tech.name}</p>
-                      <div className="w-full bg-gray-700 rounded-full h-2.5">
-                        <div
-                          className={`${tech.color} h-2.5 rounded-full ${tech.width}`}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
               </div>
             </li>
 
@@ -162,43 +142,6 @@ const MyPortfolio = () => {
                   📈 Implementación de dashboards interactivos para
                   visualización de datos.
                 </p>
-
-                <div className="mt-4">
-                  <h4 className="text-lg font-semibold">
-                    Tecnologías utilizadas:
-                  </h4>
-                  {[
-                    {
-                      name: "Python (Aplicaciones de Escritorio)",
-                      width: "w-4/5",
-                      color: "bg-green-500",
-                    },
-                    {
-                      name: "React (Frontend)",
-                      width: "w-4/5",
-                      color: "bg-blue-500",
-                    },
-                    {
-                      name: "Node.js (Backend)",
-                      width: "w-3/5",
-                      color: "bg-yellow-500",
-                    },
-                    {
-                      name: "SQL (Bases de Datos)",
-                      width: "w-3/5",
-                      color: "bg-blue-500",
-                    },
-                  ].map((tech, index) => (
-                    <div key={index} className="mt-2">
-                      <p className="text-sm">{tech.name}</p>
-                      <div className="w-full bg-gray-700 rounded-full h-2.5">
-                        <div
-                          className={`${tech.color} h-2.5 rounded-full ${tech.width}`}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
               </div>
             </li>
           </ol>
@@ -210,159 +153,153 @@ const MyPortfolio = () => {
             Habilidades
           </h2>
 
-          {/* Desarrollo Web */}
-          <div className="border-2 border-gray-300 mx-5 pb-4">
-            <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-              Lenguajes
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
-              {[
-                "html",
-                "css",
-                "javascript",
-                "python",
-                "sql_server",
-                ".NET",
-                "C++",
-              ].map((tech, index) => {
-                const techExtension = tech === "github" ? ".png" : ".svg";
-                const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
-                return (
-                  <div
-                    key={index}
-                    className="relative group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
-                  >
-                    <img
-                      src={`/assets/${tech}${techExtension}`}
-                      alt={techName}
-                      className="self-center aspect-square"
-                      width={60}
-                      height={120}
-                    />
-                    {/* Tooltip estilizado encima */}
-                    <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {techName}
-                    </span>
-                  </div>
-                );
-              })}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-5">
+            {/* Lenguajes */}
+            <div className="border-2 border-gray-300 pb-4">
+              <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
+                Lenguajes
+              </h3>
+              <div className="grid grid-cols-2 gap-4 px-6">
+                {[
+                  "html",
+                  "css",
+                  "javascript",
+                  "python",
+                  "sql_server",
+                  ".NET",
+                  "C++",
+                ].map((tech, index) => {
+                  const techExtension = tech === "github" ? ".png" : ".svg";
+                  const techName = tech.replace("-", " ").toUpperCase();
+                  return (
+                    <div
+                      key={index}
+                      className="relative group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-3 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
+                    >
+                      <img
+                        src={`/assets/${tech}${techExtension}`}
+                        alt={techName}
+                        className="self-center aspect-square"
+                        width={45} // más chico
+                        height={90}
+                      />
+                      <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {techName}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Frameworks */}
+            <div className="border-2 border-gray-300 pb-4">
+              <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
+                Frameworks y librerías
+              </h3>
+              <div className="grid grid-cols-2 gap-4 px-6">
+                {[
+                  "react",
+                  "vite",
+                  "tailwind-css",
+                  "vue-js",
+                  "flask",
+                  "selenium",
+                  "node-js",
+                  "astro",
+                ].map((tech, index) => {
+                  const techExtension = tech === "selenium" ? ".png" : ".svg";
+                  const techName = tech.replace("-", " ").toUpperCase();
+                  return (
+                    <div
+                      key={index}
+                      className="relative group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-3 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
+                    >
+                      <img
+                        src={`/assets/${tech}${techExtension}`}
+                        alt={tech}
+                        className="self-center aspect-square"
+                        width={45} // más chico
+                        height={90}
+                      />
+                      <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {techName}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Herramientas */}
+            <div className="border-2 border-gray-300 pb-4">
+              <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
+                Herramientas
+              </h3>
+              <div className="grid grid-cols-2 gap-4 px-6">
+                {[
+                  "visual-studio-code",
+                  "trello",
+                  "git",
+                  "visual-studio",
+                  "jupyter",
+                  "power-bi",
+                  "figma",
+                  "selenium",
+                ].map((tech, index) => {
+                  const techExtension = tech === "selenium" ? ".png" : ".svg";
+                  const techName = tech.replace("-", " ").toUpperCase();
+                  return (
+                    <div
+                      key={index}
+                      className="relative group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-3 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
+                    >
+                      <img
+                        src={`/assets/${tech}${techExtension}`}
+                        alt={tech}
+                        className="self-center aspect-square"
+                        width={45} // más chico
+                        height={90}
+                      />
+                      <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {techName}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Nube */}
+            <div className="border-2 border-gray-300 pb-4">
+              <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
+                Nube y proveedores
+              </h3>
+              <div className="grid grid-cols-2 gap-4 px-6">
+                {["aws", "vercel", "github"].map((tech, index) => {
+                  const techExtension = tech === "heroku" ? ".png" : ".svg";
+                  const techName = tech.replace("-", " ").toUpperCase();
+                  return (
+                    <div
+                      key={index}
+                      className="relative group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-3 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
+                    >
+                      <img
+                        src={`/assets/${tech}${techExtension}`}
+                        alt={tech}
+                        className="self-center aspect-square"
+                        width={45} // más chico
+                        height={90}
+                      />
+                      <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {techName}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
-
-          {/* Análisis de Datos */}
-          <div className="border-2 border-gray-300 mx-5 pb-4 mt-5">
-            <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-              Frameworks y librerías
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
-              {[
-                "react",
-                "vite",
-                "tailwind-css",
-                "vue-js",
-                "flask",
-                "selenium",
-                "node-js",
-                "astro"
-              ].map((tech, index) => {
-                const techExtension = tech === "selenium" ? ".png" : ".svg"; // Aquí identificamos el tipo de archivo
-                const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
-                return (
-                  <div
-                    key={index}
-                    className="group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
-                  >
-                    <img
-                      src={`/assets/${tech}${techExtension}`} // Se agrega la extensión
-                      alt={tech}
-                      className="self-center aspect-square"
-                      width={60}
-                      height={120}
-                    />
-                    {/* Tooltip estilizado encima */}
-                    <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {techName}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="border-2 border-gray-300 mx-5 pb-4 mt-5">
-            <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-              Herramientas
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
-              {[
-                "visual-studio-code",
-                "trello",
-                "git",
-                "visual-studio",
-                "jupyter",
-                "power-bi",
-                "figma",
-                "selenium",
-              ].map((tech, index) => {
-                const techExtension = tech === "selenium" ? ".png" : ".svg"; // Aquí identificamos el tipo de archivo
-                const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
-                return (
-                  <div
-                    key={index}
-                    className="group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
-                  >
-                    <img
-                      src={`/assets/${tech}${techExtension}`} // Se agrega la extensión
-                      alt={tech}
-                      className="self-center aspect-square"
-                      width={60}
-                      height={120}
-                    />
-                    {/* Tooltip estilizado encima */}
-                    <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {techName}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="border-2 border-gray-300 mx-5 pb-4 mt-5">
-            <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-              Nube y proveedores
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-10">
-
-              {[
-                "aws",
-                "vercel",
-                "github",
-              ].map((tech, index) => {
-                const techExtension = tech === "heroku" ? ".png" : ".svg"; // Aquí identificamos el tipo de archivo
-                const techName = tech.replace("-", " ").toUpperCase(); // Para mostrar bonito
-                return (
-                  <div
-                    key={index}
-                    className="group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
-                  >
-                    <img
-                      src={`/assets/${tech}${techExtension}`} // Se agrega la extensión
-                      alt={tech}
-                      className="self-center aspect-square"
-                      width={60}
-                      height={120}
-                    />
-                    {/* Tooltip estilizado encima */}
-                    <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {techName}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
         </section>
 
         <section
@@ -496,35 +433,40 @@ const MyPortfolio = () => {
           </div>
         </section>
 
-        <section
-          id="about"
-          className="scroll-m-20 mx-auto container px-4 lg:max-w-4xl md:max-w-2xl pt-20"
-        >
-          <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
-            <FontAwesomeIcon icon={faUser} className="text-3xl" />
-            SOBRE MI
-          </h2>
-          <article className="flex flex-col md:flex-row items-center justify-center gap-8 mb-24">
-            <div className="text-justify md:text-left text-white/80 dark:text-white leading-relaxed">
-              <p>
-                Me llamo Gibran Tarrillo, mis amigos cercanos me dicen Gibi.
-                Empecé en la programación cuando tenía 15 años. Actualmente me
-                encuentro trabajando en el Banco de la Nación.
-              </p>
-              <p className="mt-4">
-                Me gusta innovar en cada proyecto y reto que me propongo. Si
-                algo no lo sé, investigo. Me considero un buen solucionador de
-                problemas.
-              </p>
-              <p className="mt-4">
-                Mi meta es continuar ampliando mis conocimientos en las diversas
-                áreas de la Ingeniería de Software, con la convicción de que
-                cada paso me acerca a nuevas oportunidades y logros.
-              </p>
-            </div>
-            <img src="" alt="" />
-          </article>
-        </section>
+<section
+  id="about"
+  className="scroll-m-20 mx-auto container px-4 lg:max-w-4xl md:max-w-2xl pt-20"
+>
+  <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
+    <FontAwesomeIcon icon={faUser} className="text-3xl" />
+    SOBRE MI
+  </h2>
+
+  <article className="flex flex-col md:flex-row items-center justify-center gap-8 mb-24">
+    {/* Imagen a la izquierda en pantallas grandes */}
+    <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+      <img
+        src="/assets/profile.jpeg" // tu imagen aquí
+        alt="Foto de perfil"
+        className="rounded-xl shadow-lg w-48 h-48 md:w-64 md:h-64 object-cover"
+      />
+    </div>
+
+    {/* Texto a la derecha */}
+    <div className="w-full md:w-2/3 text-justify md:text-left text-white/80 dark:text-white leading-relaxed">
+      <p>
+        Ingeniero de software con experiencia en desarrollo web y análisis de
+        datos. Apasionado por la tecnología y la creación de soluciones
+        innovadoras.
+      </p>
+      <p className="mt-4">
+        Me gusta innovar en cada proyecto y reto que me propongo. Si algo no lo
+        sé, investigo. Me considero un buen solucionador de problemas.
+      </p>
+    </div>
+  </article>
+</section>
+
       </div>
     </main>
   );
