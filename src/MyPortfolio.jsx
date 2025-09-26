@@ -13,6 +13,7 @@ import { faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 import ProjectCard from "./components/ProjectCard";
 import projectsData from "./components/projectsData";
+import ContactSection from "./components/ContactSection";
 import { useState } from "react";
 
 const MyPortfolio = () => {
@@ -38,10 +39,10 @@ const filteredProjects = projectsData.filter((project) =>
           </h1>
         </div>
 
-        <p className="py-6 text-xl md:text-2xl mt-2">
+        <h2 className="py-6 text-3xl sm:text-5xl md:text-6xl lg:text-5xl font-bold text-center md:text-left">
           Ingeniero de Software
-          <br />
-        </p>
+         
+        </h2>
         <div className="mb-3 py-2">
           <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg text-md font-semibold">
             <a href="https://linkedin.com/in/gibrantarrillo" target="_blank">
@@ -375,6 +376,7 @@ const filteredProjects = projectsData.filter((project) =>
             </div>
           </article>
         </section>
+        <ContactSection />
       </div>
     </main>
   );
