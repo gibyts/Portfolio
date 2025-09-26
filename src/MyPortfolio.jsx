@@ -11,8 +11,19 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
+import ProjectCard from "./components/ProjectCard";
+import projectsData from "./components/projectsData";
+import { useState } from "react";
 
 const MyPortfolio = () => {
+const [filter, setFilter] = useState("Todos");
+const filters = ["Todos", "Personal", "Trabajo"];
+
+// Filtrar proyectos por type
+const filteredProjects = projectsData.filter((project) =>
+  filter === "Todos" ? true : project.type === filter
+);
+
   return (
     <main>
       <section className="text-center min-h-screen flex flex-col items-center justify-center pt-20 md:pt-24">
@@ -299,171 +310,71 @@ const MyPortfolio = () => {
           </div>
         </section>
 
-        <section
-          id="projects"
-          className="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl "
-        >
-          <h2 className="flex items-center my-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white undefined">
+        <section id="projects" className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+          <h2 className="flex items-center my-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faCode} className="text-3xl" />
             PROYECTOS
           </h2>
+
+          {/* Botones de filtro */}
+          <div className="flex gap-4 mb-8 flex-wrap">
+            {filters.map((f) => (
+              <button
+                key={f}
+                onClick={() => setFilter(f)}
+                className={`px-4 py-2 rounded-xl border transition ${
+                  filter === f
+                    ? "bg-gray-800 text-white border-gray-600"
+                    : "bg-gray-100 text-gray-800 border-gray-300 hover:bg-gray-200"
+                }`}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+
+          {/* Render de proyectos filtrados */}
           <div className="flex flex-col gap-y-16">
-            <article className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-              <div className="w-full md:w-1/2">
-                <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                  <img
-                    src="/assets/projectRCC.png"
-                    alt=""
-                    className="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-                  />
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 md:max-w-lg">
-                <h3 className="text-2xl font-bold text-white-800 dark:text-gray-100 mb-5">
-                  RCC - proceso de lectura y carga de datos
-                </h3>
-                <div className="text max-2xl font-bold ">
-                  <ul className="flex flex-row mb-2 gap-x-2">
-                    <li>
-                      <span className="flex gap-x-2 rounded-full text-xs bg-white text-black py-1 px-2">
-                        <img
-                          src="/assets/python.svg"
-                          alt=""
-                          className=" size-4"
-                        />
-                        Python
-                      </span>
-                    </li>
-                    <li>
-                      <span className="flex gap-x-2 rounded-full text-xs bg-blue-50 text-black py-1 px-2">
-                        <img
-                          src="/assets/tkinter.png"
-                          alt=""
-                          className=" size-4"
-                        />
-                        Tkinter
-                      </span>
-                    </li>
-                  </ul>
-                  <div className="mt-2 text-white-700 dark:text-gray-400">
-                    Proyecto de automatización de procesos de lectura y carga
-                    del Reporte Crediticio Consolidado (RCC) en el Banco de la
-                    Nación
-                  </div>
-                  <footer className="flex items-end justify-start mt-4 gap-x-4">
-                    <a
-                      href=""
-                      className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
-                    >
-                      Demo
-                    </a>
-                    <a
-                      href=""
-                      className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
-                    >
-                      Codigo
-                    </a>
-                  </footer>
-                </div>
-              </div>
-            </article>
-            <article className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-              <div className="w-full md:w-1/2">
-                <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                  <img
-                    src="/assets/projectRCC.png"
-                    alt=""
-                    className="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-                  />
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 md:max-w-lg">
-                <h3 className="text-2xl font-bold text-white-800 dark:text-gray-100 mb-5">
-                  La Once - Página Web
-                </h3>
-                <div className="text max-2xl font-bold ">
-                  <ul className="flex flex-row mb-2 gap-x-2">
-                    <li>
-                      <span className="flex gap-x-2 rounded-full text-xs bg-white text-black py-1 px-2">
-                        <img
-                          src="/assets/react.svg"
-                          alt=""
-                          className=" size-4"
-                        />
-                        React
-                      </span>
-                    </li>
-                    <li>
-                      <span className="flex gap-x-2 rounded-full text-xs bg-blue-50 text-black py-1 px-2">
-                        <img
-                          src="/assets/tkinter.png"
-                          alt=""
-                          className=" size-4"
-                        />
-                        Tkinter
-                      </span>
-                    </li>
-                  </ul>
-                  <div className="mt-2 text-white-700 dark:text-gray-400">
-                    Proyecto de una página web para para un negocio online de
-                    venta de humitas y tamales
-                  </div>
-                  <footer className="flex items-end justify-start mt-4 gap-x-4">
-                    <a
-                      href="https://la-once.vercel.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
-                    >
-                      Demo
-                    </a>
-                    <a
-                      href=""
-                      className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
-                    >
-                      Codigo
-                    </a>
-                  </footer>
-                </div>
-              </div>
-            </article>
+            {filteredProjects.map((project, idx) => (
+              <ProjectCard key={idx} {...project} />
+            ))}
           </div>
         </section>
 
-<section
-  id="about"
-  className="scroll-m-20 mx-auto container px-4 lg:max-w-4xl md:max-w-2xl pt-20"
->
-  <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
-    <FontAwesomeIcon icon={faUser} className="text-3xl" />
-    SOBRE MI
-  </h2>
+        <section
+          id="about"
+          className="scroll-m-20 mx-auto container px-4 lg:max-w-4xl md:max-w-2xl pt-20"
+        >
+          <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
+            <FontAwesomeIcon icon={faUser} className="text-3xl" />
+            SOBRE MI
+          </h2>
 
-  <article className="flex flex-col md:flex-row items-center justify-center gap-8 mb-24">
-    {/* Imagen a la izquierda en pantallas grandes */}
-    <div className="w-full md:w-1/3 flex justify-center md:justify-start">
-      <img
-        src="/assets/profile.jpeg" // tu imagen aquí
-        alt="Foto de perfil"
-        className="rounded-xl shadow-lg w-48 h-48 md:w-64 md:h-64 object-cover"
-      />
-    </div>
+          <article className="flex flex-col md:flex-row items-center justify-center gap-8 mb-24">
+            {/* Imagen a la izquierda en pantallas grandes */}
+            <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+              <img
+                src="/assets/profile.jpeg" // tu imagen aquí
+                alt="Foto de perfil"
+                className="rounded-xl shadow-lg w-48 h-48 md:w-64 md:h-64 object-cover"
+              />
+            </div>
 
-    {/* Texto a la derecha */}
-    <div className="w-full md:w-2/3 text-justify md:text-left text-white/80 dark:text-white leading-relaxed">
-      <p>
-        Ingeniero de software con experiencia en desarrollo web y análisis de
-        datos. Apasionado por la tecnología y la creación de soluciones
-        innovadoras.
-      </p>
-      <p className="mt-4">
-        Me gusta innovar en cada proyecto y reto que me propongo. Si algo no lo
-        sé, investigo. Me considero un buen solucionador de problemas.
-      </p>
-    </div>
-  </article>
-</section>
-
+            {/* Texto a la derecha */}
+            <div className="w-full md:w-2/3 text-justify md:text-left text-white/80 dark:text-white leading-relaxed">
+              <p>
+                Ingeniero de software con experiencia en desarrollo web y
+                análisis de datos. Apasionado por la tecnología y la creación de
+                soluciones innovadoras.
+              </p>
+              <p className="mt-4">
+                Me gusta innovar en cada proyecto y reto que me propongo. Si
+                algo no lo sé, investigo. Me considero un buen solucionador de
+                problemas.
+              </p>
+            </div>
+          </article>
+        </section>
       </div>
     </main>
   );
