@@ -168,7 +168,7 @@ const filteredProjects = projectsData.filter((project) =>
               <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
                 Lenguajes
               </h3>
-              <div className="grid grid-cols-2 gap-4 px-6">
+              <div className="grid grid-cols-3 gap-4 px-6">
                 {[
                   "html",
                   "css",
@@ -206,7 +206,7 @@ const filteredProjects = projectsData.filter((project) =>
               <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
                 Frameworks y librerías
               </h3>
-              <div className="grid grid-cols-2 gap-4 px-6">
+              <div className="grid grid-cols-3 gap-4 px-6">
                 {[
                   "react",
                   "vite",
@@ -245,7 +245,7 @@ const filteredProjects = projectsData.filter((project) =>
               <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
                 Herramientas
               </h3>
-              <div className="grid grid-cols-2 gap-4 px-6">
+              <div className="grid grid-cols-3 gap-4 px-6">
                 {[
                   "visual-studio-code",
                   "trello",
@@ -284,7 +284,7 @@ const filteredProjects = projectsData.filter((project) =>
               <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
                 Nube y proveedores
               </h3>
-              <div className="grid grid-cols-2 gap-4 px-6">
+              <div className="grid grid-cols-3 gap-4 px-6">
                 {["aws", "vercel", "github"].map((tech, index) => {
                   const techExtension = tech === "heroku" ? ".png" : ".svg";
                   const techName = tech.replace("-", " ").toUpperCase();
