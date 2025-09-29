@@ -17,13 +17,13 @@ import ContactSection from "./components/ContactSection";
 import { useState } from "react";
 
 const MyPortfolio = () => {
-const [filter, setFilter] = useState("Todos");
-const filters = ["Todos", "Personal", "Trabajo"];
+  const [filter, setFilter] = useState("Todos");
+  const filters = ["Todos", "Personal", "Trabajo"];
 
-// Filtrar proyectos por type
-const filteredProjects = projectsData.filter((project) =>
-  filter === "Todos" ? true : project.type === filter
-);
+  // Filtrar proyectos por type
+  const filteredProjects = projectsData.filter((project) =>
+    filter === "Todos" ? true : project.type === filter
+  );
 
   return (
     <main>
@@ -41,7 +41,6 @@ const filteredProjects = projectsData.filter((project) =>
 
         <h2 className="py-6 text-3xl sm:text-5xl md:text-6xl lg:text-5xl font-bold text-center md:text-left">
           Ingeniero de Software
-         
         </h2>
         <div className="mb-3 py-2">
           <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg text-md font-semibold">
@@ -311,7 +310,10 @@ const filteredProjects = projectsData.filter((project) =>
           </div>
         </section>
 
-        <section id="projects" className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+        <section
+          id="projects"
+          className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+        >
           <h2 className="flex items-center my-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faCode} className="text-3xl" />
             PROYECTOS
@@ -351,28 +353,126 @@ const filteredProjects = projectsData.filter((project) =>
             SOBRE MI
           </h2>
 
-          <article className="flex flex-col md:flex-row items-center justify-center gap-8 mb-24">
-            {/* Imagen a la izquierda en pantallas grandes */}
-            <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+          <article className="flex flex-col md:flex-row items-center justify-center gap-8 mb-24 ">
+            {/* Imagen a la izquierda */}
+            <div className="w-full md:w-1/2 flex justify-center md:justify-start  p-4">
               <img
-                src="/assets/profile.jpeg" // tu imagen aquí
+                src="/assets/profile.jpeg"
                 alt="Foto de perfil"
-                className="rounded-xl shadow-lg w-48 h-48 md:w-64 md:h-64 object-cover"
+                className="rounded-2xl shadow-lg w-48 h-48 md:w-80 md:h-80 object-cover"
               />
             </div>
 
-            {/* Texto a la derecha */}
-            <div className="w-full md:w-2/3 text-justify md:text-left text-white/80 dark:text-white leading-relaxed">
-              <p>
-                Ingeniero de software con experiencia en desarrollo web y
-                análisis de datos. Apasionado por la tecnología y la creación de
-                soluciones innovadoras.
-              </p>
-              <p className="mt-4">
-                Me gusta innovar en cada proyecto y reto que me propongo. Si
-                algo no lo sé, investigo. Me considero un buen solucionador de
-                problemas.
-              </p>
+            {/* Columna derecha: cards arriba + texto abajo */}
+            <div className="w-full md:w-2/3">
+              {/* Tres cajas (cards) */}
+              <div className="w-full flex justify-center md:justify-end  ">
+                <div className="flex gap-4">
+                  {/* Card 1 */}
+                  <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1.5"
+                        d="M12 11c0 1.657-1.343 3-3 3S6 12.657 6 11s1.343-3 3-3 3 1.343 3 3zM21 21v-2a4 4 0 00-4-4h-4"
+                      />
+                    </svg>
+                    <h4 className="text-sm font-medium mt-2">Experiencia</h4>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      trainee
+                    </span>
+                  </div>
+
+                  {/* Card 2 */}
+                  <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1.5"
+                        d="M9 12h6M9 16h6M5 8h14M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <h4 className="text-sm font-medium mt-2">Proyectos</h4>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      +10
+                    </span>
+                  </div>
+
+                  {/* Card 3 */}
+                  <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1.5"
+                        d="M18 8a6 6 0 10-12 0v4a6 6 0 0012 0V8zM12 20v-4"
+                      />
+                    </svg>
+                    <h4 className="text-sm font-medium mt-2">Soporte</h4>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      Online 24/7
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Texto (debajo de las cards) */}
+              <div className="text-center md:text-left text-gray-700 dark:text-white/85 leading-relaxed">
+                <p className="text-lg  mt-6">
+                  Ingeniero de software con experiencia en desarrollo web y
+                  análisis de datos. Apasionado por la tecnología y la creación
+                  de soluciones innovadoras.
+                </p>
+
+                {/* Botón CV */}
+                <div className="mt-6 flex justify-center md:justify-start">
+                  <a
+                    href="/assets/CV.pdf"
+                    download
+                    className="px-6 py-3 bg-black text-white rounded-xl shadow-md hover:bg-gray-800 transition flex items-center gap-2"
+                  >
+                    Descargar CV
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M12 4v12m8-8H4"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </article>
         </section>
