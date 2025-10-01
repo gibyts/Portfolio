@@ -78,7 +78,7 @@ const ProjectCard = ({ title, description, techStack, image, demoLink, codeLink,
               href={demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 text-md hover:bg-gray-800 hover:border-gray-900 rounded-xl hover:text-white"
+              className="inline-flex bg-[#ff3131] text-white border-gray-300 items-center justify-center gap-2 px-3 py-2 text-base transition  hover:bg-gray-800 hover:border-gray-900 rounded-xl hover:text-white"
             >
               Demo
             </a>

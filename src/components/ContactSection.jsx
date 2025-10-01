@@ -18,12 +18,12 @@ const ContactSection = () => {
           </h2>
           <div className="space-y-6">
             {/* Email */}
-            <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <div className="p-6 bg-gray-800 border border-gray-200 border-gray-700 rounded-xl shadow hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-2">
-                <FaEnvelope className="text-2xl text-gray-700" />
+                <FaEnvelope className="text-2xl text-white" />
                 <h3 className="font-semibold text-lg">Email</h3>
               </div>
-              <p className="text-gray-600">gibrantarrillo@gmail.com</p>
+              <p className="text-white">gibrantarrillo@gmail.com</p>
               <a
                 href="mailto:gibrantarrillo@gmail.com"
                 className="text-sm text-blue-600 mt-2 inline-block hover:underline"
@@ -33,12 +33,12 @@ const ContactSection = () => {
             </div>
 
             {/* WhatsApp */}
-            <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <div className="p-6 bg-gray-800 border border-gray-200 border-gray-700 rounded-xl shadow hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-2">
                 <FaWhatsapp className="text-2xl text-green-600" />
                 <h3 className="font-semibold text-lg">WhatsApp</h3>
               </div>
-              <p className="text-gray-600">960165362</p>
+              <p className="text-white">960165362</p>
               <a
                 href="https://wa.me/9606165362"
                 target="_blank"
@@ -59,7 +59,7 @@ const ContactSection = () => {
           <form className="space-y-6">
             {/* Nombre */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-white mb-1">
                 Nombre
               </label>
               <input
@@ -71,7 +71,7 @@ const ContactSection = () => {
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-white mb-1">
                 E-Mail
               </label>
               <input
@@ -83,7 +83,7 @@ const ContactSection = () => {
 
             {/* Proyecto */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-white mb-1">
                 Proyecto
               </label>
               <textarea
