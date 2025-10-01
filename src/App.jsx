@@ -2,38 +2,31 @@ import './App.css'
 import NavBar from './components/Navbar'
 import MyPortfolio from './MyPortfolio'
 import Footer from './components/Footer'
-import { useEffect, useRef } from 'react'
-import Starback from 'starback'
+import Plasma from './Plasma'
 
 function App() {
-  const canvasRef = useRef(null)
-
-  useEffect(() => {
-    if (canvasRef.current) {
-new Starback(canvasRef.current, {
-  type: 'dot',
-  quantity: 20,
-  backgroundColor: '#0f1219', // mismo color que var(--background-color)
-  randomOpacity: true,
-});
-
-    }
-  }, [])
-
   return (
     <>
-      {/* Canvas global del fondo */}
-      <canvas
-        ref={canvasRef}
+      {/* Plasma como fondo global */}
+      <div
         style={{
           position: 'fixed',
           top: 0,
           left: 0,
           width: '100%',
           height: '100%',
-          zIndex: -1
+          zIndex: -1,
         }}
-      ></canvas>
+      >
+        <Plasma
+          color="#ff3131"
+          speed={0.6}
+          direction="forward"
+          scale={1.8}
+          opacity={0.4}
+          mouseInteractive={true}
+        />
+      </div>
 
       {/* Contenido principal */}
       <NavBar />
