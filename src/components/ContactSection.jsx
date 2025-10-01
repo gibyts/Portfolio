@@ -1,14 +1,19 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // ContactSection.jsx
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="scroll-m-20 py-16 px-6 lg:px-20">
+    <section id="contact" className="scroll-m-20 py-20  ">
+      <h2 className="flex items-center justify-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
+        <FontAwesomeIcon icon={faPhone} className="text-3xl" />
+        CONTÁCTAME
+      </h2>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-        
         {/* Lado izquierdo */}
         <div>
-          <h2 className="text-2xl font-semibold mb-8 text-gray-800">
+          <h2 className="text-2xl font-semibold mb-8 text-white">
             Comunícate conmigo
           </h2>
           <div className="space-y-6">
@@ -48,7 +53,7 @@ const ContactSection = () => {
 
         {/* Lado derecho */}
         <div>
-          <h2 className="text-2xl font-semibold mb-8 text-gray-800">
+          <h2 className="text-2xl font-semibold mb-8 text-white">
             Escríbeme sobre tu proyecto
           </h2>
           <form className="space-y-6">

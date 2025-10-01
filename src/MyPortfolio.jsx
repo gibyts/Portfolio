@@ -91,7 +91,7 @@ const MyPortfolio = () => {
       </section>
       <div className="scroll-m-20 mx-auto container px-4 lg:max-w-4xl md:max-w-2xl">
         <section id="experience" className="h-auto max-w-full p-4">
-          <h2 className="flex flex-wrap items-center mb-6 text-2xl md:text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
+          <h2 className="flex flex-wrap justify-center items-center mb-6 text-2xl md:text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faSuitcase} className="text-3xl" />
             Experiencia laboral
           </h2>
@@ -156,7 +156,7 @@ const MyPortfolio = () => {
         </section>
 
         <section id="skills" className="w-full min-h-screen pt-20">
-          <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
+          <h2 className="flex items-center justify-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faScrewdriverWrench} className="text-3xl" />
             Habilidades
           </h2>
@@ -312,9 +312,9 @@ const MyPortfolio = () => {
 
         <section
           id="projects"
-          className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl pt-20"
+          className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl py-20"
         >
-          <h2 className="flex items-center my-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
+          <h2 className="flex items-center justify-center my-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faCode} className="text-3xl" />
             PROYECTOS
           </h2>
@@ -348,7 +348,7 @@ const MyPortfolio = () => {
           id="about"
           className="scroll-m-20 mx-auto container px-4 lg:max-w-4xl md:max-w-2xl pt-20"
         >
-          <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
+          <h2 className="flex items-center justify-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faUser} className="text-3xl" />
             SOBRE MI
           </h2>
