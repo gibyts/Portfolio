@@ -18,7 +18,7 @@ const ContactSection = () => {
           </h2>
           <div className="space-y-6">
             {/* Email */}
-            <div className="p-6 bg-gray-800 border border-gray-200 border-gray-700 rounded-xl shadow hover:shadow-lg transition">
+            <div className="p-6 bg-gray-800 border border-gray-200  rounded-xl shadow hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-2">
                 <FaEnvelope className="text-2xl text-white" />
                 <h3 className="font-semibold text-lg">Email</h3>
@@ -33,7 +33,7 @@ const ContactSection = () => {
             </div>
 
             {/* WhatsApp */}
-            <div className="p-6 bg-gray-800 border border-gray-200 border-gray-700 rounded-xl shadow hover:shadow-lg transition">
+            <div className="p-6 bg-gray-800 border border-gray-200  rounded-xl shadow hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-2">
                 <FaWhatsapp className="text-2xl text-green-600" />
                 <h3 className="font-semibold text-lg">WhatsApp</h3>
