@@ -13,7 +13,7 @@ const ContactSection = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Lado izquierdo */}
         <div>
-          <h2 className="text-2xl font-semibold mb-8 text-white">
+          <h2 className="text-2xl  mb-8 text-white">
             Comunícate conmigo
           </h2>
           <div className="space-y-6">
@@ -26,7 +26,7 @@ const ContactSection = () => {
               <p className="text-white">gibrantarrillo@gmail.com</p>
               <a
                 href="mailto:gibrantarrillo@gmail.com"
-                className="text-sm text-blue-600 mt-2 inline-block hover:underline"
+                className="text-sm icon-red mt-2 inline-block hover:underline"
               >
                 Escríbeme →
               </a>
@@ -43,7 +43,7 @@ const ContactSection = () => {
                 href="https://wa.me/9606165362"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-green-600 mt-2 inline-block hover:underline"
+                className="text-sm icon-red mt-2 inline-block hover:underline"
               >
                 Escríbeme →
               </a>
@@ -53,7 +53,7 @@ const ContactSection = () => {
 
         {/* Lado derecho */}
         <div>
-          <h2 className="text-2xl font-semibold mb-8 text-white">
+          <h2 className="text-2xl  mb-8 text-white">
             Escríbeme sobre tu proyecto
           </h2>
           <form className="space-y-6">
