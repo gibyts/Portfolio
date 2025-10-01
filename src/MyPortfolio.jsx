@@ -43,7 +43,7 @@ const MyPortfolio = () => {
           Ingeniero de Software
         </h2>
         <div className="mb-3 py-2">
-          <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg text-md font-semibold">
+          <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg text-md font-semibold bg-[#ff3131] border-none hover:bg-[#e02b2b] text-white">
             <a href="https://linkedin.com/in/gibrantarrillo" target="_blank">
               Disponible para trabajar
             </a>
