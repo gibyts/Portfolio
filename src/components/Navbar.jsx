@@ -28,11 +28,17 @@ const NavBar = () => {
         <a href="#home" className="hover:text-[#ff3131]">
           inicio
         </a>
-        <a href="#blog" className="hover:text-[#ff3131]">
+        <a href="#skills" className="hover:text-[#ff3131]">
           habilidades
         </a>
         <a href="#projects" className="hover:text-[#ff3131]">
           proyectos
+        </a>
+        <a href="#about" className="hover:text-[#ff3131]">
+          Sobre mi
+        </a>
+        <a href="#contact" className="hover:text-[#ff3131]">
+          Contacto
         </a>
       </div>
 
@@ -87,7 +93,7 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="md:hidden">
+      <div className="min-[930px]:hidden">
         <button onClick={() => setIsOpen(!isOpen)}>
           <FontAwesomeIcon
             icon={isOpen ? faTimes : faBars}
@@ -102,14 +108,20 @@ const NavBar = () => {
           <a href="#home" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
             inicio
           </a>
-          <a href="#blog" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
+          <a href="#experience" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
+            Experiencia
+          </a>
+          <a href="#skills" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
             habilidades
           </a>
           <a href="#projects" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
             proyectos
           </a>
           <a href="#about" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
-            Acerca de mi
+            Sobre mi
+          </a>
+          <a href="#contact" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
+            Contacto
           </a>
 
           {/* Mobile Social Icons */}

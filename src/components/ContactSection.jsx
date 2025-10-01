@@ -3,7 +3,7 @@ import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-16 px-6 lg:px-20">
+    <section id="contact" className="scroll-m-20 py-16 px-6 lg:px-20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         
         {/* Lado izquierdo */}

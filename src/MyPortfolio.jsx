@@ -27,7 +27,7 @@ const MyPortfolio = () => {
 
   return (
     <main>
-      <section className="text-center min-h-screen flex flex-col items-center justify-center pt-20 md:pt-24">
+      <section id="home" className="text-center min-h-screen flex flex-col items-center justify-center pt-20 md:pt-24">
         <div className="flex flex-col md:flex-row items-center gap-4">
           <img
             src="/assets/photo_profile.jpg"
@@ -353,7 +353,7 @@ const MyPortfolio = () => {
             SOBRE MI
           </h2>
 
-          <article className="flex flex-col md:flex-row items-center justify-center gap-8 mb-24 ">
+          <article className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-24 ">
             {/* Imagen a la izquierda */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-start  p-4">
               <img
