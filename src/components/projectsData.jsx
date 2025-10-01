@@ -16,7 +16,7 @@ const projectsData = [
     title: "La Once - Página Web",
     description:
       "Proyecto de una página web para un negocio online de venta de humitas y tamales.",
-    image: "/assets/projectLaOnce.png",
+    image: "/assets/LAONCE.png",
     techStack: [
       { name: "React", icon: "react.svg" },
       { name: "Tailwind", icon: "tailwind-css.svg" },
@@ -28,7 +28,7 @@ const projectsData = [
   {
     title: "Flowers - Página Web",
     description: "Proyecto de una página web de flores con React y Tailwind.",
-    image: "/assets/projectFlowers.png",
+    image: "/assets/FLOWERS.png",
     techStack: [
       { name: "React", icon: "react.svg" },
       { name: "Tailwind", icon: "tailwind-css.svg" },
