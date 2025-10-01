@@ -369,7 +369,7 @@ const MyPortfolio = () => {
               <div className="w-full flex justify-center md:justify-end  ">
                 <div className="flex gap-4">
                   {/* Card 1 */}
-                  <div className="bg-gray-800 border border-gray-200 border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
+                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6"
@@ -392,7 +392,7 @@ const MyPortfolio = () => {
                   </div>
 
                   {/* Card 2 */}
-                  <div className="bg-gray-800 border border-gray-200 border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
+                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6"
@@ -415,7 +415,7 @@ const MyPortfolio = () => {
                   </div>
 
                   {/* Card 3 */}
-                  <div className="bg-gray-800 border border-gray-200 border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
+                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6"
