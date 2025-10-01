@@ -45,7 +45,7 @@ const MyPortfolio = () => {
         <div className="mb-3 py-2">
           <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg text-md font-semibold bg-[#ff3131] border-none hover:bg-[#e02b2b] text-white">
             <a href="https://linkedin.com/in/gibrantarrillo" target="_blank">
-              Disponible para trabajar
+              Disponible para trabajar 
             </a>
           </button>
         </div>
@@ -452,7 +452,7 @@ const MyPortfolio = () => {
                   <a
                     href="/assets/CV.pdf"
                     download
-                    className="px-6 py-3 bg-black text-white rounded-xl shadow-md hover:bg-gray-800 transition flex items-center gap-2"
+                    className="px-6 py-3 bg-[#ff3131] text-white rounded-xl shadow-md hover:bg-[#e02b2b] transition flex items-center gap-2"
                   >
                     Descargar CV
                     <svg

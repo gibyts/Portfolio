@@ -96,10 +96,9 @@ const ContactSection = () => {
             {/* Botón */}
             <button
               type="submit"
-              className="w-full bg-black text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-gray-800 transition"
+              className="w-full bg-[#ff3131] text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-[#e02b2b] transition"
             >
               Enviar Mensaje
-              <span>✈️</span>
             </button>
           </form>
         </div>
