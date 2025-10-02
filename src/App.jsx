@@ -16,6 +16,7 @@ function App() {
           width: '100%',
           height: '100%',
           zIndex: -1,
+          backgroundColor: 'rgb(15,18,25)', // negro base
         }}
       >
         <Plasma
