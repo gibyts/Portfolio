@@ -48,7 +48,7 @@ const ProjectCard = ({ title, description, techStack, image, demoLink, codeLink,
         {/* Botón Ver más */}
         <button
           onClick={() => setIsOpen(true)}
-          className="mt-2 text-blue-400 hover:underline text-sm"
+          className="mt-2 icon-red hover:underline text-sm"
         >
           Ver más
         </button>
