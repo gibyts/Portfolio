@@ -440,7 +440,7 @@ const MyPortfolio = () => {
               </div>
 
               {/* Texto (debajo de las cards) */}
-              <div className="text-center md:text-left text-gray-700 dark:text-white/85 leading-relaxed">
+              <div className="text-center md:text-left text-white/85 leading-relaxed">
                 <p className="text-lg  mt-6">
                   Ingeniero de software con experiencia en desarrollo web y
                   análisis de datos. Apasionado por la tecnología y la creación
