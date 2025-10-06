@@ -125,9 +125,7 @@ const MyPortfolio = () => {
                 <p className="mb-2">
                   🔍 Manejo de bases de datos y optimización de consultas.
                 </p>
-                <p className="mb-2">
-                  🚀 ...
-                </p>
+                <p className="mb-2">🚀 ...</p>
               </div>
             </li>
 
@@ -147,9 +145,7 @@ const MyPortfolio = () => {
                 <p className="mb-2">
                   🖥️ Desarrollo de aplicaciones de escritorio en Python.
                 </p>
-                <p className="mb-2">
-                  🌐 Creación de páginas web dinámicas.
-                </p>
+                <p className="mb-2">🌐 Creación de páginas web dinámicas.</p>
                 <p className="mb-2">
                   📈 Implementación de dashboards interactivos para
                   visualización de datos.
@@ -168,9 +164,11 @@ const MyPortfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-5">
             {/* Lenguajes */}
             <div className="border-2 border-gray-300 pb-4">
-              <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-                Lenguajes
-              </h3>
+              <div className="flex justify-center pb-3">
+                <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
+                  Lenguajes
+                </h3>
+              </div>
               <div className="grid grid-cols-3 gap-4 px-6">
                 {[
                   "html",
@@ -195,7 +193,7 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="absolute -top-8 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {techName}
                       </span>
                     </div>
@@ -206,9 +204,11 @@ const MyPortfolio = () => {
 
             {/* Frameworks */}
             <div className="border-2 border-gray-300 pb-4">
-              <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-                Frameworks y librerías
-              </h3>
+              <div className="flex justify-center pb-3">
+                <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
+                  Frameworks y librerías
+                </h3>
+              </div>
               <div className="grid grid-cols-3 gap-4 px-6">
                 {[
                   "react",
@@ -234,7 +234,7 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="absolute -top-8 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {techName}
                       </span>
                     </div>
@@ -245,9 +245,11 @@ const MyPortfolio = () => {
 
             {/* Herramientas */}
             <div className="border-2 border-gray-300 pb-4">
-              <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-                Herramientas
-              </h3>
+              <div className="flex justify-center pb-3">
+                <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
+                  Herramientas
+                </h3>
+              </div>
               <div className="grid grid-cols-3 gap-4 px-6">
                 {[
                   "visual-studio-code",
@@ -273,7 +275,7 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="absolute -top-8 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {techName}
                       </span>
                     </div>
@@ -284,9 +286,11 @@ const MyPortfolio = () => {
 
             {/* Nube */}
             <div className="border-2 border-gray-300 pb-4">
-              <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-                Nube y proveedores
-              </h3>
+              <div className="flex justify-center pb-3">
+                <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
+                  Nube y proveedores
+                </h3>
+              </div>
               <div className="grid grid-cols-3 gap-4 px-6">
                 {["aws", "vercel", "github"].map((tech, index) => {
                   const techExtension = tech === "heroku" ? ".png" : ".svg";
@@ -303,7 +307,7 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span className="absolute -top-8 text-xs text-white bg-black rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="absolute -top-8 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {techName}
                       </span>
                     </div>
