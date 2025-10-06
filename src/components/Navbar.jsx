@@ -51,7 +51,7 @@ const NavBar = () => {
         >
           <FontAwesomeIcon
             icon={faXTwitter}
-            className="hover:text-blue-400 cursor-pointer"
+            className="hover:text-[#ff3131] cursor-pointer"
           />
         </a>
         <a
@@ -61,7 +61,7 @@ const NavBar = () => {
         >
           <FontAwesomeIcon
             icon={faInstagram}
-            className="hover:text-gray-100 cursor-pointer"
+            className="hover:text-[#ff3131] cursor-pointer"
           />
         </a>
         <a
@@ -71,7 +71,7 @@ const NavBar = () => {
         >
           <FontAwesomeIcon
             icon={faDiscord}
-            className="hover:text-indigo-400 cursor-pointer"
+            className="hover:text-[#ff3131] cursor-pointer"
           />
         </a>
         <a
@@ -81,7 +81,7 @@ const NavBar = () => {
         >
           <FontAwesomeIcon
             icon={faYoutube}
-            className="hover:text-red-500 cursor-pointer"
+            className="hover:text-[#ff3131] cursor-pointer"
           />
         </a>
         <div className="border-l border-gray-700 pl-4 text-xl">
