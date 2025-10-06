@@ -13,7 +13,7 @@ const ContactSection = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Lado izquierdo */}
         <div>
-          <div className="flex justify-center py-4">
+          <div className="flex justify-center pt-6">
             <h2 className="text-2xl  mb-8 text-white">Comunícate conmigo</h2>
           </div>
           <div className="space-y-6">
@@ -53,7 +53,7 @@ const ContactSection = () => {
 
         {/* Lado derecho */}
         <div>
-          <div className="flex justify-center py-4">
+          <div className="flex justify-center pt-6">
             <h2 className="text-2xl  mb-8 text-white">
               Escríbeme sobre tu proyecto
             </h2>

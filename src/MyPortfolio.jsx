@@ -178,7 +178,7 @@ const MyPortfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-5">
             {/* Lenguajes */}
             <div className="border-2 border-gray-300 pb-4">
-              <div className="flex justify-center pb-3">
+              <div className="flex justify-center pb-4">
                 <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
                   Lenguajes
                 </h3>
@@ -218,7 +218,7 @@ const MyPortfolio = () => {
 
             {/* Frameworks */}
             <div className="border-2 border-gray-300 pb-4">
-              <div className="flex justify-center pb-3">
+              <div className="flex justify-center pb-4">
                 <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
                   Frameworks y librerías
                 </h3>
@@ -259,7 +259,7 @@ const MyPortfolio = () => {
 
             {/* Herramientas */}
             <div className="border-2 border-gray-300 pb-4">
-              <div className="flex justify-center pb-3">
+              <div className="flex justify-center pb-4">
                 <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
                   Herramientas
                 </h3>
@@ -300,7 +300,7 @@ const MyPortfolio = () => {
 
             {/* Nube */}
             <div className="border-2 border-gray-300 pb-4">
-              <div className="flex justify-center pb-3">
+              <div className="flex justify-center pb-4">
                 <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
                   Nube y proveedores
                 </h3>
