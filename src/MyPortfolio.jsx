@@ -27,7 +27,10 @@ const MyPortfolio = () => {
 
   return (
     <main>
-      <section id="home" className="text-center min-h-screen flex flex-col items-center justify-center pt-20 md:pt-24">
+      <section
+        id="home"
+        className="text-center min-h-screen flex flex-col items-center justify-center pt-20 md:pt-24"
+      >
         <div className="flex flex-col md:flex-row items-center gap-4">
           <img
             src="/assets/photo_profile.jpg"
@@ -43,10 +46,15 @@ const MyPortfolio = () => {
           Ingeniero de Software
         </h2>
         <div className="mb-3 py-2">
-          <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg text-md font-semibold bg-[#ff3131] border-none hover:bg-[#e02b2b] text-white">
-            <a href="https://linkedin.com/in/gibrantarrillo" target="_blank">
-              Disponible para trabajar 
-            </a>
+          <button
+            onClick={() => {
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="btn text-lg px-6 py-3 sm:btn-sm md:btn-md lg:btn-lg text-md font-semibold bg-[#ff3131] border-none hover:bg-[#e02b2b] text-white"
+          >
+            Disponible para trabajar
           </button>
         </div>
 
@@ -110,17 +118,15 @@ const MyPortfolio = () => {
                 <span className="text-gray-400">2024 - Actualidad</span>
               </p>
               <div className="mt-2 p-3 md:p-4 bg-gray-800 text-white rounded-lg shadow-lg">
-                <p>
+                <p className="mb-2">
                   📊 Automatización de procesos de riesgo crediticio con SQL y
                   Python.
                 </p>
-                <p>
-                  🔍 Análisis de datos para mejorar la toma de decisiones en el
-                  área de riesgo.
+                <p className="mb-2">
+                  🔍 Manejo de bases de datos y optimización de consultas.
                 </p>
-                <p>
-                  🚀 Implementación de modelos predictivos para evaluación de
-                  clientes.
+                <p className="mb-2">
+                  🚀 ...
                 </p>
               </div>
             </li>
@@ -138,15 +144,13 @@ const MyPortfolio = () => {
                 <span className="text-gray-400">2023 - Actualidad</span>
               </p>
               <div className="mt-2 p-3 md:p-4 bg-gray-800 text-white rounded-lg shadow-lg">
-                <p>
-                  🖥️ Desarrollo de aplicaciones de escritorio en Python para
-                  automatización de tareas.
+                <p className="mb-2">
+                  🖥️ Desarrollo de aplicaciones de escritorio en Python.
                 </p>
-                <p>
-                  🌐 Creación de páginas web dinámicas con React y backend en
-                  Node.js.
+                <p className="mb-2">
+                  🌐 Creación de páginas web dinámicas.
                 </p>
-                <p>
+                <p className="mb-2">
                   📈 Implementación de dashboards interactivos para
                   visualización de datos.
                 </p>
