@@ -52,7 +52,9 @@ const MyPortfolio = () => {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="btn text-lg px-6 py-3 sm:btn-sm md:btn-md lg:btn-lg text-md font-semibold bg-[#ff3131] border-none hover:bg-[#e02b2b] text-white"
+            className="btn font-semibold border-none bg-[#ff3131] hover:bg-[#e02b2b] text-white 
+             text-base sm:text-base md:text-base lg:text-lg 
+             px-4 py-2 sm:px-4 sm:py-2 md:px-4 md:py-2 lg:px-6 lg:py-3"
           >
             Disponible para trabajar
           </button>
@@ -119,16 +121,23 @@ const MyPortfolio = () => {
               </p>
               <div className="mt-2 p-3 md:p-4 bg-gray-800 text-white rounded-lg shadow-lg">
                 <p className="mb-2">
-                  📊 Automatización de procesos de análisis y gestión de riesgo crediticio utilizando SQL y .NET.
+                  📊 Automatización de procesos de análisis y gestión de riesgo
+                  crediticio utilizando SQL y .NET.
                 </p>
                 <p className="mb-2">
-                  🔍 Diseño, administración y optimización de bases de datos, asegurando eficiencia en consultas y tiempos de respuesta.
+                  🔍 Diseño, administración y optimización de bases de datos,
+                  asegurando eficiencia en consultas y tiempos de respuesta.
                 </p>
                 <p className="mb-2">
-                  🚀 Integración de sistemas y fuentes de datos (SQL Server, Access y Excel) para unificar la información y optimizar la toma de decisiones.
+                  🚀 Integración de sistemas y fuentes de datos (SQL Server,
+                  Access y Excel) para unificar la información y optimizar la
+                  toma de decisiones.
                 </p>
                 <p className="mb-2">
-                  ⚙️ Desarrollo e implementación de macros en Excel para automatizar la recopilación, procesamiento y consolidación de datos descargados de portales web, optimizando la elaboración de reportes y plantillas de análisis
+                  ⚙️ Desarrollo e implementación de macros en Excel para
+                  automatizar la recopilación, procesamiento y consolidación de
+                  datos descargados de portales web, optimizando la elaboración
+                  de reportes y plantillas de análisis
                 </p>
               </div>
             </li>
@@ -149,7 +158,9 @@ const MyPortfolio = () => {
                 <p className="mb-2">
                   🖥️ Desarrollo de aplicaciones de escritorio personalizadas.
                 </p>
-                <p className="mb-2">🌐 Creación de páginas web estáticas y dinámicas.</p>
+                <p className="mb-2">
+                  🌐 Creación de páginas web estáticas y dinámicas.
+                </p>
                 <p className="mb-2">
                   📈 Automatización de tareas y procesamiento de datos.
                 </p>
