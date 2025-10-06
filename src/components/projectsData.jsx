@@ -37,6 +37,19 @@ const projectsData = [
     codeLink: "",
     type: "Personal"
   },
+  {
+    title: "Reporte SBS - Página Web",
+    description: "Proyecto de una página web para la presentación de reportes de la Superintendencia de Banca, Seguros y AFP.",
+    image: "",
+    techStack: [
+      { name: "React", icon: "react.svg" },
+      { name: "Tailwind", icon: "tailwind-css.svg" },
+      { name: "Next.js", icon: "node-js.svg" },
+    ],
+    demoLink: "",
+    codeLink: "",
+    type: "Trabajo"
+  },
 ];
 
 

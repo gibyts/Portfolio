@@ -26,19 +26,19 @@ const NavBar = () => {
       {/* Desktop Links */}
       <div className="hidden min-[1130px]:flex space-x-6 text-gray-300 text-lg">
         <a href="#home" className="hover:text-[#ff3131]">
-          inicio
+          INICIO
         </a>
         <a href="#skills" className="hover:text-[#ff3131]">
-          habilidades
+          HABILIDADES
         </a>
         <a href="#projects" className="hover:text-[#ff3131]">
-          proyectos
+          PROYECTOS
         </a>
         <a href="#about" className="hover:text-[#ff3131]">
-          Sobre mi
+          SOBRE MI
         </a>
         <a href="#contact" className="hover:text-[#ff3131]">
-          Contacto
+          CONTACTO
         </a>
       </div>
 

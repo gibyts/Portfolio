@@ -101,7 +101,7 @@ const MyPortfolio = () => {
         <section id="experience" className="h-auto max-w-full p-4">
           <h2 className="flex flex-wrap justify-center items-center mb-6 text-2xl md:text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faSuitcase} className="text-3xl" />
-            Experiencia laboral
+            EXPERIENCIA LABORAL
           </h2>
 
           <ol className="relative border-l-4 border-gray-400 dark:border-gray-700 ml-4 md:ml-6">
@@ -158,7 +158,7 @@ const MyPortfolio = () => {
         <section id="skills" className="w-full min-h-screen pt-20">
           <h2 className="flex items-center justify-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faScrewdriverWrench} className="text-3xl" />
-            Habilidades
+            HABILIDADES
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-5">
