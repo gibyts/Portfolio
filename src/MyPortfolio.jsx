@@ -324,12 +324,12 @@ const MyPortfolio = () => {
           </h2>
 
           {/* Botones de filtro */}
-          <div className="flex gap-4 mb-8 flex-wrap">
+          <div className="flex gap-4 mb-8 flex-wrap justify-center py-6">
             {filters.map((f) => (
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-4 py-2 rounded-xl border transition ${
+                className={`px-4 py-2 rounded-xl border transition  ${
                   filter === f
                     ? "bg-gray-800 text-white border-gray-600"
                     : "bg-gray-100 text-gray-800 border-gray-300 hover:bg-gray-200"
