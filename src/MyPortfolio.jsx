@@ -119,13 +119,17 @@ const MyPortfolio = () => {
               </p>
               <div className="mt-2 p-3 md:p-4 bg-gray-800 text-white rounded-lg shadow-lg">
                 <p className="mb-2">
-                  📊 Automatización de procesos de riesgo crediticio con SQL y
-                  Python.
+                  📊 Automatización de procesos de análisis y gestión de riesgo crediticio utilizando SQL y .NET.
                 </p>
                 <p className="mb-2">
-                  🔍 Manejo de bases de datos y optimización de consultas.
+                  🔍 Diseño, administración y optimización de bases de datos, asegurando eficiencia en consultas y tiempos de respuesta.
                 </p>
-                <p className="mb-2">🚀 ...</p>
+                <p className="mb-2">
+                  🚀 Integración de sistemas y fuentes de datos (SQL Server, Access y Excel) para unificar la información y optimizar la toma de decisiones.
+                </p>
+                <p className="mb-2">
+                  ⚙️ Desarrollo e implementación de macros en Excel para automatizar la recopilación, procesamiento y consolidación de datos descargados de portales web, optimizando la elaboración de reportes y plantillas de análisis
+                </p>
               </div>
             </li>
 
@@ -143,12 +147,11 @@ const MyPortfolio = () => {
               </p>
               <div className="mt-2 p-3 md:p-4 bg-gray-800 text-white rounded-lg shadow-lg">
                 <p className="mb-2">
-                  🖥️ Desarrollo de aplicaciones de escritorio en Python.
+                  🖥️ Desarrollo de aplicaciones de escritorio personalizadas.
                 </p>
-                <p className="mb-2">🌐 Creación de páginas web dinámicas.</p>
+                <p className="mb-2">🌐 Creación de páginas web estáticas y dinámicas.</p>
                 <p className="mb-2">
-                  📈 Implementación de dashboards interactivos para
-                  visualización de datos.
+                  📈 Automatización de tareas y procesamiento de datos.
                 </p>
               </div>
             </li>
@@ -395,7 +398,7 @@ const MyPortfolio = () => {
                     </svg>
                     <h4 className="text-sm font-medium mt-2">Experiencia</h4>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      trainee
+                      practicante
                     </span>
                   </div>
 
