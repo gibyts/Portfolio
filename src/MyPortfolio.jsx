@@ -196,7 +196,7 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span className="absolute -top-8 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {techName}
                       </span>
                     </div>
@@ -237,7 +237,7 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span className="absolute -top-8 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {techName}
                       </span>
                     </div>
@@ -255,7 +255,7 @@ const MyPortfolio = () => {
               </div>
               <div className="grid grid-cols-3 gap-4 px-6">
                 {[
-                  "visual-studio-code",
+                  "vs-code",
                   "trello",
                   "git",
                   "visual-studio",
@@ -278,7 +278,7 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span className="absolute -top-8 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {techName}
                       </span>
                     </div>
@@ -310,7 +310,7 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span className="absolute -top-8 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {techName}
                       </span>
                     </div>

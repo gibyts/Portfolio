@@ -74,7 +74,7 @@ const ContactSection = () => {
             {/* Email */}
             <div>
               <label className="block text-sm font-medium text-white mb-1">
-                E-Mail
+                Correo Electrónico
               </label>
               <input
                 type="email"

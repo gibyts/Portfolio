@@ -44,7 +44,7 @@ const projectsData = [
     techStack: [
       { name: "React", icon: "react.svg" },
       { name: "Tailwind", icon: "tailwind-css.svg" },
-      { name: "Next.js", icon: "node-js.svg" },
+      { name: "Node.js", icon: "node-js.svg" },
     ],
     demoLink: "",
     codeLink: "",
