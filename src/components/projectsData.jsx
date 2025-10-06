@@ -5,7 +5,7 @@ const projectsData = [
       "Proyecto de automatización de procesos de lectura y carga del Reporte Crediticio Consolidado (RCC) en el Banco de la Nación.",
     image: "/assets/projectRCC.png",
     techStack: [
-      { name: "Python", icon: "python.svg" },
+      { name: ".NET", icon: ".NET.svg" },
       { name: "Tkinter", icon: "tkinter.png" },
     ],
     demoLink: "",
@@ -40,7 +40,7 @@ const projectsData = [
   {
     title: "Reporte SBS - Página Web",
     description: "Proyecto de una página web para la presentación de reportes de la Superintendencia de Banca, Seguros y AFP.",
-    image: "",
+    image: "/assets/ReporteSBS.png",
     techStack: [
       { name: "React", icon: "react.svg" },
       { name: "Tailwind", icon: "tailwind-css.svg" },
