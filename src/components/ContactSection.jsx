@@ -13,9 +13,9 @@ const ContactSection = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Lado izquierdo */}
         <div>
-          <h2 className="text-2xl  mb-8 text-white">
-            Comunícate conmigo
-          </h2>
+          <div className="flex justify-center py-4">
+            <h2 className="text-2xl  mb-8 text-white">Comunícate conmigo</h2>
+          </div>
           <div className="space-y-6">
             {/* Email */}
             <div className="p-6 bg-gray-800 border border-gray-200  rounded-xl shadow hover:shadow-lg transition">
@@ -53,9 +53,11 @@ const ContactSection = () => {
 
         {/* Lado derecho */}
         <div>
-          <h2 className="text-2xl  mb-8 text-white">
-            Escríbeme sobre tu proyecto
-          </h2>
+          <div className="flex justify-center py-4">
+            <h2 className="text-2xl  mb-8 text-white">
+              Escríbeme sobre tu proyecto
+            </h2>
+          </div>
           <form className="space-y-6">
             {/* Nombre */}
             <div>
