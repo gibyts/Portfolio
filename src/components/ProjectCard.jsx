@@ -1,40 +1,50 @@
-// ProjectCard.jsx
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { ExternalLink, Code, X } from "lucide-react";
 
 const ProjectCard = ({ title, description, techStack, image, demoLink, codeLink, type }) => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Permitir cerrar con tecla ESC
+  useEffect(() => {
+    const handleEsc = (e) => e.key === "Escape" && setIsOpen(false);
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
   return (
-    <article className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-      {/* Imagen */}
-      <div className="w-full md:w-1/2">
-        <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl l sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-          <img
-            src={image}
-            alt={title}
-            className="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-          />
+    <article className="relative flex flex-col md:flex-row md:space-x-8 bg-gray-900/40 backdrop-blur-sm border border-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+      
+      {/* Imagen con overlay */}
+      <div className="w-full md:w-1/2 relative group">
+        <img
+          src={image}
+          alt={title}
+          className="object-cover w-full h-64 md:h-full transition-all duration-500 group-hover:brightness-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent rounded-t-2xl flex items-end p-4">
+          <h3 className="text-2xl font-bold text-white">{title}</h3>
         </div>
       </div>
 
       {/* Contenido */}
-      <div className="w-full md:w-1/2 md:max-w-lg">
-        <h3 className="text-2xl font-bold text-white-800 dark:text-gray-100 mb-5">
-          {title}
-        </h3>
-
-        {/* Tipo (Personal / Trabajo) */}
-        <span className={`inline-block mb-4 px-3 py-1 text-xs rounded-full ${
-          type === "Trabajo" ? "bg-blue-500 text-white" : "bg-green-500 text-white"
-        }`}>
+      <div className="w-full md:w-1/2 p-6 flex flex-col justify-between">
+        {/* Tipo */}
+        <span
+          className={`self-start mb-3 px-3 py-1 text-xs rounded-full font-medium ${
+            type === "Trabajo" ? "bg-blue-600/80 text-white" : "bg-green-600/80 text-white"
+          }`}
+        >
           {type}
         </span>
 
+        {/* Descripción */}
+        <p className="text-gray-300 text-sm leading-relaxed mb-3">{description}</p>
+
         {/* Tecnologías */}
-        <ul className="flex flex-row mb-2 gap-x-2">
+        <ul className="flex flex-wrap gap-2 mb-4">
           {techStack.map((tech, index) => (
             <li key={index}>
-              <span className="flex gap-x-2 rounded-full text-xs bg-gray-100 text-black py-1 px-2">
+              <span className="flex items-center gap-x-1 bg-gray-800 text-gray-200 px-3 py-1 text-xs rounded-full transition-all hover:bg-gray-700 cursor-default">
                 <img src={`/assets/${tech.icon}`} alt={tech.name} className="size-4" />
                 {tech.name}
               </span>
@@ -42,45 +52,16 @@ const ProjectCard = ({ title, description, techStack, image, demoLink, codeLink,
           ))}
         </ul>
 
-        {/* Descripción */}
-        <div className="mt-2 text-white-700 dark:text-gray-400">{description}</div>
-
-        {/* Botón Ver más */}
-        <button
-          onClick={() => setIsOpen(true)}
-          className="mt-2 icon-red hover:underline text-sm"
-        >
-          Ver más
-        </button>
-
-        {/* Modal */}
-        {isOpen && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black/70 z-50">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg max-w-lg w-full relative">
-              <button
-                onClick={() => setIsOpen(false)}
-                className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
-              >
-                ✕
-              </button>
-              <h3 className="text-xl font-bold mb-4">{title}</h3>
-              <p className="text-gray-700 dark:text-gray-300">{description}</p>
-            </div>
-          </div>
-        )}
-
-
-
         {/* Botones */}
-        <footer className="flex items-end justify-start mt-4 gap-x-4">
+        <footer className="flex gap-3">
           {demoLink && (
             <a
               href={demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex bg-[#ff3131] text-white border-gray-300 items-center justify-center gap-2 px-3 py-2 text-base transition  hover:bg-gray-800 hover:border-gray-900 rounded-xl hover:text-white"
+              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-xl text-sm font-medium transition"
             >
-              Demo
+              <ExternalLink size={16} /> Demo
             </a>
           )}
           {codeLink && (
@@ -88,13 +69,35 @@ const ProjectCard = ({ title, description, techStack, image, demoLink, codeLink,
               href={codeLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 text-md hover:bg-gray-800 hover:border-gray-900 rounded-xl hover:text-white"
+              className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-xl text-sm font-medium border border-gray-600 transition"
             >
-              Código
+              <Code size={16} /> Código
             </a>
           )}
+          <button
+            onClick={() => setIsOpen(true)}
+            className="ml-auto text-sm text-gray-400 hover:text-gray-100 underline transition"
+          >
+            Ver más
+          </button>
         </footer>
       </div>
+
+      {/* Modal */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="relative bg-gray-900 text-gray-100 rounded-2xl shadow-2xl p-6 max-w-lg w-full transform transition-all scale-100 animate-fadeIn">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-3 right-3 text-gray-400 hover:text-white"
+            >
+              <X size={20} />
+            </button>
+            <h3 className="text-xl font-semibold mb-3">{title}</h3>
+            <p className="text-gray-300 text-sm">{description}</p>
+          </div>
+        </div>
+      )}
     </article>
   );
 };
