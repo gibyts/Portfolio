@@ -104,7 +104,7 @@ const ContactSection = () => {
                 type="text"
                 name="nombre"
                 placeholder="Escribe tu Nombre"
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:outline-none"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:outline-none bg-gray-800 text-white"
                 required
               />
             </div>
@@ -118,7 +118,7 @@ const ContactSection = () => {
                 type="email"
                 name="email"
                 placeholder="Escribe tu Correo"
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:outline-none"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:outline-none bg-gray-800 text-white"
                 required
               />
             </div>
@@ -132,7 +132,7 @@ const ContactSection = () => {
                 name="mensaje"
                 rows="4"
                 placeholder="Escribe acerca de tu proyecto"
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:outline-none"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:outline-none bg-gray-800 text-white resize-none"
                 required
               ></textarea>
             </div>
