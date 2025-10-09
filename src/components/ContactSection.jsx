@@ -38,7 +38,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="scroll-m-20 py-20">
+    <section id="contact" className="scroll-m-20 py-16">
       <h2 className="flex items-center justify-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
         <FontAwesomeIcon icon={faPhone} className="text-3xl" />
         CONTÁCTAME

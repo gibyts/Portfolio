@@ -334,7 +334,7 @@ const MyPortfolio = () => {
 
         <section
           id="projects"
-          className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl py-20"
+          className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl py-16"
         >
           <h2 className="flex items-center justify-center my-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faCode} className="text-3xl" />
@@ -368,7 +368,7 @@ const MyPortfolio = () => {
 
         <section
           id="about"
-          className="scroll-m-20 mx-auto container px-4 lg:max-w-4xl md:max-w-2xl pt-20"
+          className="scroll-m-20 mx-auto container px-4 lg:max-w-4xl md:max-w-2xl pt-16"
         >
           <h2 className="flex items-center justify-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faUser} className="text-3xl" />
