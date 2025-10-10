@@ -118,7 +118,7 @@ const MyPortfolio = () => {
                 {t("experience_section.job_title1")}
               </h3>
               <p className="text-sm md:text-base text-white/80 dark:text-white">
-                Banco de la Nación{" "}
+                {t("experience_section.company1")}{" "}
                 <span className="text-gray-400">{t("experience_section.range1")}</span>
               </p>
               <div className="mt-2 p-3 md:p-4 bg-gray-800 text-white rounded-lg shadow-lg">
@@ -146,7 +146,7 @@ const MyPortfolio = () => {
                 {t("experience_section.job_title2")}
               </h3>
               <p className="text-sm md:text-base text-white/80 dark:text-white">
-                {t("experience_section.role2_title2")}{" "}
+                {t("experience_section.company2")}{" "}
                 <span className="text-gray-400">{t("experience_section.range2")}</span>
               </p>
               <div className="mt-2 p-3 md:p-4 bg-gray-800 text-white rounded-lg shadow-lg">
@@ -383,7 +383,7 @@ const MyPortfolio = () => {
             {/* Columna derecha: cards arriba + texto abajo */}
             <div className="w-full md:w-2/3">
               {/* Tres cajas (cards) */}
-              <div className="w-full flex justify-center md:justify-end  ">
+              <div className="w-full flex justify-center md:justify-center  ">
                 <div className="flex gap-4">
                   {/* Card 1 */}
                   <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
@@ -457,13 +457,13 @@ const MyPortfolio = () => {
               </div>
 
               {/* Texto (debajo de las cards) */}
-              <div className="text-center md:text-left text-white/85 leading-relaxed">
+              <div className="text-center  text-white/85 leading-relaxed">
                 <p className="text-lg  mt-6">
                   {t("about_section.description")}
                 </p>
 
                 {/* Botón CV */}
-                <div className="mt-6 flex justify-center md:justify-start">
+                <div className="mt-6 flex justify-center md:justify-center">
                   <a
                     href="/assets/CV.pdf"
                     download
