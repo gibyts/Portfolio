@@ -14,6 +14,7 @@ import "./App.css";
 import ProjectCard from "./components/ProjectCard";
 import projectsData from "./components/projectsData";
 import ContactSection from "./components/ContactSection";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import { useState } from "react";
 import { useTranslation } from "react-i18next"; 
 
@@ -493,6 +494,7 @@ const MyPortfolio = () => {
         </section>
         <ContactSection />
       </div>
+      <ScrollToTopButton />
     </main>
   );
 };
