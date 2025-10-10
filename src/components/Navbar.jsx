@@ -93,11 +93,14 @@ const NavBar = () => {
             className="hover:text-[#ff3131] cursor-pointer"
           />
         </a>
-        <div className="border-l border-gray-700 pl-4 text-xl" onClick={toggleLanguage}  title="Cambiar idioma">
+
+        {/* Idioma */}
+        <div className="flex items-center border-l border-gray-700 pl-4 text-xl space-x-1 cursor-pointer" onClick={toggleLanguage}  title="Cambiar idioma">
           <FontAwesomeIcon
             icon={faGlobe}
-            className="hover:text-green-400 cursor-pointer"
+            className="hover:text-green-400"
           />
+          <span className="text-gray-300 text-sm">{i18n.language.toUpperCase()}</span>
         </div>
       </div>
 
@@ -115,22 +118,22 @@ const NavBar = () => {
       {isOpen && (
         <div className="absolute top-20 left-0 w-full bg-gray-900 rounded-b-2xl shadow-lg flex flex-col items-center space-y-4 py-6 text-gray-300 text-lg min-[1130px]:hidden">
           <a href="#home" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
-            inicio
+            {t("home")}
           </a>
           <a href="#experience" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
-            Experiencia
+            {t("experience")}
           </a>
           <a href="#skills" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
-            habilidades
+            {t("skills")}
           </a>
           <a href="#projects" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
-            proyectos
+            {t("projects")}
           </a>
           <a href="#about" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
-            Sobre mi
+            {t("about")}
           </a>
           <a href="#contact" className="hover:text-[#ff3131]" onClick={() => setIsOpen(false)}>
-            Contacto
+            {t("contact")}
           </a>
 
           {/* Mobile Social Icons */}
@@ -144,6 +147,20 @@ const NavBar = () => {
             <a href="https://www.youtube.com/@gibycode" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faYoutube} className="hover:text-red-500" />
             </a>
+            <a href="https://discord.com/invite/your-invite-code" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faDiscord} className="hover:text-indigo-500" />
+            </a>
+            
+            {/* Botón idioma móvil */}
+            <div
+              className="flex items-center space-x-1 cursor-pointer border-l border-gray-700 pl-4"
+              onClick={toggleLanguage}
+              title="Cambiar idioma"
+            >
+              <FontAwesomeIcon icon={faGlobe} className="hover:text-green-400" />
+              <span className="text-gray-300 text-sm">{i18n.language.toUpperCase()}</span>
+            </div>
+
           </div>
         </div>
       )}
