@@ -15,10 +15,12 @@ import ProjectCard from "./components/ProjectCard";
 import projectsData from "./components/projectsData";
 import ContactSection from "./components/ContactSection";
 import { useState } from "react";
+import { useTranslation } from "react-i18next"; 
 
 const MyPortfolio = () => {
   const [filter, setFilter] = useState("Todos");
   const filters = ["Todos", "Personal", "Trabajo"];
+  const { t } = useTranslation();
 
   // Filtrar proyectos por type
   const filteredProjects = projectsData.filter((project) =>
@@ -43,7 +45,7 @@ const MyPortfolio = () => {
         </div>
 
         <h2 className="py-6 text-3xl sm:text-5xl md:text-6xl lg:text-5xl font-bold text-center md:text-left">
-          Ingeniero de Software
+          {t("home_section.profession")}
         </h2>
         <div className="mb-3 py-2">
           <button
@@ -56,7 +58,7 @@ const MyPortfolio = () => {
              text-base sm:text-base md:text-base lg:text-lg 
              px-4 py-2 sm:px-4 sm:py-2 md:px-4 md:py-2 lg:px-6 lg:py-3"
           >
-            Disponible para trabajar
+            {t("home_section.workAvailable")}
           </button>
         </div>
 
@@ -103,7 +105,7 @@ const MyPortfolio = () => {
         <section id="experience" className="h-auto max-w-full p-4">
           <h2 className="flex flex-wrap justify-center items-center mb-6 text-2xl md:text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faSuitcase} className="text-3xl" />
-            EXPERIENCIA LABORAL
+            {t("experience_section.title")}
           </h2>
 
           <ol className="relative border-l-4 border-gray-400 dark:border-gray-700 ml-4 md:ml-6">
@@ -113,31 +115,24 @@ const MyPortfolio = () => {
                 <FontAwesomeIcon icon={faBriefcase} />
               </span>
               <h3 className="text-lg md:text-xl font-semibold text-white/80 dark:text-white">
-                Practicante de Riesgo Crediticio
+                {t("experience_section.job_title1")}
               </h3>
               <p className="text-sm md:text-base text-white/80 dark:text-white">
                 Banco de la Nación{" "}
-                <span className="text-gray-400">2024 - Actualidad</span>
+                <span className="text-gray-400">{t("experience_section.range1")}</span>
               </p>
               <div className="mt-2 p-3 md:p-4 bg-gray-800 text-white rounded-lg shadow-lg">
                 <p className="mb-2">
-                  📊 Automatización de procesos de análisis y gestión de riesgo
-                  crediticio utilizando SQL y .NET.
+                  📊 {t("experience_section.role1_description1")}
                 </p>
                 <p className="mb-2">
-                  🔍 Diseño, administración y optimización de bases de datos,
-                  asegurando eficiencia en consultas y tiempos de respuesta.
+                  🔍 {t("experience_section.role1_description2")}
                 </p>
                 <p className="mb-2">
-                  🚀 Integración de sistemas y fuentes de datos (SQL Server,
-                  Access y Excel) para unificar la información y optimizar la
-                  toma de decisiones.
+                  🚀 {t("experience_section.role1_description3")}
                 </p>
                 <p className="mb-2">
-                  ⚙️ Desarrollo e implementación de macros en Excel para
-                  automatizar la recopilación, procesamiento y consolidación de
-                  datos descargados de portales web, optimizando la elaboración
-                  de reportes y plantillas de análisis
+                  ⚙️ {t("experience_section.role1_description4")}
                 </p>
               </div>
             </li>
@@ -148,21 +143,21 @@ const MyPortfolio = () => {
                 <FontAwesomeIcon icon={faLaptopCode} />
               </span>
               <h3 className="text-lg md:text-xl font-semibold text-white/80 dark:text-white">
-                Desarrollador Freelance
+                {t("experience_section.job_title2")}
               </h3>
               <p className="text-sm md:text-base text-white/80 dark:text-white">
-                Independiente{" "}
-                <span className="text-gray-400">2023 - Actualidad</span>
+                {t("experience_section.role2_title2")}{" "}
+                <span className="text-gray-400">{t("experience_section.range2")}</span>
               </p>
               <div className="mt-2 p-3 md:p-4 bg-gray-800 text-white rounded-lg shadow-lg">
                 <p className="mb-2">
-                  🖥️ Desarrollo de aplicaciones de escritorio personalizadas.
+                  🖥️ {t("experience_section.role2_description1")}
                 </p>
                 <p className="mb-2">
-                  🌐 Creación de páginas web estáticas y dinámicas.
+                  🌐 {t("experience_section.role2_description2")}
                 </p>
                 <p className="mb-2">
-                  📈 Automatización de tareas y procesamiento de datos.
+                  📈 {t("experience_section.role2_description3")}
                 </p>
               </div>
             </li>
@@ -172,7 +167,7 @@ const MyPortfolio = () => {
         <section id="skills" className="w-full min-h-screen pt-20">
           <h2 className="flex items-center justify-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faScrewdriverWrench} className="text-3xl" />
-            HABILIDADES
+            {t("skills_section.title")}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-5">
@@ -180,7 +175,7 @@ const MyPortfolio = () => {
             <div className="border-2 border-gray-300 pb-4">
               <div className="flex justify-center pb-4">
                 <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-                  Lenguajes
+                  {t("skills_section.subtitle1")}
                 </h3>
               </div>
               <div className="grid grid-cols-3 gap-4 px-6">
@@ -220,7 +215,7 @@ const MyPortfolio = () => {
             <div className="border-2 border-gray-300 pb-4">
               <div className="flex justify-center pb-4">
                 <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-                  Frameworks y librerías
+                  {t("skills_section.subtitle2")}
                 </h3>
               </div>
               <div className="grid grid-cols-3 gap-4 px-6">
@@ -261,7 +256,7 @@ const MyPortfolio = () => {
             <div className="border-2 border-gray-300 pb-4">
               <div className="flex justify-center pb-4">
                 <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-                  Herramientas
+                  {t("skills_section.subtitle3")}
                 </h3>
               </div>
               <div className="grid grid-cols-3 gap-4 px-6">
@@ -302,7 +297,7 @@ const MyPortfolio = () => {
             <div className="border-2 border-gray-300 pb-4">
               <div className="flex justify-center pb-4">
                 <h3 className="mt-4 text-xl font-semibold text-white-700 uppercase tracking-wider p-3">
-                  Nube y proveedores
+                  {t("skills_section.subtitle4")}
                 </h3>
               </div>
               <div className="grid grid-cols-3 gap-4 px-6">
@@ -338,7 +333,7 @@ const MyPortfolio = () => {
         >
           <h2 className="flex items-center justify-center my-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faCode} className="text-3xl" />
-            PROYECTOS
+            {t("projects_section.title")}
           </h2>
 
           {/* Botones de filtro */}
@@ -372,7 +367,7 @@ const MyPortfolio = () => {
         >
           <h2 className="flex items-center justify-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faUser} className="text-3xl" />
-            SOBRE MI
+            {t("about_section.title")}
           </h2>
 
           <article className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-24 ">
@@ -407,9 +402,9 @@ const MyPortfolio = () => {
                         d="M12 11c0 1.657-1.343 3-3 3S6 12.657 6 11s1.343-3 3-3 3 1.343 3 3zM21 21v-2a4 4 0 00-4-4h-4"
                       />
                     </svg>
-                    <h4 className="text-sm font-medium mt-2">Experiencia</h4>
+                    <h4 className="text-sm font-medium mt-2">{t("about_section.box_title1")}</h4>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      practicante
+                      {t("about_section.box_subtitle1")}
                     </span>
                   </div>
 
@@ -430,7 +425,7 @@ const MyPortfolio = () => {
                         d="M9 12h6M9 16h6M5 8h14M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                       />
                     </svg>
-                    <h4 className="text-sm font-medium mt-2">Proyectos</h4>
+                    <h4 className="text-sm font-medium mt-2">{t("about_section.box_title2")}</h4>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                       +5
                     </span>
@@ -453,7 +448,7 @@ const MyPortfolio = () => {
                         d="M18 8a6 6 0 10-12 0v4a6 6 0 0012 0V8zM12 20v-4"
                       />
                     </svg>
-                    <h4 className="text-sm font-medium mt-2">Soporte</h4>
+                    <h4 className="text-sm font-medium mt-2">{t("about_section.box_title3")}</h4>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                       Online 24/7
                     </span>
@@ -464,9 +459,7 @@ const MyPortfolio = () => {
               {/* Texto (debajo de las cards) */}
               <div className="text-center md:text-left text-white/85 leading-relaxed">
                 <p className="text-lg  mt-6">
-                  Ingeniero de software con experiencia en desarrollo web y
-                  análisis de datos. Apasionado por la tecnología y la creación
-                  de soluciones innovadoras.
+                  {t("about_section.description")}
                 </p>
 
                 {/* Botón CV */}
@@ -476,7 +469,7 @@ const MyPortfolio = () => {
                     download
                     className="px-6 py-3 bg-[#ff3131] text-white rounded-xl shadow-md hover:bg-[#e02b2b] transition flex items-center gap-2"
                   >
-                    Descargar CV
+                    {t("about_section.download_cv")}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5"

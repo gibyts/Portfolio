@@ -9,6 +9,53 @@
   "about": "About me",
   "contact": "Contact",
 
+  "home_section": {
+    "profession": "Software Engineering",
+    "workAvailable": "Available for work"
+  },
+
+  "experience_section": {
+    "title": "WORK EXPERIENCE",
+    "job_title1": "Credit Risk Intern",
+    "range1": "2024 - Present",
+    "role1_description1":"Automation of credit risk analysis and management processes using SQL and .NET.",
+    "role1_description2":"Design, administration, and optimization of relational databases, ensuring efficiency in queries and response times.",
+    "role1_description3":"Integration of systems and data sources (SQL Server, Access, and Excel) to unify information and optimize decision-making.",
+    "role1_description4":"Development and implementation of Excel macros to automate the collection, processing, and consolidation of data downloaded from web portals, optimizing the preparation of reports and analysis templates.",
+    "job_title2": "Freelance Developer",
+    "range2": "2023 - Present",
+    "role2_title2": "Freelance",
+    "role2_description1":" Custom desktop application development.",
+    "role2_description2":" Creation of static and dynamic web pages.",
+    "role2_description3":" Task automation and data processing."
+
+  },
+
+  "skills_section":{
+    "title": "SKILLS",
+    "subtitle1": "Languages",
+    "subtitle2": "Frameworks and Libraries",
+    "subtitle3": "Tools",
+    "subtitle4": "Cloud and Providers"
+  },
+
+  "projects_section": {
+    "title": "PROJECTS",
+    "filter_title1": "All",
+    "filter_title2": "Personal",
+    "filter_title3": "Work"
+  },
+
+  "about_section": {
+    "title": "ABOUT ME",
+    "box_title1": "Experience",
+    "box_subtitle1": "2+ Intern",
+    "box_title2": "Projects",
+    "box_title3": "Support",
+    "description": "Software engineer with experience in web development and data management. Passionate about technology and creating innovative solutions.",
+    "download_cv": "Download CV"
+  },
+
   "contact_section": {
     "title": "CONTACT ME",
     "subtitle": "Get in touch",
@@ -25,6 +72,9 @@
     "sending": "Sending...",
     "successMessage": "Your message was sent successfully!",
     "errorMessage": "An error occurred while sending the message."
+  },
+  "footer": {
+    "text": "All rights reserved."
   }
 
 

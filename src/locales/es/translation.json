@@ -8,6 +8,55 @@
   "projects": "proyectos",
   "about": "sobre mi",
   "contact": "contacto",
+
+  "home_section": {
+    "profession": "Ingeniero de Software",
+    "workAvailable": "Disponible para trabajar"
+  },  
+
+
+  "experience_section": {
+    "title": "EXPERIENCIA LABORAL",
+    "job_title1": "Practicante de Riesgo Crediticio",
+    "range1": "2024 - Actualidad",
+    "role1_description1":"Automatización de procesos de análisis y gestión de riesgo crediticio utilizando SQL y .NET.", 
+    "role1_description2": "Diseño, administración y optimización de bases de datos relacionales, asegurando eficiencia en consultas y tiempos de respuesta.",
+    "role1_description3": "Integración de sistemas y fuentes de datos (SQL Server, Access y Excel) para unificar la información y optimizar la toma de decisiones.",
+    "role1_description4": "Desarrollo e implementación de macros en Excel para automatizar la recopilación, procesamiento y consolidación de datos descargados de portales web, optimizando la elaboración de reportes y plantillas de análisis.",
+    "job_title2": "Desarrollador Freelance",
+    "range2": "2023 - Actualidad",
+    "role2_title2": "Independiente",
+    "role2_description1": "Desarrollo de aplicaciones de escritorio personalizadas.",
+    "role2_description2": "Creación de páginas web estáticas y dinámicas.",
+    "role2_description3": "Automatización de tareas y procesamiento de datos."
+
+  },
+
+  "skills_section":{
+    "title": "HABILIDADES",
+    "subtitle1": "Lenguajes",
+    "subtitle2": "Frameworks y Librerías",
+    "subtitle3": "Herramientas",
+    "subtitle4": "Nube y proveedores"
+  },
+
+  "projects_section": {
+    "title": "PROYECTOS",
+    "filter_title1": "Todos",
+    "filter_title2": "Personal",
+    "filter_title3": "Trabajo"
+  },
+
+  "about_section" : {
+    "title": "SOBRE MI",
+    "box_title1": "Experiencia",
+    "box_subtitle1": "2+ Practicante",
+    "box_title2": "Proyectos",
+    "box_title3": "Soporte",
+    "description": "Ingeniero de software con experiencia en desarrollo web y manejo de datos. Apasionado por la tecnología y la creación de soluciones innovadoras.",
+    "download_cv": "Descargar CV"
+  },
+
   "contact_section": {
     "title": "CONTÁCTAME",
     "subtitle": "Ponte en contacto",
@@ -23,5 +72,8 @@
     "sending": "Enviando...",
     "successMessage": "¡Tu mensaje fue enviado con éxito!",
     "errorMessage": "Ocurrió un error al enviar el mensaje."
+  },
+  "footer": {
+    "text": "Todos los derechos reservados."
   }
 }
