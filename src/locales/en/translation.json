@@ -1,8 +1,33 @@
 {
-  "name": "Gibran Tarrillo",
-  "title": "Software Engineering Graduate.",
-  "subtitle": "Passionate about technology and creating innovative solutions",
+  "title": "Software Engineerings",
   "work_available": "Available for work",
   "experience": "Work Experience",
-  "about_me": "ABOUT ME"
+  "about_me": "ABOUT ME",
+  "home": "home",
+  "skills": "skills",
+  "projects": "projects",
+  "about": "About me",
+  "contact": "Contact",
+
+  "contact_section": {
+    "title": "CONTACT ME",
+    "subtitle": "Get in touch",
+    "email": "Email",
+    "writeMe": "Write me",
+    "projectTitle": "Write me about your project",
+    "nameLabel": "Name",
+    "namePlaceholder": "Enter your Name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your Email",
+    "projectLabel": "Project",
+    "projectPlaceholder": "Tell me about your project",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Your message was sent successfully!",
+    "errorMessage": "An error occurred while sending the message."
+  }
+
+
 }
+
+

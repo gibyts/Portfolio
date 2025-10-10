@@ -1,8 +1,27 @@
 {
-  "name": "Gibran Tarrillo",
-  "title": "Egresado de ingeniería de Software.",
-  "subtitle": "Apasionado por la tecnología y crear soluciones innovadoras",
+  "title": "Ingeniero de Software",
   "work_available": "Disponible para trabajar",
   "experience": "Experiencia laboral",
-  "about_me": "SOBRE MI"
+  "about_me": "SOBRE MI",
+  "home": "inicio",
+  "skills": "habilidades",
+  "projects": "proyectos",
+  "about": "sobre mi",
+  "contact": "contacto",
+  "contact_section": {
+    "title": "CONTÁCTAME",
+    "subtitle": "Ponte en contacto",
+    "projectTitle": "Escríbeme acerca de tu proyecto",
+    "writeMe": "Escríbeme",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Escribe tu Nombre",
+    "emailLabel": "Correo Electrónico",
+    "emailPlaceholder": "Escribe tu Correo",
+    "projectLabel": "Proyecto",
+    "projectPlaceholder": "Escribe acerca de tu proyecto",
+    "sendMessage": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "successMessage": "¡Tu mensaje fue enviado con éxito!",
+    "errorMessage": "Ocurrió un error al enviar el mensaje."
+  }
 }

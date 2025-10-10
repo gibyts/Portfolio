@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -10,6 +11,14 @@ import {
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  // Función para cambiar idioma
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "es" ? "en" : "es";
+    i18n.changeLanguage(newLang);
+    localStorage.setItem("lang", newLang);
+  };
 
   return (
     <div
@@ -24,21 +33,21 @@ const NavBar = () => {
       </div>
 
       {/* Desktop Links */}
-      <div className="hidden min-[1130px]:flex space-x-6 text-gray-300 text-lg">
+      <div className="hidden min-[1130px]:flex space-x-6 text-gray-300 text-lg uppercase">
         <a href="#home" className="hover:text-[#ff3131]">
-          INICIO
+          {t("home")}
         </a>
         <a href="#skills" className="hover:text-[#ff3131]">
-          HABILIDADES
+          {t("skills")}
         </a>
         <a href="#projects" className="hover:text-[#ff3131]">
-          PROYECTOS
+          {t("projects")}
         </a>
         <a href="#about" className="hover:text-[#ff3131]">
-          SOBRE MI
+          {t("about")}
         </a>
         <a href="#contact" className="hover:text-[#ff3131]">
-          CONTACTO
+          {t("contact")}
         </a>
       </div>
 
@@ -84,7 +93,7 @@ const NavBar = () => {
             className="hover:text-[#ff3131] cursor-pointer"
           />
         </a>
-        <div className="border-l border-gray-700 pl-4 text-xl">
+        <div className="border-l border-gray-700 pl-4 text-xl" onClick={toggleLanguage}  title="Cambiar idioma">
           <FontAwesomeIcon
             icon={faGlobe}
             className="hover:text-green-400 cursor-pointer"

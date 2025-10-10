@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 const ContactSection = () => {
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const { t } = useTranslation(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,14 +43,14 @@ const ContactSection = () => {
     <section id="contact" className="scroll-m-20 py-16">
       <h2 className="flex items-center justify-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
         <FontAwesomeIcon icon={faPhone} className="text-3xl" />
-        CONTÁCTAME
+        {t("contact_section.title")}
       </h2>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Lado izquierdo */}
         <div>
           <div className="flex justify-center pt-6">
-            <h2 className="text-2xl mb-8 text-white">Comunícate conmigo</h2>
+            <h2 className="text-2xl mb-8 text-white">{t("contact_section.subtitle")}</h2>
           </div>
 
           <div className="space-y-6">
@@ -56,14 +58,14 @@ const ContactSection = () => {
             <div className="p-6 bg-gray-800 border border-gray-200 rounded-xl shadow hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-2">
                 <FaEnvelope className="text-2xl text-white" />
-                <h3 className="font-semibold text-lg">Email</h3>
+                <h3 className="font-semibold text-lg">{t("contact_section.emailLabel")}</h3>
               </div>
               <p className="text-white">gibrantarrillo@gmail.com</p>
               <a
                 href="mailto:gibrantarrillo@gmail.com"
                 className="text-sm text-[#ff3131] mt-2 inline-block hover:underline"
               >
-                Escríbeme →
+                {t("contact_section.writeMe")} →
               </a>
             </div>
 
@@ -80,7 +82,7 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="text-sm text-[#ff3131] mt-2 inline-block hover:underline"
               >
-                Escríbeme →
+                {t("contact_section.writeMe")} →
               </a>
             </div>
           </div>
@@ -90,7 +92,7 @@ const ContactSection = () => {
         <div>
           <div className="flex justify-center pt-6">
             <h2 className="text-2xl mb-8 text-white">
-              Escríbeme sobre tu proyecto
+              {t("contact_section.projectTitle")}
             </h2>
           </div>
 
@@ -98,12 +100,12 @@ const ContactSection = () => {
             {/* Nombre */}
             <div>
               <label className="block text-sm font-medium text-white mb-1">
-                Nombre
+                {t("contact_section.nameLabel")}
               </label>
               <input
                 type="text"
                 name="nombre"
-                placeholder="Escribe tu Nombre"
+                placeholder={t("contact_section.namePlaceholder")}
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:outline-none bg-gray-800 text-white"
                 required
               />
@@ -112,12 +114,12 @@ const ContactSection = () => {
             {/* Email */}
             <div>
               <label className="block text-sm font-medium text-white mb-1">
-                Correo Electrónico
+                {t("contact_section.emailLabel")}
               </label>
               <input
                 type="email"
                 name="email"
-                placeholder="Escribe tu Correo"
+                placeholder={t("contact_section.emailPlaceholder")}
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:outline-none bg-gray-800 text-white"
                 required
               />
@@ -126,12 +128,12 @@ const ContactSection = () => {
             {/* Proyecto */}
             <div>
               <label className="block text-sm font-medium text-white mb-1">
-                Proyecto
+                {t("contact_section.projectLabel")}
               </label>
               <textarea
                 name="mensaje"
                 rows="4"
-                placeholder="Escribe acerca de tu proyecto"
+                placeholder={t("contact_section.projectPlaceholder")}
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:outline-none bg-gray-800 text-white resize-none"
                 required
               ></textarea>
@@ -143,17 +145,17 @@ const ContactSection = () => {
               disabled={status === "loading"}
               className="w-full bg-[#ff3131] text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-[#e02b2b] transition disabled:opacity-50"
             >
-              {status === "loading" ? "Enviando..." : "Enviar Mensaje"}
+              {status === "loading" ? t("contact_section.sending") : t("contact_section.sendMessage")}
             </button>
 
             {status === "success" && (
               <p className="text-green-400 text-center mt-3">
-                ✅ ¡Tu mensaje fue enviado con éxito!
+                ✅ {t("contact_section.successMessage")}
               </p>
             )}
             {status === "error" && (
               <p className="text-red-400 text-center mt-3">
-                ❌ Ocurrió un error al enviar el mensaje.
+                ❌ {t("contact_section.errorMessage")}
               </p>
             )}
           </form>
