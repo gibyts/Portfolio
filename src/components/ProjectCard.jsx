@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { ExternalLink, Code, X } from "lucide-react";
 
 const ProjectCard = ({ title, description, techStack, image, demoLink, codeLink, type }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   // Permitir cerrar con tecla ESC
   useEffect(() => {
@@ -78,7 +80,7 @@ const ProjectCard = ({ title, description, techStack, image, demoLink, codeLink,
             onClick={() => setIsOpen(true)}
             className="ml-auto text-sm text-gray-400 hover:text-gray-100 underline transition"
           >
-            Ver más
+            {t("projects_section.more_info")}
           </button>
         </footer>
       </div>
