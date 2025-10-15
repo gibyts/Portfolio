@@ -20,15 +20,24 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next"; 
 
 const MyPortfolio = () => {
-  const [filter, setFilter] = useState("Todos");
-  const filters = ["Todos", "Personal", "Trabajo"];
   const { t } = useTranslation();
 
-  // Filtrar proyectos por type
-  const filteredProjects = projectsData.filter((project) =>
-    filter === "Todos" ? true : project.type === filter
-  );
+  const filters = [
+    { key: "All", title: t("projects_section.filter_title1") },
+    { key: "Personal", title: t("projects_section.filter_title2") },
+    { key: "Work", title: t("projects_section.filter_title3") },
+  ];
 
+  const [filter, setFilter] = useState("All");
+    
+
+      // Filtramos según la clave, no según la traducción
+  const filteredProjects = projectsData.filter((project) => {
+    if (filter === "All") return true;
+    if (filter === "Personal") return project.type === "Personal";
+    if (filter === "Work") return project.type === "Trabajo";
+    return true;
+  });
   return (
     <main>
       <section
@@ -342,23 +351,23 @@ const MyPortfolio = () => {
           <div className="flex gap-4 mb-8 flex-wrap justify-center py-6">
             {filters.map((f) => (
               <button
-                key={f}
-                onClick={() => setFilter(f)}
+                key={f.key}
+                onClick={() => setFilter(f.key)}
                 className={`px-4 py-2 rounded-xl border transition  ${
-                  filter === f
+                  filter === f.key
                     ? "bg-gray-800 text-white border-gray-600"
                     : "bg-gray-100 text-gray-800 border-gray-300 hover:bg-gray-200"
                 }`}
               >
-                {f}
+                {f.title}
               </button>
             ))}
           </div>
 
           {/* Render de proyectos filtrados */}
           <div className="flex flex-col gap-y-16">
-            {filteredProjects.map((project, idx) => (
-              <ProjectCard key={idx} {...project} />
+            {filteredProjects.map((project, i) => (
+              <ProjectCard key={i} {...project} />
             ))}
           </div>
         </Section>

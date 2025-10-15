@@ -48,6 +48,14 @@
     "more_info": "See more"
   },
 
+  "rcc": {
+    "title": "RCC - Data Reading and Loading Process",
+    "description": "Automation project for reading and loading processes of the Consolidated Credit Report (RCC) at the Bank of the Nation of Peru.",
+    "detailedDescription": "This project involves the automation of data extraction, transformation, and loading (ETL) processes for the RCC, improving efficiency and accuracy in reporting."
+
+  },
+
+
   "about_section": {
     "title": "ABOUT",
     "box_title1": "Experience",

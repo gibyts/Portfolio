@@ -48,6 +48,12 @@
     "filter_title3": "Trabajo",
     "more_info": "Ver más"
   },
+  "rcc": {
+    "title": "RCC - Proceso de lectura y carga de datos",
+    "description": "Proyecto de automatización de procesos de lectura y carga del Reporte Crediticio Consolidado (RCC) en el Banco de la Nación.",
+    "detailedDescription": "Este proyecto implica la automatización de procesos de extracción, transformación y carga de datos (ETL) para el RCC, mejorando la eficiencia y precisión en la elaboración de informes."
+
+  },
 
   "about_section" : {
     "title": "SOBRE MI",

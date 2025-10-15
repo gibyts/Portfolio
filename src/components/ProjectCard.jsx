@@ -2,9 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ExternalLink, Code, X } from "lucide-react";
 
-const ProjectCard = ({ title, description, techStack, image, demoLink, codeLink, type }) => {
+const ProjectCard = ({ title, description,detailedDescription, techStack, image, demoLink, codeLink, type }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
+
+  
+    const translatedType =
+    type === "Trabajo"
+      ? t("projects_section.filter_title3")
+      : t("projects_section.filter_title2");
 
   // Permitir cerrar con tecla ESC
   useEffect(() => {
@@ -20,11 +26,11 @@ const ProjectCard = ({ title, description, techStack, image, demoLink, codeLink,
       <div className="w-full md:w-1/2 relative group">
         <img
           src={image}
-          alt={title}
+          alt={t(title)}
           className="object-cover w-full h-64 md:h-full transition-all duration-500 group-hover:brightness-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent rounded-t-2xl flex items-end p-4">
-          <h3 className="text-2xl font-bold text-white">{title}</h3>
+          <h3 className="text-2xl font-bold text-white">{t(title)}</h3>
         </div>
       </div>
 
@@ -36,11 +42,11 @@ const ProjectCard = ({ title, description, techStack, image, demoLink, codeLink,
             type === "Trabajo" ? "bg-blue-600/80 text-white" : "bg-green-600/80 text-white"
           }`}
         >
-          {type}
+          {translatedType}
         </span>
 
         {/* Descripción */}
-        <p className="text-gray-300 text-sm leading-relaxed mb-3">{description}</p>
+        <p className="text-gray-300 text-sm leading-relaxed mb-3">{t(description)}</p>
 
         {/* Tecnologías */}
         <ul className="flex flex-wrap gap-2 mb-4">
@@ -95,8 +101,8 @@ const ProjectCard = ({ title, description, techStack, image, demoLink, codeLink,
             >
               <X size={20} />
             </button>
-            <h3 className="text-xl font-semibold mb-3">{title}</h3>
-            <p className="text-gray-300 text-sm">{description}</p>
+            <h3 className="text-xl font-semibold mb-3">{t(title)}</h3>
+            <p className="text-gray-300 text-sm">{t(detailedDescription)}</p>
           </div>
         </div>
       )}
