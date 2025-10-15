@@ -3,7 +3,7 @@ const projectsData = [
     title: "rcc.title",
     description: "rcc.description",
     detailedDescription: "rcc.detailedDescription",
-    image: "/assets/projectRCC.png",
+    image: "/assets/project_rcc.png",
     techStack: [
       { name: ".NET", icon: ".NET.svg" },
       { name: "Tkinter", icon: "tkinter.png" },
