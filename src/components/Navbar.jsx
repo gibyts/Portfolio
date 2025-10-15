@@ -33,9 +33,12 @@ const NavBar = () => {
       </div>
 
       {/* Desktop Links */}
-      <div className="hidden min-[1130px]:flex space-x-6 text-gray-300 text-lg uppercase">
+      <div className="hidden min-[1280px]:flex space-x-6 text-gray-300 text-lg ">
         <a href="#home" className="hover:text-[#ff3131]">
           {t("home")}
+        </a>
+        <a href="#experience" className="hover:text-[#ff3131]">
+          {t("experience")}
         </a>
         <a href="#skills" className="hover:text-[#ff3131]">
           {t("skills")}
@@ -52,7 +55,7 @@ const NavBar = () => {
       </div>
 
       {/* Social Icons */}
-      <div className="hidden min-[1130px]:flex items-center space-x-8 text-xl text-gray-300">
+      <div className="hidden min-[1280px]:flex items-center space-x-8 text-xl text-gray-300">
         <a
           href="https://x.com/GibyCode"
           target="_blank"
@@ -105,7 +108,7 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="min-[1130px]:hidden">
+      <div className="min-[1280px]:hidden">
         <button onClick={() => setIsOpen(!isOpen)}>
           <FontAwesomeIcon
             icon={isOpen ? faTimes : faBars}

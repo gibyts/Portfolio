@@ -1,13 +1,13 @@
 {
   "title": "Ingeniero de Software",
   "work_available": "Disponible para trabajar",
-  "experience": "Experiencia laboral",
-  "about_me": "SOBRE MI",
-  "home": "inicio",
-  "skills": "habilidades",
-  "projects": "proyectos",
-  "about": "sobre mi",
-  "contact": "contacto",
+  "experience": "Experiencia",
+  "about_me": "Sobre mí",
+  "home": "Inicio",
+  "skills": "Habilidades",
+  "projects": "Proyectos",
+  "about": "Sobre mí",
+  "contact": "Contacto",
 
   "home_section": {
     "profession": "Ingeniero de Software",
@@ -16,7 +16,7 @@
 
 
   "experience_section": {
-    "title": "EXPERIENCIA LABORAL",
+    "title": "EXPERIENCIA",
     "job_title1": "Practicante de Riesgo Crediticio",
     "range1": "2024 - Actualidad",
     "company1": "Banco de la Nación",
@@ -60,7 +60,7 @@
   },
 
   "contact_section": {
-    "title": "CONTÁCTAME",
+    "title": "CONTACTO",
     "subtitle": "Ponte en contacto",
     "projectTitle": "Escríbeme acerca de tu proyecto",
     "writeMe": "Escríbeme",

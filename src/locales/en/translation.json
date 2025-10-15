@@ -1,12 +1,12 @@
 {
   "title": "Software Engineerings",
   "work_available": "Available for work",
-  "experience": "Work Experience",
-  "about_me": "ABOUT ME",
-  "home": "home",
-  "skills": "skills",
-  "projects": "projects",
-  "about": "About me",
+  "experience": "Experience",
+  "about_me": "ABOUT",
+  "home": "Home",
+  "skills": "Skills",
+  "projects": "Projects",
+  "about": "About",
   "contact": "Contact",
 
   "home_section": {
@@ -15,7 +15,7 @@
   },
 
   "experience_section": {
-    "title": "WORK EXPERIENCE",
+    "title": "EXPERIENCE",
     "job_title1": "Credit Risk Intern",
     "range1": "2024 - Present",
     "company1": "Bank of the Nation of Peru",
@@ -49,7 +49,7 @@
   },
 
   "about_section": {
-    "title": "ABOUT ME",
+    "title": "ABOUT",
     "box_title1": "Experience",
     "box_subtitle1": "2+ Intern",
     "box_title2": "Projects",
@@ -59,7 +59,7 @@
   },
 
   "contact_section": {
-    "title": "CONTACT ME",
+    "title": "CONTACT",
     "subtitle": "Get in touch",
     "email": "Email",
     "writeMe": "Write me",
