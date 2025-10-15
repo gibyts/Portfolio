@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import Section  from "./Section"; 
 
 const ContactSection = () => {
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
@@ -40,7 +41,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="scroll-m-20 py-16">
+    <Section id="contact" className="w-full min-h-screen scroll-m-20 py-16">
       <h2 className="flex items-center justify-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
         <FontAwesomeIcon icon={faPhone} className="text-3xl" />
         {t("contact_section.title")}
@@ -161,7 +162,7 @@ const ContactSection = () => {
           </form>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
