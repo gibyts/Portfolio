@@ -33,7 +33,7 @@ const NavBar = () => {
       </div>
 
       {/* Desktop Links */}
-      <div className="hidden min-[1280px]:flex space-x-6 text-gray-300 text-lg ">
+      <div className="hidden min-[1280px]:flex space-x-6 text-gray-300 text-lg min-[1456px]:absolute min-[1456px]:left-1/2 min-[1456px]:transform min-[1456px]:-translate-x-1/2">
         <a href="#home" className="hover:text-[#ff3131]">
           {t("home")}
         </a>
