@@ -113,7 +113,7 @@ const MyPortfolio = () => {
         </div>
       </section>
       <div className="scroll-m-20 mx-auto container px-4 lg:max-w-4xl md:max-w-2xl">
-        <Section id="experience" className="h-auto max-w-full p-4">
+        <Section id="experience" className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl py-16">
           <h2 className="flex flex-wrap justify-center items-center mb-6 text-2xl md:text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faSuitcase} className="text-3xl" />
             {t("experience_section.title")}
@@ -175,7 +175,7 @@ const MyPortfolio = () => {
           </ol>
         </Section>
 
-        <Section id="skills" className="w-full min-h-screen pt-20">
+        <Section id="skills" className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl py-16">
           <h2 className="flex items-center justify-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faScrewdriverWrench} className="text-3xl" />
             {t("skills_section.title")}
