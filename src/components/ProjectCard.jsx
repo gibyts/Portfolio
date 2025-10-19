@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ExternalLink, Code, X } from "lucide-react";
 
-const ProjectCard = ({ title, description,detailedDescription, techStack, image, demoLink, codeLink, type }) => {
+const ProjectCard = ({ title, description,detailedDescription1, detailedDescription2, detailedDescription3, techStack, image, demoLink, codeLink, type }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
 
@@ -102,7 +102,9 @@ const ProjectCard = ({ title, description,detailedDescription, techStack, image,
               <X size={20} />
             </button>
             <h3 className="text-xl font-semibold mb-3">{t(title)}</h3>
-            <p className="text-gray-300 text-sm">{t(detailedDescription)}</p>
+            <p className="text-gray-300 text-sm">{t(detailedDescription1)}</p>
+            <p className="text-gray-300 text-sm">{t(detailedDescription2)}</p>
+            <p className="text-gray-300 text-sm">{t(detailedDescription3)}</p>
           </div>
         </div>
       )}

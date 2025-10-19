@@ -13,10 +13,11 @@ const projectsData = [
     type: "Trabajo"
   },
   {
-    title: "La Once - Página Web",
-    description:
-      "Proyecto de una página web para un negocio online de venta de humitas y tamales.",
-    detailedDescription: "la_once.detailedDescription",
+    title: "la_once.title",
+    description: "la_once.description",
+    detailedDescription1: "la_once.detailedDescription1",
+    detailedDescription2: "la_once.detailedDescription2",
+    detailedDescription3: "la_once.detailedDescription3",
     image: "/assets/LAONCE.png",
     techStack: [
       { name: "React", icon: "react.svg" },

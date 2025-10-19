@@ -55,6 +55,15 @@
 
   },
 
+  "la_once": {
+    "title": "La Once",
+    "description": "Project for an online business selling humitas and tamales.",
+    "detailedDescription1": "LaOnce is a platform that allows users to make online purchases of tamales and humitas, offering an intuitive and secure user experience.",
+    "detailedDescription2": "Also includes features such as order tracking, user management, and a secure payment system.",
+    "detailedDescription3": "La Once seeks to facilitate access to these traditional products, promoting local culture and gastronomy."
+
+  },
+
 
   "about_section": {
     "title": "ABOUT",
