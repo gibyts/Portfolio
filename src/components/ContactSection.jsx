@@ -58,7 +58,7 @@ const ContactSection = () => {
             {/* Email */}
             <div className="p-6 bg-gray-800 border border-gray-200 rounded-xl shadow hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-2">
-                <FaEnvelope className="text-2xl text-white" />
+                <FaEnvelope className="text-2xl text-[#ff3131]" />
                 <h3 className="font-semibold text-lg">{t("contact_section.emailLabel")}</h3>
               </div>
               <p className="text-white">gibrantarrillo@gmail.com</p>
@@ -73,7 +73,7 @@ const ContactSection = () => {
             {/* WhatsApp */}
             <div className="p-6 bg-gray-800 border border-gray-200 rounded-xl shadow hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-2">
-                <FaWhatsapp className="text-2xl text-green-600" />
+                <FaWhatsapp className="text-2xl text-[#ff3131]" />
                 <h3 className="font-semibold text-lg">WhatsApp</h3>
               </div>
               <p className="text-white">960165362</p>
