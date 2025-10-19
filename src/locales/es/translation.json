@@ -56,12 +56,16 @@
   },
 
   "la_once": {
-    "title": "La Once ",
+    "title": "La Once",
     "description": "Proyecto de una página web para un negocio online de venta de humitas y tamales.",
     "detailedDescription1": "La Once es una plataforma que permite a los usuarios realizar compras en línea de tamales y humitas, ofreciendo una experiencia de usuario intuitiva y segura.",
     "detailedDescription2": "También incluye características como seguimiento de pedidos, gestión de usuarios y un sistema de pago seguro.",
     "detailedDescription3": "La Once busca facilitar el acceso a estos productos tradicionales, promoviendo la cultura y gastronomía local."
 
+  },
+
+  "flowers" : {
+    "title": "Flowers"
   },
 
 

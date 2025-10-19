@@ -1,3 +1,5 @@
+import { desc } from "framer-motion/client";
+
 const projectsData = [
   {
     title: "rcc.title",
@@ -6,7 +8,7 @@ const projectsData = [
     image: "/assets/project_rcc.png",
     techStack: [
       { name: ".NET", icon: ".NET.svg" },
-      { name: "Tkinter", icon: "tkinter.png" },
+      { name: "SQL", icon: "sql.svg" },
     ],
     demoLink: "",
     codeLink: "",
@@ -28,7 +30,7 @@ const projectsData = [
     type: "Personal"
   },
   {
-    title: "Flowers - Página Web",
+    title: "Flowers",
     description: "Proyecto de una página web de flores con React y Tailwind.",
     detailedDescription: "projects_section.details.flowers",
     image: "/assets/FLOWERS.png",
@@ -41,7 +43,7 @@ const projectsData = [
     type: "Personal"
   },
   {
-    title: "Reporte SBS - Página Web",
+    title: "Reporte SBS ",
     description: "Proyecto de una página web para la presentación de reportes de la Superintendencia de Banca, Seguros y AFP.",
     detailedDescription: "projects_section.details.reporte_sbs",
     image: "/assets/ReporteSBS.png",
@@ -54,6 +56,19 @@ const projectsData = [
     codeLink: "",
     type: "Trabajo"
   },
+  {
+    title: "Convertidor",
+    description: "Aplicación de escritorio para convertir boletas electrónicas y tabularlos en excel.",
+    detailedDescription: "projects_section.details.convertidor",
+    image: "/assets/convertidor.png",
+    techStack: [
+      { name: "Python", icon: "python.svg" },
+      { name: "Tkinter", icon: "tkinter.png" },
+    ],
+    demoLink: "",
+    codeLink: "",
+    type: "Trabajo"
+  }
 ];
 
 
