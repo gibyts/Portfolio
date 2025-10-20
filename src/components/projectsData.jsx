@@ -1,5 +1,3 @@
-import { desc } from "framer-motion/client";
-
 const projectsData = [
   {
     title: "rcc.title",
@@ -31,8 +29,10 @@ const projectsData = [
   },
   {
     title: "Flowers",
-    description: "Proyecto de una página web de flores con React y Tailwind.",
-    detailedDescription: "projects_section.details.flowers",
+    description: "flowers.description",
+    detailedDescription1: "flowers.detailedDescription1",
+    detailedDescription2: "flowers.detailedDescription2",
+    detailedDescription3: "flowers.detailedDescription3",
     image: "/assets/FLOWERS.png",
     techStack: [
       { name: "React", icon: "react.svg" },
@@ -43,9 +43,9 @@ const projectsData = [
     type: "Personal"
   },
   {
-    title: "Reporte SBS ",
-    description: "Proyecto de una página web para la presentación de reportes de la Superintendencia de Banca, Seguros y AFP.",
-    detailedDescription: "projects_section.details.reporte_sbs",
+    title: "reporte_sbs.title",
+    description: "reporte_sbs.description",
+    detailedDescription1: "reporte_sbs.detailedDescription1",
     image: "/assets/ReporteSBS.png",
     techStack: [
       { name: "React", icon: "react.svg" },

@@ -66,6 +66,10 @@
 
   "flowers": {
     "title": "Flowers"
+    ,"description": "Project for an interactive web page for a flower bouquet surprise.",
+    "detailedDescription1": "Flowers is a web platform that allows users to send flower bouquets as a surprise to their loved ones, with an attractive and user-friendly experience.",
+    "detailedDescription2": "Includes features such as entering the name of the surprised person, animation view.",
+    "detailedDescription3": "Developed with a stack of vite, react, and css."
   },  
 
 

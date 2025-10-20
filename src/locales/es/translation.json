@@ -59,13 +59,24 @@
     "title": "La Once",
     "description": "Proyecto de una página web para un negocio online de venta de humitas y tamales.",
     "detailedDescription1": "La Once es una plataforma que permite a los usuarios realizar compras en línea de tamales y humitas, ofreciendo una experiencia de usuario intuitiva y segura.",
-    "detailedDescription2": "También incluye características como seguimiento de pedidos, gestión de usuarios y un sistema de pago seguro.",
-    "detailedDescription3": "La Once busca facilitar el acceso a estos productos tradicionales, promoviendo la cultura y gastronomía local."
+    "detailedDescription2": "También incluye características como una Landing page, un menú interactivo, vista de productos y redirección a WhatsApp.",
+    "detailedDescription3": "Desarrollado con un stack de vite, react y tailwind."
 
   },
 
   "flowers" : {
     "title": "Flowers"
+    ,"description": "Proyecto de una página web interactiva de una sorpresa con un ramos de flores.",
+    "detailedDescription1": "Flowers es una plataforma web que permite a los usuarios enviar ramos de flores como sorpresa a sus seres queridos, con una experiencia de usuario atractiva y fácil de usar.",
+    "detailedDescription2": "Incluye características como ingresar el nombre del sorprendido, vista de la animación.",
+    "detailedDescription3": "Desarrollado con un stack de vite, react y css."
+  },
+
+  "reporte_sbs": {
+    "title": "Reporte SBS",
+    "description": "Proyecto de automatización para la generación de reportes financieros requeridos por la Superintendencia de Banca, Seguros y AFP (SBS) en el Banco de la Nación.",
+    "detailedDescription1": "Este proyecto se centra en la automatización del proceso de recopilación, análisis y presentación de datos financieros para cumplir con los requisitos regulatorios establecidos por la SBS, mejorando la precisión y eficiencia en la elaboración de informes."
+    
   },
 
 
