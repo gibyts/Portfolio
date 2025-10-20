@@ -1,27 +1,28 @@
-import  { useState, useEffect } from "react";
+import { ExternalLink, Code } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { ExternalLink, Code, X } from "lucide-react";
 
-const ProjectCard = ({ title, description,detailedDescription1, detailedDescription2, detailedDescription3, techStack, image, demoLink, codeLink, type }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const ProjectCard = ({
+  title,
+  description,
+  detailedDescription1,
+  detailedDescription2,
+  detailedDescription3,
+  techStack,
+  image,
+  demoLink,
+  codeLink,
+  type,
+  onOpenModal,
+}) => {
   const { t } = useTranslation();
 
-  
-    const translatedType =
+  const translatedType =
     type === "Trabajo"
       ? t("projects_section.filter_title3")
       : t("projects_section.filter_title2");
 
-  // Permitir cerrar con tecla ESC
-  useEffect(() => {
-    const handleEsc = (e) => e.key === "Escape" && setIsOpen(false);
-    window.addEventListener("keydown", handleEsc);
-    return () => window.removeEventListener("keydown", handleEsc);
-  }, []);
-
   return (
     <article className="relative flex flex-col md:flex-row md:space-x-8 bg-gray-900/40 backdrop-blur-sm border border-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]">
-      
       {/* Imagen con overlay */}
       <div className="w-full md:w-1/2 relative group">
         <img
@@ -39,21 +40,29 @@ const ProjectCard = ({ title, description,detailedDescription1, detailedDescript
         {/* Tipo */}
         <span
           className={`self-start mb-3 px-3 py-1 text-xs rounded-full font-medium ${
-            type === "Trabajo" ? "bg-blue-600/80 text-white" : "bg-green-600/80 text-white"
+            type === "Trabajo"
+              ? "bg-blue-600/80 text-white"
+              : "bg-green-600/80 text-white"
           }`}
         >
           {translatedType}
         </span>
 
         {/* Descripción */}
-        <p className="text-gray-300 text-sm leading-relaxed mb-3">{t(description)}</p>
+        <p className="text-gray-300 text-sm leading-relaxed mb-3">
+          {t(description)}
+        </p>
 
         {/* Tecnologías */}
         <ul className="flex flex-wrap gap-2 mb-4">
           {techStack.map((tech, index) => (
             <li key={index}>
               <span className="flex items-center gap-x-1 bg-gray-800 text-gray-200 px-3 py-1 text-xs rounded-full transition-all hover:bg-gray-700 cursor-default">
-                <img src={`/assets/${tech.icon}`} alt={tech.name} className="size-4" />
+                <img
+                  src={`/assets/${tech.icon}`}
+                  alt={tech.name}
+                  className="size-4"
+                />
                 {tech.name}
               </span>
             </li>
@@ -82,32 +91,23 @@ const ProjectCard = ({ title, description,detailedDescription1, detailedDescript
               <Code size={16} /> Código
             </a>
           )}
+
+          {/* Botón Ver Más */}
           <button
-            onClick={() => setIsOpen(true)}
+            onClick={() =>
+              onOpenModal({
+                title: t(title),
+                detailedDescription1: t(detailedDescription1),
+                detailedDescription2: t(detailedDescription2),
+                detailedDescription3: t(detailedDescription3),
+              })
+            }
             className="ml-auto text-sm text-gray-400 hover:text-gray-100 underline transition"
           >
             {t("projects_section.more_info")}
           </button>
         </footer>
       </div>
-
-      {/* Modal */}
-      {isOpen && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="relative bg-gray-900 text-gray-100 rounded-2xl shadow-2xl p-6 max-w-lg w-full transform transition-all scale-100 animate-fadeIn">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute top-3 right-3 text-gray-400 hover:text-white"
-            >
-              <X size={20} />
-            </button>
-            <h3 className="text-xl font-semibold mb-3">{t(title)}</h3>
-            <p className="text-gray-300 text-sm">{t(detailedDescription1)}</p>
-            <p className="text-gray-300 text-sm">{t(detailedDescription2)}</p>
-            <p className="text-gray-300 text-sm">{t(detailedDescription3)}</p>
-          </div>
-        </div>
-      )}
     </article>
   );
 };

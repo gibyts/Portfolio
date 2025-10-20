@@ -9,6 +9,8 @@ import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { createPortal } from "react-dom";
+import { X } from "lucide-react";
 import { faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 import ProjectCard from "./components/ProjectCard";
@@ -16,8 +18,9 @@ import projectsData from "./components/projectsData";
 import ContactSection from "./components/ContactSection";
 import Section from "./components/Section";
 import ScrollToTopButton from "./components/ScrollToTopButton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next"; 
+import { details } from "framer-motion/client";
 
 const MyPortfolio = () => {
   const { t } = useTranslation();
@@ -38,6 +41,30 @@ const MyPortfolio = () => {
     if (filter === "Work") return project.type === "Trabajo";
     return true;
   });
+
+
+  // 🆕 Estado para manejar modal global
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState({ title: "", detailedDescription1: "", detailedDescription2: "", detailedDescription3: "" });
+
+  // 🆕 Funciones para abrir/cerrar el modal
+  const openModal = (content) => {
+    setModalContent(content);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => setIsModalOpen(false);
+
+  // 🆕 Permitir cerrar modal con tecla Escape
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === "Escape") closeModal();
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, []);
+
+
   return (
     <main>
       <section
@@ -365,11 +392,12 @@ const MyPortfolio = () => {
           </div>
 
           {/* Render de proyectos filtrados */}
-          <div className="flex flex-col gap-y-16">
-            {filteredProjects.map((project, i) => (
-              <ProjectCard key={i} {...project} />
-            ))}
-          </div>
+<div className="flex flex-col gap-y-16">
+  {filteredProjects.map((project, i) => (
+    <ProjectCard key={i} {...project} onOpenModal={openModal} />
+  ))}
+</div>
+
         </Section>
 
         <Section
@@ -505,6 +533,29 @@ const MyPortfolio = () => {
         <ContactSection />
       </div>
       <ScrollToTopButton />
+
+      {/* Modal global con portal */}
+{isModalOpen &&
+  createPortal(
+    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999]">
+      <div className="relative bg-gray-900 text-gray-100 rounded-2xl shadow-2xl p-6 max-w-lg w-full">
+        <button
+          onClick={closeModal}
+          className="absolute top-3 right-3 text-gray-400 hover:text-white"
+        >
+          <X size={20} />
+        </button>
+        <h3 className="text-xl font-semibold mb-3">{modalContent.title}</h3>
+        <p className="text-gray-300 text-sm leading-relaxed">
+          {modalContent.detailedDescription1 && <p>• {modalContent.detailedDescription1}</p>}
+          {modalContent.detailedDescription2 && <p>• {modalContent.detailedDescription2}</p>}
+          {modalContent.detailedDescription3 && <p>• {modalContent.detailedDescription3}</p>}
+        </p>
+      </div>
+    </div>,
+    document.body
+  )}
+
     </main>
   );
 };
