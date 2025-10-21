@@ -19,8 +19,7 @@ import ContactSection from "./components/ContactSection";
 import Section from "./components/Section";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next"; 
-import { details } from "framer-motion/client";
+import { useTranslation } from "react-i18next";
 
 const MyPortfolio = () => {
   const { t } = useTranslation();
@@ -32,9 +31,8 @@ const MyPortfolio = () => {
   ];
 
   const [filter, setFilter] = useState("All");
-    
 
-      // Filtramos según la clave, no según la traducción
+  // Filtramos según la clave, no según la traducción
   const filteredProjects = projectsData.filter((project) => {
     if (filter === "All") return true;
     if (filter === "Personal") return project.type === "Personal";
@@ -42,10 +40,14 @@ const MyPortfolio = () => {
     return true;
   });
 
-
   // 🆕 Estado para manejar modal global
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState({ title: "", detailedDescription1: "", detailedDescription2: "", detailedDescription3: "" });
+  const [modalContent, setModalContent] = useState({
+    title: "",
+    detailedDescription1: "",
+    detailedDescription2: "",
+    detailedDescription3: "",
+  });
 
   // 🆕 Funciones para abrir/cerrar el modal
   const openModal = (content) => {
@@ -63,7 +65,6 @@ const MyPortfolio = () => {
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
-
 
   return (
     <main>
@@ -140,7 +141,10 @@ const MyPortfolio = () => {
         </div>
       </section>
       <div className="scroll-m-20 mx-auto container px-4 lg:max-w-4xl md:max-w-2xl">
-        <Section id="experience" className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl py-16">
+        <Section
+          id="experience"
+          className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl py-16"
+        >
           <h2 className="flex flex-wrap justify-center items-center mb-6 text-2xl md:text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faSuitcase} className="text-3xl" />
             {t("experience_section.title")}
@@ -157,7 +161,9 @@ const MyPortfolio = () => {
               </h3>
               <p className="text-sm md:text-base text-white/80 dark:text-white">
                 {t("experience_section.company1")}{" "}
-                <span className="text-gray-400">{t("experience_section.range1")}</span>
+                <span className="text-gray-400">
+                  {t("experience_section.range1")}
+                </span>
               </p>
               <div className="mt-2 p-3 md:p-4 bg-gray-800 text-white rounded-lg shadow-lg">
                 <p className="mb-2">
@@ -185,7 +191,9 @@ const MyPortfolio = () => {
               </h3>
               <p className="text-sm md:text-base text-white/80 dark:text-white">
                 {t("experience_section.company2")}{" "}
-                <span className="text-gray-400">{t("experience_section.range2")}</span>
+                <span className="text-gray-400">
+                  {t("experience_section.range2")}
+                </span>
               </p>
               <div className="mt-2 p-3 md:p-4 bg-gray-800 text-white rounded-lg shadow-lg">
                 <p className="mb-2">
@@ -202,7 +210,10 @@ const MyPortfolio = () => {
           </ol>
         </Section>
 
-        <Section id="skills" className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl py-16">
+        <Section
+          id="skills"
+          className="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl py-16"
+        >
           <h2 className="flex items-center justify-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
             <FontAwesomeIcon icon={faScrewdriverWrench} className="text-3xl" />
             {t("skills_section.title")}
@@ -392,12 +403,11 @@ const MyPortfolio = () => {
           </div>
 
           {/* Render de proyectos filtrados */}
-<div className="flex flex-col gap-y-16">
-  {filteredProjects.map((project, i) => (
-    <ProjectCard key={i} {...project} onOpenModal={openModal} />
-  ))}
-</div>
-
+          <div className="flex flex-col gap-y-16">
+            {filteredProjects.map((project, i) => (
+              <ProjectCard key={i} {...project} onOpenModal={openModal} />
+            ))}
+          </div>
         </Section>
 
         <Section
@@ -441,7 +451,9 @@ const MyPortfolio = () => {
                         d="M12 11c0 1.657-1.343 3-3 3S6 12.657 6 11s1.343-3 3-3 3 1.343 3 3zM21 21v-2a4 4 0 00-4-4h-4"
                       />
                     </svg>
-                    <h4 className="text-sm font-medium mt-2">{t("about_section.box_title1")}</h4>
+                    <h4 className="text-sm font-medium mt-2">
+                      {t("about_section.box_title1")}
+                    </h4>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                       {t("about_section.box_subtitle1")}
                     </span>
@@ -464,7 +476,9 @@ const MyPortfolio = () => {
                         d="M9 12h6M9 16h6M5 8h14M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                       />
                     </svg>
-                    <h4 className="text-sm font-medium mt-2">{t("about_section.box_title2")}</h4>
+                    <h4 className="text-sm font-medium mt-2">
+                      {t("about_section.box_title2")}
+                    </h4>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                       +5
                     </span>
@@ -487,7 +501,9 @@ const MyPortfolio = () => {
                         d="M18 8a6 6 0 10-12 0v4a6 6 0 0012 0V8zM12 20v-4"
                       />
                     </svg>
-                    <h4 className="text-sm font-medium mt-2">{t("about_section.box_title3")}</h4>
+                    <h4 className="text-sm font-medium mt-2">
+                      {t("about_section.box_title3")}
+                    </h4>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                       Online 24/7
                     </span>
@@ -535,27 +551,34 @@ const MyPortfolio = () => {
       <ScrollToTopButton />
 
       {/* Modal global con portal */}
-{isModalOpen &&
-  createPortal(
-    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999]">
-      <div className="relative bg-gray-900 text-gray-100 rounded-2xl shadow-2xl p-6 max-w-lg w-full">
-        <button
-          onClick={closeModal}
-          className="absolute top-3 right-3 text-gray-400 hover:text-white"
-        >
-          <X size={20} />
-        </button>
-        <h3 className="text-xl font-semibold mb-3">{modalContent.title}</h3>
-        <p className="text-gray-300 text-sm leading-relaxed">
-          {modalContent.detailedDescription1 && <p>• {modalContent.detailedDescription1}</p>}
-          {modalContent.detailedDescription2 && <p>• {modalContent.detailedDescription2}</p>}
-          {modalContent.detailedDescription3 && <p>• {modalContent.detailedDescription3}</p>}
-        </p>
-      </div>
-    </div>,
-    document.body
-  )}
-
+      {isModalOpen &&
+        createPortal(
+          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999]">
+            <div className="relative bg-gray-900 text-gray-100 rounded-2xl shadow-2xl p-6 max-w-lg w-full">
+              <button
+                onClick={closeModal}
+                className="absolute top-3 right-3 text-gray-400 hover:text-white"
+              >
+                <X size={20} />
+              </button>
+              <h3 className="text-xl font-semibold mb-3">
+                {modalContent.title}
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                {modalContent.detailedDescription1 && (
+                  <p>• {modalContent.detailedDescription1}</p>
+                )}
+                {modalContent.detailedDescription2 && (
+                  <p>• {modalContent.detailedDescription2}</p>
+                )}
+                {modalContent.detailedDescription3 && (
+                  <p>• {modalContent.detailedDescription3}</p>
+                )}
+              </p>
+            </div>
+          </div>,
+          document.body
+        )}
     </main>
   );
 };

@@ -51,7 +51,8 @@
   "rcc": {
     "title": "RCC - Data Reading and Loading Process",
     "description": "Automation project for reading and loading processes of the Consolidated Credit Report (RCC) at the Bank of the Nation of Peru.",
-    "detailedDescription": "This project involves the automation of data extraction, transformation, and loading (ETL) processes for the RCC, improving efficiency and accuracy in reporting."
+    "detailedDescription1": "Desktop application developed in .NET with SQL Server connection, designed to process plain text files (TXT) containing large volumes of tabulated information. "
+    ,"detailedDescription2": "Its objective is to automate the loading, transformation, and export of data to a structured database, optimizing processing times through block loading logic and the use of stored procedures."
 
   },
 

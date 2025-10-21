@@ -49,9 +49,10 @@
     "more_info": "Ver más"
   },
   "rcc": {
-    "title": "RCC - Proceso de lectura y carga de datos",
+    "title": "Datafile Processor",
     "description": "Proyecto de automatización de procesos de lectura y carga del Reporte Crediticio Consolidado (RCC) en el Banco de la Nación.",
-    "detailedDescription": "Este proyecto implica la automatización de procesos de extracción, transformación y carga de datos (ETL) para el RCC, mejorando la eficiencia y precisión en la elaboración de informes."
+    "detailedDescription1": "Aplicación de escritorio desarrollada en .NET  con conexión a SQL Server, diseñada para procesar archivos de texto plano (TXT) que contienen grandes volúmenes de información tabulada.",
+    "detailedDescription2": "Su objetivo es automatizar la carga, transformación y exportación de datos hacia una base de datos estructurada, optimizando tiempos de procesamiento mediante una lógica de carga por bloques y uso de procedimientos almacenados"
 
   },
 
@@ -76,7 +77,7 @@
     "title": "Reporte SBS",
     "description": "Proyecto de automatización para la generación de reportes financieros requeridos por la Superintendencia de Banca, Seguros y AFP (SBS) en el Banco de la Nación.",
     "detailedDescription1": "Este proyecto se centra en la automatización del proceso de recopilación, análisis y presentación de datos financieros para cumplir con los requisitos regulatorios establecidos por la SBS, mejorando la precisión y eficiencia en la elaboración de informes."
-    
+
   },
 
 
