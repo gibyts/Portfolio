@@ -1,13 +1,19 @@
-import './App.css'
-import NavBar from './components/Navbar'
-import MyPortfolio from './MyPortfolio'
-import Footer from './components/Footer'
-import Plasma from './Plasma'
+import './App.css';
+import NavBar from './components/Navbar';
+import MyPortfolio from './MyPortfolio';
+import Footer from './components/Footer';
+import Plasma from './Plasma';
+import PoliticaPrivacidad from './components/PrivacyPolicy';
 
-function App() {
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+
+function Layout() {
+  const location = useLocation();
+  const hideLayout = location.pathname === '/politica-privacidad'; // 👈 si estamos en esa ruta, ocultamos Navbar/Footer
+
   return (
     <>
-      {/* Plasma como fondo global */}
+      {/* Fondo animado */}
       <div
         style={{
           position: 'fixed',
@@ -16,7 +22,7 @@ function App() {
           width: '100%',
           height: '100%',
           zIndex: -1,
-          backgroundColor: 'rgb(15,18,25)', // negro base
+          backgroundColor: 'rgb(15,18,25)',
         }}
       >
         <Plasma
@@ -29,12 +35,25 @@ function App() {
         />
       </div>
 
-      {/* Contenido principal */}
-      <NavBar />
-      <MyPortfolio />
-      <Footer />
+      {/* Solo mostramos NavBar y Footer si no estamos en /politica-privacidad */}
+      {!hideLayout && <NavBar />}
+
+      <Routes>
+        <Route path="/" element={<MyPortfolio />} />
+        <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
+      </Routes>
+
+      {!hideLayout && <Footer />}
     </>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <Layout />
+    </Router>
+  );
+}
+
+export default App;
