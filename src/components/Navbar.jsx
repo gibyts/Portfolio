@@ -84,7 +84,7 @@ const NavBar = () => {
           <button
             key={section.id}
             onClick={() => handleLinkClick(section.id)}
-            className={`transition-colors duration-200 ${
+            className={`transition-colors duration-200 font-semibold ${
               activeSection === section.id
                 ? "text-[#ff3131]" // activo
                 : "hover:text-[#ff3131]"
