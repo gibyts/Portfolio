@@ -550,35 +550,74 @@ const MyPortfolio = () => {
       </div>
       <ScrollToTopButton />
 
-      {/* Modal global con portal */}
-      {isModalOpen &&
-        createPortal(
-          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999]">
-            <div className="relative bg-gray-900 text-gray-100 rounded-2xl shadow-2xl p-6 max-w-lg w-full">
-              <button
-                onClick={closeModal}
-                className="absolute top-3 right-3 text-gray-400 hover:text-white"
-              >
-                <X size={20} />
-              </button>
-              <h3 className="text-xl font-semibold mb-3">
-                {modalContent.title}
-              </h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                {modalContent.detailedDescription1 && (
-                  <p>• {modalContent.detailedDescription1}</p>
-                )}
-                {modalContent.detailedDescription2 && (
-                  <p>• {modalContent.detailedDescription2}</p>
-                )}
-                {modalContent.detailedDescription3 && (
-                  <p>• {modalContent.detailedDescription3}</p>
-                )}
-              </p>
-            </div>
-          </div>,
-          document.body
-        )}
+{/* Modal global con portal */}
+{isModalOpen &&
+  createPortal(
+    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999] overflow-y-auto">
+      <div className="relative bg-gray-900 text-gray-100 rounded-2xl shadow-2xl p-8 max-w-xl w-full my-8 mx-4">
+        <button
+          onClick={closeModal}
+          className="absolute top-4 right-4 text-gray-400 hover:text-white"
+        >
+          <X size={22} />
+        </button>
+
+        <h2 className="text-2xl font-bold mb-3 text-center">
+          {modalContent.title}
+        </h2>
+
+        <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
+          <p>
+            Aplicación de escritorio desarrollada en <strong>.NET</strong> con conexión a 
+            <strong> SQL Server</strong>, diseñada para procesar grandes volúmenes de 
+            <strong> archivos de texto plano (TXT)</strong> de manera dinámica y eficiente.
+          </p>
+
+          <ul className="list-disc list-inside space-y-1">
+            <li>
+              Carga de datos <strong>por bloques</strong> con temporizador, optimizando el rendimiento.
+            </li>
+            <li>
+              <strong>Menú modular</strong> que permite procesar distintos reportes (RCC, PHFO, RCA, RCD).
+            </li>
+            <li>
+              Uso de <strong>stored procedures</strong> para crear, limpiar y estandarizar tablas.
+            </li>
+            <li>
+              Funciones integradas: <strong>cargar data</strong>, <strong>exportar</strong> (.bak / tabulados)
+              y <strong>limpiar tablas</strong>.
+            </li>
+          </ul>
+
+          <p>
+            El sistema detecta automáticamente el <strong>usuario y servidor</strong>, garantizando una
+            configuración adaptable y segura.
+          </p>
+
+          <h3 className="text-base font-semibold text-white mt-4">
+            Resultados:
+          </h3>
+          <ul className="list-disc list-inside space-y-1">
+            <li>Reducción del tiempo de carga de datos masivos.</li>
+            <li>Estandarización de procesos de integración.</li>
+            <li>Interfaz intuitiva y adaptable para distintos reportes.</li>
+          </ul>
+        </div>
+
+        <div className="mt-6 text-center">
+          <button
+            onClick={closeModal}
+            className="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>,
+    document.body
+  )}
+
+
     </main>
   );
 };
