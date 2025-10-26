@@ -96,49 +96,97 @@ const NavBar = () => {
       </div>
 
       {/* Social Icons */}
-      <div className="hidden min-[1280px]:flex items-center space-x-8 text-xl text-gray-300">
-        <a
-          href="https://x.com/GibyCode"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon icon={faXTwitter} className="hover:text-[#ff3131]" />
-        </a>
-        <a
-          href="https://www.instagram.com/gibran.tarrillo/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon
-            icon={faInstagram}
-            className="hover:text-[#ff3131]"
-          />
-        </a>
-        <a
-          href="https://discord.com/invite/your-invite-code"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon icon={faDiscord} className="hover:text-[#ff3131]" />
-        </a>
-        <a
-          href="https://www.youtube.com/@gibycode"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon icon={faYoutube} className="hover:text-[#ff3131]" />
-        </a>
+      <div className="hidden min-[1280px]:flex items-center space-x-5 text-xl text-gray-300">
+        {/* X */}
+        <div className="relative group">
+          <a
+            href="https://x.com/GibyCode"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X"
+            className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
+          >
+            <FontAwesomeIcon icon={faXTwitter} className="text-gray-300" />
+          </a>
+
+          {/* Tooltip debajo */}
+          <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+            X
+          </span>
+        </div>
+
+        {/* Instagram */}
+        <div className="relative group">
+          <a
+            href="https://www.instagram.com/gibran.tarrillo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
+          >
+            <FontAwesomeIcon icon={faInstagram} className="text-gray-300" />
+          </a>
+          <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+            Instagram
+          </span>
+        </div>
+
+        {/* Discord */}
+        <div className="relative group">
+          <a
+            href="https://discord.com/invite/your-invite-code"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Discord"
+            className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
+          >
+            <FontAwesomeIcon icon={faDiscord} className="text-gray-300" />
+          </a>
+          <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+            Discord
+          </span>
+        </div>
+        {/* YouTube */}
+        <div className="relative group">
+          <a
+            href="https://www.youtube.com/@gibycode"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
+          >
+            <FontAwesomeIcon icon={faYoutube} className="text-gray-300" />
+          </a>
+          <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+            YouTube
+          </span>
+        </div>
 
         {/* Idioma */}
-        <div
-          className="flex items-center border-l border-gray-700 pl-4 text-xl space-x-1 cursor-pointer"
-          onClick={toggleLanguage}
-          title="Cambiar idioma"
-        >
-          <FontAwesomeIcon icon={faGlobe} className="hover:text-[#ff3131]" />
-          <span className="text-gray-300 text-sm">
-            {i18n.language.toUpperCase()}
-          </span>
+        <div className="flex items-center border-l border-gray-700 pl-4 text-xl space-x-1">
+          <div className="relative group">
+            <div
+              onClick={toggleLanguage}
+              className="flex items-center justify-center space-x-1 w-16 h-10 rounded-xl bg-transparent transition-all duration-200 group-hover:bg-[#1e1e1e] group-hover:shadow-lg cursor-pointer px-2"
+              aria-label="Cambiar idioma"
+            >
+              {/* Icono */}
+              <FontAwesomeIcon
+                icon={faGlobe}
+                className="text-gray-300 text-lg"
+              />
+
+              {/* Texto del idioma al costado */}
+              <span className="text-gray-300 text-sm font-medium">
+                {i18n.language.toUpperCase()}
+              </span>
+            </div>
+
+            {/* Tooltip debajo */}
+            <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+              Cambiar idioma
+            </span>
+          </div>
         </div>
       </div>
 
@@ -159,7 +207,7 @@ const NavBar = () => {
             <button
               key={section.id}
               onClick={() => handleLinkClick(section.id)}
-              className={`transition-colors duration-200 ${
+              className={`transition-colors duration-200 font-semibold ${
                 activeSection === section.id
                   ? "text-[#ff3131]"
                   : "hover:text-[#ff3131]"
@@ -171,46 +219,62 @@ const NavBar = () => {
 
           {/* Mobile Social Icons */}
           <div className="flex space-x-6 text-xl pt-4 border-t border-gray-700">
-            <a
-              href="https://x.com/GibyCode"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                icon={faXTwitter}
-                className="hover:text-blue-400"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/gibran.tarrillo/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="hover:text-gray-100"
-              />
-            </a>
-            <a
-              href="https://www.youtube.com/@gibycode"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                icon={faYoutube}
-                className="hover:text-red-500"
-              />
-            </a>
-            <a
-              href="https://discord.com/invite/your-invite-code"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                icon={faDiscord}
-                className="hover:text-indigo-500"
-              />
-            </a>
+            <div className="relative group">
+              <a
+                href="https://x.com/GibyCode"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+                className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
+              >
+                <FontAwesomeIcon icon={faXTwitter} className="text-gray-300" />
+              </a>
+              <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                X
+              </span>
+            </div>
+            <div className="relative group">
+              <a
+                href="https://www.instagram.com/gibran.tarrillo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
+              >
+                <FontAwesomeIcon icon={faInstagram} className="text-gray-300" />
+              </a>
+              <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                Instagram
+              </span>
+            </div>
+            <div className="relative group">
+              <a
+                href="https://www.youtube.com/@gibycode"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
+              >
+                <FontAwesomeIcon icon={faYoutube} className="text-gray-300" />
+              </a>
+              <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                YouTube
+              </span>
+            </div>
+            <div className="relative group">
+              <a
+                href="https://discord.com/invite/your-invite-code"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Discord"
+                className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
+              >
+                <FontAwesomeIcon icon={faDiscord} className="text-gray-300" />
+              </a>
+              <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                Discord
+              </span>
+            </div>
 
             {/* Botón idioma móvil */}
             <div
