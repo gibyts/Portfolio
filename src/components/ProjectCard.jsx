@@ -60,7 +60,7 @@ const ProjectCard = ({
               <span className="flex items-center gap-x-1 bg-gray-800 text-gray-200 px-3 py-1 text-xs rounded-full transition-all hover:bg-gray-700 cursor-default">
                 <img
                   src={`/assets/${tech.icon}`}
-                  alt={tech.name}
+                  alt=""
                   className="size-4"
                 />
                 {tech.name}
