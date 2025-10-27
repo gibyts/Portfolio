@@ -15,7 +15,7 @@ const Footer = () => {
     href="/politica-privacidad"
     target="_blank"           // 👈 abre en nueva pestaña
     rel="noopener noreferrer" // 👈 seguridad recomendada
-    className="text-[#ff3131] hover:underline"
+    className="text-[#d32020] hover:underline"
   >
     Política de Privacidad
   </a>
