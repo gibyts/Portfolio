@@ -607,7 +607,7 @@ const MyPortfolio = () => {
         <div className="mt-6 text-center">
           <button
             onClick={closeModal}
-            className="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition"
+            className="px-5 py-2 rounded-xl bg-[#ff3131] hover:bg-[#e02b2b] text-white font-semibold transition"
           >
             Cerrar
           </button>
