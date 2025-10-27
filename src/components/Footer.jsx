@@ -9,7 +9,7 @@ const Footer = () => {
         <p>
           © {new Date().getFullYear()} Gibran Tarrillo. {t("footer.text")}
         </p>
-<p className="mt-1 opacity-80">
+<p className="mt-1 ">
   Este sitio usa Google Analytics para analizar el tráfico.{" "}
   <a
     href="/politica-privacidad"
