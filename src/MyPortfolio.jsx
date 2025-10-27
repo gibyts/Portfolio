@@ -251,7 +251,7 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                      <span aria-hidden="true" className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
                         {techName}
                       </span>
                     </div>
@@ -292,7 +292,7 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                      <span aria-hidden="true" className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
                         {techName}
                       </span>
                     </div>
@@ -333,7 +333,7 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                      <span aria-hidden="true" className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
                         {techName}
                       </span>
                     </div>
@@ -365,7 +365,7 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                      <span aria-hidden="true" className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
                         {techName}
                       </span>
                     </div>

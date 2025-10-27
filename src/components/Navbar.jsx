@@ -192,12 +192,22 @@ const NavBar = () => {
 
       {/* Mobile Menu Button */}
       <div className="min-[1280px]:hidden">
-        <button onClick={() => setIsOpen(!isOpen)}>
-          <FontAwesomeIcon
-            icon={isOpen ? faTimes : faBars}
-            className="text-gray-300 text-2xl"
-          />
-        </button>
+        <div className="relative group">
+          <div
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex items-center justify-center w-10 h-10 rounded-xl bg-transparent transition-all duration-200 hover:bg-[#1e1e1e] hover:shadow-lg cursor-pointer"
+            aria-label="Toggle Menu"
+          >
+            <FontAwesomeIcon
+              icon={isOpen ? faTimes : faBars}
+              className="text-gray-300 text-2xl"
+            />
+          </div>
+
+          <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+            Menú
+          </span>
+        </div>
       </div>
 
       {/* Mobile Menu */}
