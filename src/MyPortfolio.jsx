@@ -436,21 +436,7 @@ const MyPortfolio = () => {
                 <div className="flex gap-4">
                   {/* Card 1 */}
                   <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                        d="M12 11c0 1.657-1.343 3-3 3S6 12.657 6 11s1.343-3 3-3 3 1.343 3 3zM21 21v-2a4 4 0 00-4-4h-4"
-                      />
-                    </svg>
+                    <span>+2</span>
                     <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title1")}
                     </h3>
@@ -461,51 +447,23 @@ const MyPortfolio = () => {
 
                   {/* Card 2 */}
                   <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                        d="M9 12h6M9 16h6M5 8h14M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
+                    <span>+5</span>
                     <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title2")}
                     </h3>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      +5
+                      
                     </span>
                   </div>
 
                   {/* Card 3 */}
                   <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                        d="M18 8a6 6 0 10-12 0v4a6 6 0 0012 0V8zM12 20v-4"
-                      />
-                    </svg>
+                    <span>24/7</span>
                     <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title3")}
                     </h3>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      Online 24/7
+                      Online 
                     </span>
                   </div>
                 </div>
