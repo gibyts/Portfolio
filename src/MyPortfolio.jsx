@@ -93,7 +93,7 @@ const MyPortfolio = () => {
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="btn font-semibold border-none bg-[#ff3131] hover:bg-[#e02b2b] text-white 
+            className="btn font-semibold border-none bg-[#d32020] hover:bg-[#b91c1c] text-white 
              text-base sm:text-base md:text-base lg:text-lg 
              px-4 py-2 sm:px-4 sm:py-2 md:px-4 md:py-2 lg:px-6 lg:py-3"
           >
