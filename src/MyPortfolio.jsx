@@ -452,7 +452,7 @@ const MyPortfolio = () => {
                       {t("about_section.box_title2")}
                     </h3>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      
+                      {t("about_section.box_subtitle2")}
                     </span>
                   </div>
 
