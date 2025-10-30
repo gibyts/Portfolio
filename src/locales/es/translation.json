@@ -51,7 +51,7 @@
   "rcc": {
     "title": "Datafile Processor",
     "description": "Proyecto de automatización de procesos de lectura y carga del Reporte Crediticio Consolidado (RCC) en el Banco de la Nación.",
-    "detailedDescription1": "Aplicación de escritorio desarrollada en .NET  con conexión a SQL Server, diseñada para procesar archivos de texto plano (TXT) que contienen grandes volúmenes de información tabulada.",
+    "detailedDescription1": "Aplicación de escritorio desarrollada en .NET con conexión a SQL Server, diseñada para procesar grandes volúmenes de archivos de texto plano (TXT) de manera dinámica y eficiente.",
     "detailedDescription2": "Su objetivo es automatizar la carga, transformación y exportación de datos hacia una base de datos estructurada, optimizando tiempos de procesamiento mediante una lógica de carga por bloques y uso de procedimientos almacenados"
 
   },
@@ -84,9 +84,10 @@
   "about_section" : {
     "title": "SOBRE MI",
     "box_title1": "Experiencia",
-    "box_subtitle1": "Practicante",
+    "box_subtitle11" : "(años)",
+    "box_subtitle12": "Practicante",
     "box_title2": "Proyectos",
-    "box_subtitle2": "Realizados",
+    "box_subtitle21": "Realizados",
     "box_title3": "Soporte",
     "description": "Ingeniero de software con experiencia en desarrollo web y manejo de datos. Apasionado por la tecnología y la creación de soluciones innovadoras.",
     "download_cv": "Descargar CV"

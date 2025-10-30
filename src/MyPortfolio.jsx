@@ -437,11 +437,14 @@ const MyPortfolio = () => {
                   {/* Card 1 */}
                   <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
                     <span>+2</span>
-                    <h3 className="text-sm font-medium mt-2">
+                    <h3 className="text-sm font-medium mt-2b">
                       {t("about_section.box_title1")}
                     </h3>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      {t("about_section.box_subtitle1")}
+                      {t("about_section.box_subtitle11")}
+                    </span>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      {t("about_section.box_subtitle12")}
                     </span>
                   </div>
 
@@ -452,7 +455,7 @@ const MyPortfolio = () => {
                       {t("about_section.box_title2")}
                     </h3>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      {t("about_section.box_subtitle2")}
+                      {t("about_section.box_subtitle21")}
                     </span>
                   </div>
 
@@ -526,9 +529,7 @@ const MyPortfolio = () => {
 
         <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
           <p>
-            Aplicación de escritorio desarrollada en <strong>.NET</strong> con conexión a 
-            <strong> SQL Server</strong>, diseñada para procesar grandes volúmenes de 
-            <strong> archivos de texto plano (TXT)</strong> de manera dinámica y eficiente.
+            {modalContent.detailedDescription1}
           </p>
 
           <ul className="list-disc list-inside space-y-1">

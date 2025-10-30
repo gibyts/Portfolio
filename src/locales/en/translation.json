@@ -49,9 +49,9 @@
   },
 
   "rcc": {
-    "title": "RCC - Data Reading and Loading Process",
+    "title": "Datafile Processor",
     "description": "Automation project for reading and loading processes of the Consolidated Credit Report (RCC) at the Bank of the Nation of Peru.",
-    "detailedDescription1": "Desktop application developed in .NET with SQL Server connection, designed to process plain text files (TXT) containing large volumes of tabulated information. "
+    "detailedDescription1": "Desktop application developed in .NET with SQL Server connection, designed to process large volumes of plain text (TXT) files dynamically and efficiently."
     ,"detailedDescription2": "Its objective is to automate the loading, transformation, and export of data to a structured database, optimizing processing times through block loading logic and the use of stored procedures."
 
   },
@@ -77,9 +77,10 @@
   "about_section": {
     "title": "ABOUT",
     "box_title1": "Experience",
-    "box_subtitle1": "Intern",
+    "box_subtitle11": "(years)",
+    "box_subtitle12": "Intern",
     "box_title2": "Projects",
-    "box_subtitle2": "Completed",
+    "box_subtitle21": "Completed",
     "box_title3": "Support",
     "description": "Software engineer with experience in web development and data management. Passionate about technology and creating innovative solutions.",
     "download_cv": "Download CV"
