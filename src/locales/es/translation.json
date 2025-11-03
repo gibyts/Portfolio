@@ -52,7 +52,11 @@
     "title": "Datafile Processor",
     "description": "Proyecto de automatización de procesos de lectura y carga del Reporte Crediticio Consolidado (RCC) en el Banco de la Nación.",
     "detailedDescription1": "Aplicación de escritorio desarrollada en .NET con conexión a SQL Server, diseñada para procesar grandes volúmenes de archivos de texto plano (TXT) de manera dinámica y eficiente.",
-    "detailedDescription2": "Su objetivo es automatizar la carga, transformación y exportación de datos hacia una base de datos estructurada, optimizando tiempos de procesamiento mediante una lógica de carga por bloques y uso de procedimientos almacenados"
+    "detailedDescription2": "Su objetivo es automatizar la carga, transformación y exportación de datos hacia una base de datos estructurada, optimizando tiempos de procesamiento mediante una lógica de carga por bloques y uso de procedimientos almacenados",
+    "titleDescription3": "Características",
+    "detailedDescription3": [ "Carga de datos por bloques con temporizador, optimizando el rendimiento.","Menú modular que permite procesar distintos reportes (RCC, PHFO, RCA, RCD).","Funciones integradas: cargar data, exportar (.bak / tabulados) y limpiar tablas.","El sistema detecta automáticamente el usuario y servidor, garantizando una configuración adaptable y segura." ],
+    "titleDescription4": "Resultados",
+    "detailedDescription4":[ "Reducción del tiempo de carga de datos masivos.","Estandarización de procesos de integración.","Interfaz intuitiva y adaptable para distintos reportes." ]
 
   },
 
@@ -61,7 +65,8 @@
     "description": "Proyecto de una página web para un negocio online de venta de humitas y tamales.",
     "detailedDescription1": "La Once es una plataforma que permite a los usuarios realizar compras en línea de tamales y humitas, ofreciendo una experiencia de usuario intuitiva y segura.",
     "detailedDescription2": "También incluye características como una Landing page, un menú interactivo, vista de productos y redirección a WhatsApp.",
-    "detailedDescription3": "Desarrollado con un stack de vite, react y tailwind."
+    "titleDescription3": "Características",
+    "titleDescription4": "Resultados"
 
   },
 
@@ -70,13 +75,21 @@
     ,"description": "Proyecto de una página web interactiva de una sorpresa con un ramos de flores.",
     "detailedDescription1": "Flowers es una plataforma web que permite a los usuarios enviar ramos de flores como sorpresa a sus seres queridos, con una experiencia de usuario atractiva y fácil de usar.",
     "detailedDescription2": "Incluye características como ingresar el nombre del sorprendido, vista de la animación.",
-    "detailedDescription3": "Desarrollado con un stack de vite, react y css."
+    "titleDescription3": "Características",
+    "titleDescription4": "Resultados"
   },
 
   "reporte_sbs": {
-    "title": "Reporte SBS",
+    "title": "Reporte de deudores SBS",
     "description": "Proyecto de automatización para la generación de reportes financieros requeridos por la Superintendencia de Banca, Seguros y AFP (SBS) en el Banco de la Nación.",
-    "detailedDescription1": "Este proyecto se centra en la automatización del proceso de recopilación, análisis y presentación de datos financieros para cumplir con los requisitos regulatorios establecidos por la SBS, mejorando la precisión y eficiencia en la elaboración de informes."
+    "detailedDescription1": "Prototipo web desarrollado con React y Tailwind CSS en el frontend, Node.js en el backend y conexión a SQL Server, diseñado como una versión modernizada del sistema de consulta de deudores de la SBS. Este desarrollo propone una interfaz más intuitiva, visual y eficiente, manteniendo la lógica de consulta y reporte del sistema original.",
+    "titleDescription3": "Características",
+    "detailedDescription3": [     "Procesamiento previo de la información antes de su inserción en tablas mensuales.",
+      "Mantenimiento de las funcionalidades originales de consulta y reporte.",
+      "Incorporación de gráficas dinámicas y paneles visuales.",
+      "Interfaz moderna, adaptable y fácil de usar."],
+    "titleDescription4": "Resultados"
+
 
   },
 

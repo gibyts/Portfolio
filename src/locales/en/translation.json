@@ -53,6 +53,10 @@
     "description": "Automation project for reading and loading processes of the Consolidated Credit Report (RCC) at the Bank of the Nation of Peru.",
     "detailedDescription1": "Desktop application developed in .NET with SQL Server connection, designed to process large volumes of plain text (TXT) files dynamically and efficiently."
     ,"detailedDescription2": "Its objective is to automate the loading, transformation, and export of data to a structured database, optimizing processing times through block loading logic and the use of stored procedures."
+    ,"titleDescription3": "Features",
+    "detailedDescription3": [ "Block data loading with timer, optimizing performance.","Modular menu that allows processing different reports (RCC, PHFO, RCA, RCD).","Integrated functions: load data, export (.bak / tabulated) and clean tables.","The system automatically detects the user and server, ensuring adaptable and secure configuration." ],
+    "titleDescription4": "Results",
+    "detailedDescription4":[ "Reduction of massive data loading time.","Standardization of integration processes.","Intuitive and adaptable interface for different reports." ]
 
   },
 
@@ -61,7 +65,8 @@
     "description": "Project for an online business selling humitas and tamales.",
     "detailedDescription1": "LaOnce is a platform that allows users to make online purchases of tamales and humitas, offering an intuitive and secure user experience.",
     "detailedDescription2": "Also includes features such as order tracking, user management, and a secure payment system.",
-    "detailedDescription3": "La Once seeks to facilitate access to these traditional products, promoting local culture and gastronomy."
+    "titleDescription3": "Features",
+    "titleDescription4": "Results"
 
   },
 
@@ -70,8 +75,23 @@
     ,"description": "Project for an interactive web page for a flower bouquet surprise.",
     "detailedDescription1": "Flowers is a web platform that allows users to send flower bouquets as a surprise to their loved ones, with an attractive and user-friendly experience.",
     "detailedDescription2": "Includes features such as entering the name of the surprised person, animation view.",
-    "detailedDescription3": "Developed with a stack of vite, react, and css."
+    "titleDescription3": "Features",
+    "titleDescription4": "Results"
   },  
+
+  "reporte_sbs": {
+    "title": "SBS Debtor Report",
+    "description": "Automation project for generating financial reports required by the Superintendence of Banking, Insurance, and AFP (SBS) at the Bank of the Nation of Peru.",
+    "detailedDescription1": "This project focuses on automating the process of collecting, analyzing, and presenting financial data to comply with the regulatory requirements established by the SBS, improving accuracy and efficiency in report preparation.",
+    "titleDescription3": "Features",
+    "detailedDescription3": [     "Pre-processing of information before its insertion into monthly tables.",
+      "Maintenance of the original consultation and reporting functionalities.",
+      "Incorporation of dynamic graphs and visual dashboards.",
+      "Modern, adaptable, and user-friendly interface."],
+    "titleDescription4": "Results"
+
+  },
+
 
 
   "about_section": {

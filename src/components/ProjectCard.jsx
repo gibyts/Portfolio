@@ -6,7 +6,10 @@ const ProjectCard = ({
   description,
   detailedDescription1,
   detailedDescription2,
+  titleDescription3,
   detailedDescription3,
+  titleDescription4,
+  detailedDescription4,
   techStack,
   image,
   demoLink,
@@ -94,14 +97,17 @@ const ProjectCard = ({
 
           {/* Botón Ver Más */}
           <button
-            onClick={() =>
+            onClick={() => {
               onOpenModal({
                 title: t(title),
                 detailedDescription1: t(detailedDescription1),
                 detailedDescription2: t(detailedDescription2),
-                detailedDescription3: t(detailedDescription3),
+                titleDescription3: t(titleDescription3),
+                detailedDescription3: t(detailedDescription3, { returnObjects: true }),
+                titleDescription4: t(titleDescription4),
+                detailedDescription4: t(detailedDescription4, { returnObjects: true }),
               })
-            }
+            }}
             className="ml-auto text-sm text-gray-400 hover:text-gray-100 underline transition"
           >
             {t("projects_section.more_info")}

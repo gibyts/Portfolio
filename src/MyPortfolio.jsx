@@ -74,7 +74,7 @@ const MyPortfolio = () => {
       >
         <div className="flex flex-col md:flex-row items-center gap-4">
           <img
-            src="/assets/photo_profile.jpg"
+            src="/assets/photo_profile.webp"
             alt="Gibran Tarrillo"
             className="rounded-full shadow-lg w-24 h-24 md:w-40 md:h-40"
           />
@@ -251,7 +251,10 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span aria-hidden="true" className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                      <span
+                        aria-hidden="true"
+                        className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center"
+                      >
                         {techName}
                       </span>
                     </div>
@@ -292,7 +295,10 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span aria-hidden="true" className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                      <span
+                        aria-hidden="true"
+                        className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center"
+                      >
                         {techName}
                       </span>
                     </div>
@@ -333,7 +339,10 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span aria-hidden="true" className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                      <span
+                        aria-hidden="true"
+                        className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center"
+                      >
                         {techName}
                       </span>
                     </div>
@@ -365,7 +374,10 @@ const MyPortfolio = () => {
                         width={45} // más chico
                         height={90}
                       />
-                      <span aria-hidden="true" className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                      <span
+                        aria-hidden="true"
+                        className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center"
+                      >
                         {techName}
                       </span>
                     </div>
@@ -466,7 +478,7 @@ const MyPortfolio = () => {
                       {t("about_section.box_title3")}
                     </h3>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      Online 
+                      Online
                     </span>
                   </div>
                 </div>
@@ -511,72 +523,63 @@ const MyPortfolio = () => {
       </div>
       <ScrollToTopButton />
 
-{/* Modal global con portal */}
-{isModalOpen &&
-  createPortal(
-    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999] overflow-y-auto">
-      <div className="relative bg-gray-900 text-gray-100 rounded-2xl shadow-2xl p-8 max-w-xl w-full my-8 mx-4">
-        <button
-          onClick={closeModal}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white"
-        >
-          <X size={22} />
-        </button>
+      {/* Modal global con portal */}
+      {isModalOpen &&
+        createPortal(
+          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999] overflow-y-auto">
+            <div className="relative bg-gray-900 text-gray-100 rounded-2xl shadow-2xl p-8 max-w-xl w-full my-8 mx-4">
+              <button
+                onClick={closeModal}
+                className="absolute top-4 right-4 text-gray-400 hover:text-white"
+              >
+                <X size={22} />
+              </button>
 
-        <h2 className="text-2xl font-bold mb-3 text-center">
-          {modalContent.title}
-        </h2>
+              <h2 className="text-2xl font-bold mb-3 text-center">
+                {modalContent.title}
+              </h2>
 
-        <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
-          <p>
-            {modalContent.detailedDescription1}
-          </p>
+              <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
+                <p>{modalContent.detailedDescription1}</p>
+                <h3 className="text-base font-semibold text-white mt-4">
+                  {modalContent.titleDescription3}
+                </h3>
+                {Array.isArray(modalContent.detailedDescription3) ? (
+                  <ul className="list-disc list-inside space-y-1">
+                    {modalContent.detailedDescription3.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{modalContent.detailedDescription3}</p>
+                )}
 
-          <ul className="list-disc list-inside space-y-1">
-            <li>
-              Carga de datos <strong>por bloques</strong> con temporizador, optimizando el rendimiento.
-            </li>
-            <li>
-              <strong>Menú modular</strong> que permite procesar distintos reportes (RCC, PHFO, RCA, RCD).
-            </li>
-            <li>
-              Uso de <strong>stored procedures</strong> para crear, limpiar y estandarizar tablas.
-            </li>
-            <li>
-              Funciones integradas: <strong>cargar data</strong>, <strong>exportar</strong> (.bak / tabulados)
-              y <strong>limpiar tablas</strong>.
-            </li>
-          </ul>
+                <h3 className="text-base font-semibold text-white mt-4">
+                  {modalContent.titleDescription4}
+                </h3>
+                {Array.isArray(modalContent.detailedDescription4) ? (
+                  <ul className="list-disc list-inside space-y-1">
+                    {modalContent.detailedDescription4.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{modalContent.detailedDescription4}</p>
+                )}
+              </div>
 
-          <p>
-            El sistema detecta automáticamente el <strong>usuario y servidor</strong>, garantizando una
-            configuración adaptable y segura.
-          </p>
-
-          <h3 className="text-base font-semibold text-white mt-4">
-            Resultados:
-          </h3>
-          <ul className="list-disc list-inside space-y-1">
-            <li>Reducción del tiempo de carga de datos masivos.</li>
-            <li>Estandarización de procesos de integración.</li>
-            <li>Interfaz intuitiva y adaptable para distintos reportes.</li>
-          </ul>
-        </div>
-
-        <div className="mt-6 text-center">
-          <button
-            onClick={closeModal}
-            className="px-5 py-2 rounded-xl bg-[#ff3131] hover:bg-[#e02b2b] text-white font-semibold transition"
-          >
-            Cerrar
-          </button>
-        </div>
-      </div>
-    </div>,
-    document.body
-  )}
-
-
+              <div className="mt-6 text-center">
+                <button
+                  onClick={closeModal}
+                  className="px-5 py-2 rounded-xl bg-[#ff3131] hover:bg-[#e02b2b] text-white font-semibold transition"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>,
+          document.body
+        )}
     </main>
   );
 };
