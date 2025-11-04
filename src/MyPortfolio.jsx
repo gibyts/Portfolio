@@ -449,14 +449,11 @@ const MyPortfolio = () => {
                   {/* Card 1 */}
                   <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
                     <span>+2</span>
-                    <h3 className="text-sm font-medium mt-2b">
+                    <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title1")}
                     </h3>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                       {t("about_section.box_subtitle11")}
-                    </span>
-                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      {t("about_section.box_subtitle12")}
                     </span>
                   </div>
 
