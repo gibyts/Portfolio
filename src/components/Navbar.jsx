@@ -79,7 +79,7 @@ const NavBar = () => {
       </div>
 
       {/* Desktop Links */}
-      <div className="hidden min-[1280px]:flex space-x-6 text-gray-300 text-lg min-[1456px]:absolute min-[1456px]:left-1/2 min-[1456px]:transform min-[1456px]:-translate-x-1/2">
+      <div className="hidden min-[1112px]:flex space-x-6 text-gray-300 text-lg min-[1470px]:absolute min-[1470px]:left-1/2 min-[1470px]:transform min-[1470px]:-translate-x-1/2">
         {sections.map((section) => (
           <button
             key={section.id}
@@ -95,75 +95,77 @@ const NavBar = () => {
         ))}
       </div>
 
-      {/* Social Icons */}
-      <div className="hidden min-[1280px]:flex items-center space-x-5 text-xl text-gray-300">
-        {/* X */}
-        <div className="relative group">
-          <a
-            href="https://x.com/GibyCode"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="X"
-            className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
-          >
-            <FontAwesomeIcon icon={faXTwitter} className="text-gray-300" />
-          </a>
+      {/* 🔸 Contenedor de Social + Idioma */}
+      <div className="flex items-center space-x-5 text-xl text-gray-300">
+        {/* Social Icons */}
+        <div className="hidden min-[1300px]:flex items-center space-x-5">
+          {/* X */}
+          <div className="relative group">
+            <a
+              href="https://x.com/GibyCode"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
+            >
+              <FontAwesomeIcon icon={faXTwitter} className="text-gray-300" />
+            </a>
 
-          {/* Tooltip debajo */}
-          <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-            X
-          </span>
-        </div>
+            {/* Tooltip debajo */}
+            <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+              X
+            </span>
+          </div>
 
-        {/* Instagram */}
-        <div className="relative group">
-          <a
-            href="https://www.instagram.com/gibran.tarrillo/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
-          >
-            <FontAwesomeIcon icon={faInstagram} className="text-gray-300" />
-          </a>
-          <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-            Instagram
-          </span>
-        </div>
+          {/* Instagram */}
+          <div className="relative group">
+            <a
+              href="https://www.instagram.com/gibran.tarrillo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
+            >
+              <FontAwesomeIcon icon={faInstagram} className="text-gray-300" />
+            </a>
+            <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+              Instagram
+            </span>
+          </div>
 
-        {/* Discord */}
-        <div className="relative group">
-          <a
-            href="https://discord.com/invite/your-invite-code"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Discord"
-            className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
-          >
-            <FontAwesomeIcon icon={faDiscord} className="text-gray-300" />
-          </a>
-          <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-            Discord
-          </span>
+          {/* Discord */}
+          <div className="relative group">
+            <a
+              href="https://discord.com/invite/your-invite-code"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Discord"
+              className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
+            >
+              <FontAwesomeIcon icon={faDiscord} className="text-gray-300" />
+            </a>
+            <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+              Discord
+            </span>
+          </div>
+          {/* YouTube */}
+          <div className="relative group">
+            <a
+              href="https://www.youtube.com/@gibycode"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
+            >
+              <FontAwesomeIcon icon={faYoutube} className="text-gray-300" />
+            </a>
+            <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+              YouTube
+            </span>
+          </div>
         </div>
-        {/* YouTube */}
-        <div className="relative group">
-          <a
-            href="https://www.youtube.com/@gibycode"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube"
-            className="flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-200 group-hover:bg-black/40 group-hover:shadow-lg"
-          >
-            <FontAwesomeIcon icon={faYoutube} className="text-gray-300" />
-          </a>
-          <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-            YouTube
-          </span>
-        </div>
-
         {/* Idioma */}
-        <div className="flex items-center border-l border-gray-700 pl-4 text-xl space-x-1">
+        <div className="hidden min-[1112px]:flex items-center border-l border-gray-700 pl-4 text-xl space-x-1 ">
           <div className="relative group">
             <div
               onClick={toggleLanguage}
@@ -191,7 +193,7 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="min-[1280px]:hidden">
+      <div className="min-[1112px]:hidden">
         <div className="relative group">
           <button
             onClick={() => setIsOpen(!isOpen)}
