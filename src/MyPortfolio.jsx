@@ -278,9 +278,10 @@ const MyPortfolio = () => {
                   "vue-js",
                   "flask",
                   "node-js",
+                  "tkinter",
                   "astro",
                 ].map((tech, index) => {
-                  const techExtension = ".svg";
+                  const techExtension = tech === "tkinter" ? ".png" : ".svg";
                   const techName = tech.replace("-", " ").toUpperCase();
                   return (
                     <div
