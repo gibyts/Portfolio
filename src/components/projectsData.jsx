@@ -57,7 +57,7 @@ const projectsData = [
     titleDescription3: "reporte_sbs.titleDescription3",
     detailedDescription3: "reporte_sbs.detailedDescription3",
     titleDescription4: "reporte_sbs.titleDescription4",
-    image: "/assets/ReporteSBS.png",
+    image: "/assets/ReporteSBS.webp",
     techStack: [
       { name: "React", icon: "react.svg" },
       { name: "Tailwind", icon: "tailwind-css.svg" },
