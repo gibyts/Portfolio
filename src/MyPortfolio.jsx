@@ -281,7 +281,7 @@ const MyPortfolio = () => {
                   "node-js",
                   "astro",
                 ].map((tech, index) => {
-                  const techExtension = tech === "selenium" ? ".png" : ".svg";
+                  const techExtension = ".svg";
                   const techName = tech.replace("-", " ").toUpperCase();
                   return (
                     <div
