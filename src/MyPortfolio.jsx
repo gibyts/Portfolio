@@ -237,7 +237,7 @@ const MyPortfolio = () => {
                   ".NET",
                   "C++",
                 ].map((tech, index) => {
-                  const techExtension = tech === "github" ? ".png" : ".svg";
+                  const techExtension = ".svg";
                   const techName = tech.replace("-", " ").toUpperCase();
                   return (
                     <div
@@ -360,7 +360,7 @@ const MyPortfolio = () => {
               </div>
               <div className="grid grid-cols-3 gap-4 px-6">
                 {["aws", "vercel", "github"].map((tech, index) => {
-                  const techExtension = tech === "heroku" ? ".png" : ".svg";
+                  const techExtension = ".svg";
                   const techName = tech.replace("-", " ").toUpperCase();
                   return (
                     <div
