@@ -435,7 +435,7 @@ const MyPortfolio = () => {
             {/* Imagen a la izquierda */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-start  p-4">
               <img
-                src="/assets/profile.jpeg"
+                src="/assets/profile.webp"
                 alt="Foto de perfil"
                 className="rounded-2xl shadow-lg w-48 h-48 md:w-80 md:h-80 object-cover"
               />
