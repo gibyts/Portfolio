@@ -448,7 +448,7 @@ const MyPortfolio = () => {
                 <div className="flex gap-4">
                   {/* Card 1 */}
                   <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
-                    <span>+2</span>
+                    <span className="text-2xl">+2</span>
                     <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title1")}
                     </h3>
@@ -459,7 +459,7 @@ const MyPortfolio = () => {
 
                   {/* Card 2 */}
                   <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
-                    <span>+5</span>
+                    <span className="text-2xl">+5</span>
                     <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title2")}
                     </h3>
@@ -470,7 +470,7 @@ const MyPortfolio = () => {
 
                   {/* Card 3 */}
                   <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
-                    <span>24/7</span>
+                    <span className="text-xl">24/7</span>
                     <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title3")}
                     </h3>
