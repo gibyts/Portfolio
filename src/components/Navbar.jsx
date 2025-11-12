@@ -136,7 +136,7 @@ const NavBar = () => {
           {/* Discord */}
           <div className="relative group">
             <a
-              href="https://discord.com/invite/your-invite-code"
+              href="https://discord.gg/2svKkGr3"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Discord"
