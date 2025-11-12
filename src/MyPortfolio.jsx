@@ -447,7 +447,7 @@ const MyPortfolio = () => {
               <div className="w-full flex justify-center md:justify-center  ">
                 <div className="flex gap-4">
                   {/* Card 1 */}
-                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
+                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36 hover:scale-105 transition-transform">
                     <span className="text-2xl">+2</span>
                     <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title1")}
@@ -458,7 +458,7 @@ const MyPortfolio = () => {
                   </div>
 
                   {/* Card 2 */}
-                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
+                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36 hover:scale-105 transition-transform">
                     <span className="text-2xl">+5</span>
                     <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title2")}
@@ -469,7 +469,7 @@ const MyPortfolio = () => {
                   </div>
 
                   {/* Card 3 */}
-                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
+                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36 hover:scale-105 transition-transform">
                     <span className="text-2xl">24/7</span>
                     <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title3")}
