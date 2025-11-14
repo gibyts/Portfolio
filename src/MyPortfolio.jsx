@@ -237,7 +237,7 @@ const MyPortfolio = () => {
                   ".NET",
                   "C++",
                 ].map((tech, index) => {
-                  const techExtension = tech === "github" ? ".png" : ".svg";
+                  const techExtension = ".svg";
                   const techName = tech.replace("-", " ").toUpperCase();
                   return (
                     <div
@@ -277,11 +277,11 @@ const MyPortfolio = () => {
                   "tailwind-css",
                   "vue-js",
                   "flask",
-                  "selenium",
                   "node-js",
+                  "tkinter",
                   "astro",
                 ].map((tech, index) => {
-                  const techExtension = tech === "selenium" ? ".png" : ".svg";
+                  const techExtension = tech === "tkinter" ? ".png" : ".svg";
                   const techName = tech.replace("-", " ").toUpperCase();
                   return (
                     <div
@@ -325,7 +325,7 @@ const MyPortfolio = () => {
                   "figma",
                   "selenium",
                 ].map((tech, index) => {
-                  const techExtension = tech === "selenium" ? ".png" : ".svg";
+                  const techExtension = ".svg";
                   const techName = tech.replace("-", " ").toUpperCase();
                   return (
                     <div
@@ -360,7 +360,7 @@ const MyPortfolio = () => {
               </div>
               <div className="grid grid-cols-3 gap-4 px-6">
                 {["aws", "vercel", "github"].map((tech, index) => {
-                  const techExtension = tech === "heroku" ? ".png" : ".svg";
+                  const techExtension = ".svg";
                   const techName = tech.replace("-", " ").toUpperCase();
                   return (
                     <div
@@ -435,7 +435,7 @@ const MyPortfolio = () => {
             {/* Imagen a la izquierda */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-start  p-4">
               <img
-                src="/assets/profile.jpeg"
+                src="/assets/profile.webp"
                 alt="Foto de perfil"
                 className="rounded-2xl shadow-lg w-48 h-48 md:w-80 md:h-80 object-cover"
               />
@@ -447,22 +447,19 @@ const MyPortfolio = () => {
               <div className="w-full flex justify-center md:justify-center  ">
                 <div className="flex gap-4">
                   {/* Card 1 */}
-                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
-                    <span>+2</span>
-                    <h3 className="text-sm font-medium mt-2b">
+                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36 hover:scale-105 transition-transform">
+                    <span className="text-2xl">+2</span>
+                    <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title1")}
                     </h3>
                     <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                       {t("about_section.box_subtitle11")}
                     </span>
-                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      {t("about_section.box_subtitle12")}
-                    </span>
                   </div>
 
                   {/* Card 2 */}
-                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
-                    <span>+5</span>
+                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36 hover:scale-105 transition-transform">
+                    <span className="text-2xl">+5</span>
                     <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title2")}
                     </h3>
@@ -472,8 +469,8 @@ const MyPortfolio = () => {
                   </div>
 
                   {/* Card 3 */}
-                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36">
-                    <span>24/7</span>
+                  <div className="bg-gray-800 border  border-gray-700 rounded-xl p-4 shadow-sm flex flex-col items-center w-28 md:w-36 hover:scale-105 transition-transform">
+                    <span className="text-2xl">24/7</span>
                     <h3 className="text-sm font-medium mt-2">
                       {t("about_section.box_title3")}
                     </h3>

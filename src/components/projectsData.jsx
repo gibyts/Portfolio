@@ -38,7 +38,7 @@ const projectsData = [
     description: "flowers.description",
     detailedDescription1: "flowers.detailedDescription1",
     detailedDescription2: "flowers.detailedDescription2",
-    detailedDescription3: "flowers.detailedDescription3",
+    titleDescription3: "flowers.titleDescription3",
     titleDescription4: "flowers.titleDescription4",
     image: "/assets/FLOWERS.png",
     techStack: [
@@ -57,7 +57,7 @@ const projectsData = [
     titleDescription3: "reporte_sbs.titleDescription3",
     detailedDescription3: "reporte_sbs.detailedDescription3",
     titleDescription4: "reporte_sbs.titleDescription4",
-    image: "/assets/ReporteSBS.png",
+    image: "/assets/ReporteSBS.webp",
     techStack: [
       { name: "React", icon: "react.svg" },
       { name: "Tailwind", icon: "tailwind-css.svg" },
@@ -71,6 +71,12 @@ const projectsData = [
     title: "Convertidor",
     description: "Aplicación de escritorio para convertir boletas electrónicas y tabularlos en excel.",
     detailedDescription: "projects_section.details.convertidor",
+    detailedDescription1: "projects_section.details.convertidor.detailedDescription1",
+    detailedDescription2: "projects_section.details.convertidor.detailedDescription2",
+    titleDescription3: "projects_section.details.convertidor.titleDescription3",
+    detailedDescription3: "projects_section.details.convertidor.detailedDescription3",
+    titleDescription4: "projects_section.details.convertidor.titleDescription4",
+    detailedDescription4: "projects_section.details.convertidor.detailedDescription4",
 
     image: "/assets/convertidor.webp",
     techStack: [
