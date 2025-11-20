@@ -490,7 +490,7 @@ const MyPortfolio = () => {
                 {/* Botón CV */}
                 <div className="mt-6 flex justify-center md:justify-center">
                   <a
-                    href="/assets/CV.pdf"
+                    href="/assets/CV_Gibran_Tarrillo.pdf"
                     download
                     className="px-6 py-3 bg-[#ff3131] text-white rounded-xl shadow-md hover:bg-[#e02b2b] transition flex items-center gap-2"
                   >
