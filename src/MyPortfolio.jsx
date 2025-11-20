@@ -234,7 +234,6 @@ const MyPortfolio = () => {
                   "javascript",
                   "python",
                   "sql",
-                  ".NET",
                   "C++",
                 ].map((tech, index) => {
                   const techExtension = ".svg";
@@ -277,6 +276,7 @@ const MyPortfolio = () => {
                   "tailwind-css",
                   "vue-js",
                   "flask",
+                  ".NET",
                   "node-js",
                   "tkinter",
                   "astro",
@@ -359,7 +359,7 @@ const MyPortfolio = () => {
                 </h3>
               </div>
               <div className="grid grid-cols-3 gap-4 px-6">
-                {["aws", "vercel", "github"].map((tech, index) => {
+                {["aws", "vercel", "github", "supabase"].map((tech, index) => {
                   const techExtension = ".svg";
                   const techName = tech.replace("-", " ").toUpperCase();
                   return (
