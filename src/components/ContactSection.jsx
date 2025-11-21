@@ -1,13 +1,81 @@
-import { useState } from "react";
-import { useTranslation } from "react-i18next"; 
+import { useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
-import Section  from "./Section"; 
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+import { gsap } from "gsap";
+import Section from "./Section";
 
 const ContactSection = () => {
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
+
+  const emailTextRef = useRef(null);
+  const emailArrowRef = useRef(null);
+
+  // WHATSAPP refs
+  const waTextRef = useRef(null);
+  const waArrowRef = useRef(null);
+
+  // Animación email
+  const handleEnterEmail = () => {
+    gsap.to(emailTextRef.current, {
+      opacity: 1,
+      width: "auto",
+      duration: 0.8,
+      ease: "power3.out",
+    });
+    gsap.to(emailArrowRef.current, {
+      x: 10,
+      duration: 0.8,
+      ease: "power3.out",
+    });
+  };
+
+  const handleLeaveEmail = () => {
+    gsap.to(emailTextRef.current, {
+      opacity: 0,
+      width: 0,
+      duration: 0.6,
+      ease: "power2.inOut",
+    });
+    gsap.to(emailArrowRef.current, {
+      x: 0,
+      duration: 0.6,
+      ease: "power2.inOut",
+    });
+  };
+
+  // Animación WhatsApp
+  const handleEnterWA = () => {
+    gsap.to(waTextRef.current, {
+      opacity: 1,
+      width: "auto",
+      duration: 0.8,
+      ease: "power3.out",
+    });
+    gsap.to(waArrowRef.current, {
+      x: 10,
+      duration: 0.8,
+      ease: "power3.out",
+    });
+  };
+
+  const handleLeaveWA = () => {
+    gsap.to(waTextRef.current, {
+      opacity: 0,
+      width: 0,
+      duration: 0.6,
+      ease: "power2.inOut",
+    });
+    gsap.to(waArrowRef.current, {
+      x: 0,
+      duration: 0.6,
+      ease: "power2.inOut",
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -51,27 +119,52 @@ const ContactSection = () => {
         {/* Lado izquierdo */}
         <div>
           <div className="flex justify-center pt-6">
-            <h2 className="text-2xl mb-8 text-white">{t("contact_section.subtitle")}</h2>
+            <h2 className="text-2xl mb-8 text-white">
+              {t("contact_section.subtitle")}
+            </h2>
           </div>
 
           <div className="space-y-6">
             {/* Email */}
-            <div className="p-6 bg-gray-800 border border-gray-200 rounded-xl shadow hover:scale-105 transition-transform">
+            <div
+              className="p-6 bg-gray-800 border border-gray-200 rounded-xl shadow hover:scale-105 transition-transform "
+              onMouseEnter={handleEnterEmail}
+              onMouseLeave={handleLeaveEmail}
+            >
               <div className="flex items-center gap-3 mb-2">
                 <FaEnvelope className="text-2xl text-[#ff3131]" />
-                <h3 className="font-semibold text-lg">{t("contact_section.emailLabel")}</h3>
+                <h3 className="font-semibold text-lg">
+                  {t("contact_section.emailLabel")}
+                </h3>
               </div>
+
               <p className="text-white">gibrantarrillo@gmail.com</p>
+
               <a
                 href="mailto:gibrantarrillo@gmail.com"
-                className="text-sm text-[#ff3131] mt-2 inline-block hover:underline"
+                className="text-sm text-[#ff3131] mt-2 inline-flex items-center cursor-pointer "
               >
-                {t("contact_section.writeMe")} →
+                {/* Texto oculto */}
+                <span
+                  ref={emailTextRef}
+                  className="whitespace-nowrap opacity-0 inline-block w-0 mr-1"
+                >
+                  {t("contact_section.writeMe")}
+                </span>
+
+                {/* Flecha visible siempre */}
+                <span ref={emailArrowRef}>
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </span>
               </a>
             </div>
 
             {/* WhatsApp */}
-            <div className="p-6 bg-gray-800 border border-gray-200 rounded-xl shadow hover:scale-105 transition-transform">
+            <div
+              className="p-6 bg-gray-800 border border-gray-200 rounded-xl shadow hover:scale-105 transition-transform"
+              onMouseEnter={handleEnterWA}
+              onMouseLeave={handleLeaveWA}
+            >
               <div className="flex items-center gap-3 mb-2">
                 <FaWhatsapp className="text-2xl text-[#ff3131]" />
                 <h3 className="font-semibold text-lg">WhatsApp</h3>
@@ -81,9 +174,17 @@ const ContactSection = () => {
                 href="https://wa.me/9606165362"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-[#ff3131] mt-2 inline-block hover:underline"
+                className="text-sm text-[#ff3131] mt-2 inline-flex items-center cursor-pointer "
               >
-                {t("contact_section.writeMe")} →
+                <span
+                  ref={waTextRef}
+                  className="whitespace-nowrap opacity-0 inline-block w-0 mr-1"
+                >
+                  {t("contact_section.writeMe")}
+                </span>
+                <span ref={waArrowRef}>
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </span>
               </a>
             </div>
           </div>
@@ -146,7 +247,9 @@ const ContactSection = () => {
               disabled={status === "loading"}
               className="w-full bg-[#ff3131] text-white py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-[#e02b2b] transition disabled:opacity-50"
             >
-              {status === "loading" ? t("contact_section.sending") : t("contact_section.sendMessage")}
+              {status === "loading"
+                ? t("contact_section.sending")
+                : t("contact_section.sendMessage")}
             </button>
 
             {status === "success" && (
