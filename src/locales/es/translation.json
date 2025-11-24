@@ -66,31 +66,45 @@
     "detailedDescription1": "La Once es una plataforma que permite a los usuarios realizar compras en línea de tamales y humitas, ofreciendo una experiencia de usuario intuitiva y segura.",
     "detailedDescription2": "También incluye características como una Landing page, un menú interactivo, vista de productos y redirección a WhatsApp.",
     "titleDescription3": "Características",
-    "titleDescription4": "Resultados"
+    "titleDescription4": "Resultados",
+    "detailedDescription3": ["Landing page moderna con presentación clara de la marca y sus productos.","Menú interactivo que facilita la navegación por las diferentes categorías de productos.","Vista detallada de productos con descripciones e imágenes atractivas.","Redirección directa a WhatsApp para facilitar la comunicación y realización de pedidos."],
+    "detailedDescription4": ["Mayor facilidad para explorar productos y tomar decisiones de compra.","Interfaz atractiva y fácil de usar que mejora la experiencia del usuario.","Optimización del proceso de compra mediante la integración con WhatsApp para una comunicación directa."]
 
   },
 
   "flowers" : {
     "title": "Flowers"
     ,"description": "Proyecto de una página web interactiva de una sorpresa con un ramos de flores.",
-    "detailedDescription1": "Flowers es una plataforma web que permite a los usuarios enviar ramos de flores como sorpresa a sus seres queridos, con una experiencia de usuario atractiva y fácil de usar.",
+    "detailedDescription1": "Flowers es una plataforma web que permite a los usuarios enviar un detalle digital en forma de ramo de flores animado, acompañado del nombre de la persona y un mensaje especial.",
     "detailedDescription2": "Incluye características como ingresar el nombre del sorprendido, vista de la animación.",
     "titleDescription3": "Características",
-    "titleDescription4": "Resultados"
+    "detailedDescription3": ["Ingreso personalizado del nombre de la persona a quien se dedicará el detalle.","Animación de un ramo de flores acompañado del nombre ingresado","Mensaje romántico o afectivo que refuerza la sorpresa.","Interfaz simple, estética y fácil de usar, enfocada en la experiencia emocional.","Diseño responsivo, compatible con dispositivos móviles, tablets y computadoras."],
+    "titleDescription4": "Resultados",
+    "detailedDescription4": ["Una forma sencilla y creativa de enviar un detalle digital personalizado.","Experiencia visual atractiva que genera sorpresa y emoción.","Interfaz atractiva y fácil de usar que mejora la experiencia del usuario.","Accesibilidad desde cualquier dispositivo, facilitando el envío del detalle en cualquier momento y lugar."]
   },
 
   "reporte_sbs": {
     "title": "Reporte de deudores SBS",
     "description": "Proyecto de automatización para la generación de reportes financieros requeridos por la Superintendencia de Banca, Seguros y AFP (SBS) en el Banco de la Nación.",
-    "detailedDescription1": "Prototipo web desarrollado con React y Tailwind CSS en el frontend, Node.js en el backend y conexión a SQL Server, diseñado como una versión modernizada del sistema de consulta de deudores de la SBS. Este desarrollo propone una interfaz más intuitiva, visual y eficiente, manteniendo la lógica de consulta y reporte del sistema original.",
+    "detailedDescription1": "Este proyecto moderniza el sistema original de consulta de deudores de la SBS, ofreciendo una interfaz más visual, intuitiva y eficiente, sin perder la lógica de consulta y reporte que caracteriza al sistema tradicional.",
     "titleDescription3": "Características",
-    "detailedDescription3": [     "Procesamiento previo de la información antes de su inserción en tablas mensuales.",
-      "Mantenimiento de las funcionalidades originales de consulta y reporte.",
-      "Incorporación de gráficas dinámicas y paneles visuales.",
-      "Interfaz moderna, adaptable y fácil de usar."],
+    "detailedDescription3": [ "Procesamiento automático y optimizado de la información antes de insertarla en las tablas mensuales.",
+      "Respeto a las funcionalidades originales de consulta y generación de reportes del sistema SBS.",
+      "Dashboard interactivo con gráficas dinámicas y visualización clara del estado de los deudores.",
+      "Interfaz moderna y responsiva, diseñada para mejorar la experiencia del usuario y facilitar la navegación."],
+    "titleDescription4": "Resultados",
+    "detailedDescription4": [ "Consultas más rápidas y visuales.",
+      "Procesos internos más ordenados y eficientes.",
+      "Mejora significativa en la experiencia de usuario respecto al sistema tradicional."]
+  },
+
+
+  "convertidor":{
+    "title": "Convertidor",
+    "description": "Aplicación de escritorio para convertir archivos de texto plano (TXT) a formato tabulado (CSV).",
+    "detailedDescription1": "",
+    "titleDescription3": "Características",
     "titleDescription4": "Resultados"
-
-
   },
 
 

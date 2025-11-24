@@ -66,7 +66,9 @@
     "detailedDescription1": "LaOnce is a platform that allows users to make online purchases of tamales and humitas, offering an intuitive and secure user experience.",
     "detailedDescription2": "Also includes features such as order tracking, user management, and a secure payment system.",
     "titleDescription3": "Features",
-    "titleDescription4": "Results"
+    "detailedDescription3": ["Modern landing page with clear presentation of the brand and its products.","Interactive menu that facilitates navigation through different product categories.","Detailed product view with attractive descriptions and images.","Direct redirection to WhatsApp to facilitate communication and order placement."],
+    "titleDescription4": "Results",
+    "detailedDescription4":[ "Greater ease in exploring products and making purchase decisions.","Attractive and user-friendly interface that enhances the user experience.","Optimization of the purchasing process through integration with WhatsApp for direct communication."]
 
   },
 
@@ -76,20 +78,32 @@
     "detailedDescription1": "Flowers is a web platform that allows users to send flower bouquets as a surprise to their loved ones, with an attractive and user-friendly experience.",
     "detailedDescription2": "Includes features such as entering the name of the surprised person, animation view.",
     "titleDescription3": "Features",
-    "titleDescription4": "Results"
+    "detailedDescription3": ["Personalized entry of the name of the person to whom the detail will be dedicated.","Animation of a bouquet of flowers accompanied by the entered name","Romantic or affectionate message that reinforces the surprise.","Simple, aesthetic, and easy-to-use interface, focused on the emotional experience.","Responsive design, compatible with mobile devices, tablets, and computers."],
+    "titleDescription4": "Results",
+    "detailedDescription4": ["A simple and creative way to send a personalized digital detail.","Attractive visual experience that generates surprise and emotion.","Attractive and easy-to-use interface that improves the user experience.","Accessibility from any device, facilitating the sending of the detail anytime and anywhere."]
   },  
 
   "reporte_sbs": {
     "title": "SBS Debtor Report",
     "description": "Automation project for generating financial reports required by the Superintendence of Banking, Insurance, and AFP (SBS) at the Bank of the Nation of Peru.",
-    "detailedDescription1": "This project focuses on automating the process of collecting, analyzing, and presenting financial data to comply with the regulatory requirements established by the SBS, improving accuracy and efficiency in report preparation.",
+    "detailedDescription1": "This project modernizes the original SBS debtor consultation system, offering a more visual, intuitive, and efficient interface, without losing the consultation and reporting logic that characterizes the traditional system.",
     "titleDescription3": "Features",
-    "detailedDescription3": [     "Pre-processing of information before its insertion into monthly tables.",
-      "Maintenance of the original consultation and reporting functionalities.",
-      "Incorporation of dynamic graphs and visual dashboards.",
-      "Modern, adaptable, and user-friendly interface."],
-    "titleDescription4": "Results"
+    "detailedDescription3": [   "Automatic and optimized processing of information before inserting it into monthly tables.",
+      "Respect for the original functionalities of consultation and reporting of the SBS system.",
+      "Interactive dashboard with dynamic graphs and clear visualization of debtor status.",
+      "Modern and responsive interface, designed to enhance user experience and facilitate navigation."],
+    "titleDescription4": "Results",
+    "detailedDescription4": [ "Faster and more visual consultations.",
+      "More organized and efficient internal processes.",
+      "Significant improvement in user experience compared to the traditional system."]
+  },
 
+  "convertidor":{
+    "title": "Converter",
+    "description": "Desktop application to convert plain text (TXT) files to tabulated format (CSV).",
+    "detailedDescription1": "",
+    "titleDescription3": "Features",
+    "titleDescription4": "Results"
   },
 
 

@@ -170,7 +170,7 @@ const NavBar = () => {
             <div
               onClick={toggleLanguage}
               className="flex items-center justify-center space-x-1 w-16 h-10 rounded-xl bg-transparent transition-all duration-200 group-hover:bg-[#1e1e1e] group-hover:shadow-lg cursor-pointer px-2"
-              aria-label="Cambiar idioma"
+              aria-label="Idioma"
             >
               {/* Icono */}
               <FontAwesomeIcon
@@ -186,7 +186,7 @@ const NavBar = () => {
 
             {/* Tooltip debajo */}
             <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-              Cambiar idioma
+              Idioma
             </span>
           </div>
         </div>
@@ -294,7 +294,7 @@ const NavBar = () => {
                 <div
                   onClick={toggleLanguage}
                   className="flex items-center justify-center space-x-1 w-16 h-10 rounded-xl bg-transparent transition-all duration-200 group-hover:bg-[#1e1e1e] group-hover:shadow-lg cursor-pointer px-2"
-                  aria-label="Cambiar idioma"
+                  aria-label="Idioma"
                 >
                   <FontAwesomeIcon
                     icon={faGlobe}
@@ -305,7 +305,7 @@ const NavBar = () => {
                   </span>
                 </div>
                 <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                  Cambiar idioma
+                  Idioma
                 </span>
               </div>
             </div>

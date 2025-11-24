@@ -24,6 +24,8 @@ const projectsData = [
     detailedDescription2: "la_once.detailedDescription2",
     titleDescription3: "la_once.titleDescription3",
     titleDescription4: "la_once.titleDescription4",
+    detailedDescription3: "la_once.detailedDescription3",
+    detailedDescription4: "la_once.detailedDescription4",
     image: "/assets/LAONCE.webp",
     techStack: [
       { name: "React", icon: "react.svg" },
@@ -39,7 +41,9 @@ const projectsData = [
     detailedDescription1: "flowers.detailedDescription1",
     detailedDescription2: "flowers.detailedDescription2",
     titleDescription3: "flowers.titleDescription3",
+    detailedDescription3: "flowers.detailedDescription3",
     titleDescription4: "flowers.titleDescription4",
+    detailedDescription4: "flowers.detailedDescription4",
     image: "/assets/FLOWERS.png",
     techStack: [
       { name: "React", icon: "react.svg" },
@@ -57,6 +61,7 @@ const projectsData = [
     titleDescription3: "reporte_sbs.titleDescription3",
     detailedDescription3: "reporte_sbs.detailedDescription3",
     titleDescription4: "reporte_sbs.titleDescription4",
+    detailedDescription4: "reporte_sbs.detailedDescription4",
     image: "/assets/ReporteSBS.webp",
     techStack: [
       { name: "React", icon: "react.svg" },
@@ -69,14 +74,14 @@ const projectsData = [
   },
   {
     title: "Convertidor",
-    description: "Aplicación de escritorio para convertir boletas electrónicas y tabularlos en excel.",
-    detailedDescription: "projects_section.details.convertidor",
-    detailedDescription1: "projects_section.details.convertidor.detailedDescription1",
-    detailedDescription2: "projects_section.details.convertidor.detailedDescription2",
-    titleDescription3: "projects_section.details.convertidor.titleDescription3",
-    detailedDescription3: "projects_section.details.convertidor.detailedDescription3",
-    titleDescription4: "projects_section.details.convertidor.titleDescription4",
-    detailedDescription4: "projects_section.details.convertidor.detailedDescription4",
+    description: "convertidor.description",
+    detailedDescription: "convertidor.convertidor",
+    detailedDescription1: "convertidor.detailedDescription1",
+    detailedDescription2: "convertidor.detailedDescription2",
+    titleDescription3: "convertidor.titleDescription3",
+    detailedDescription3: "convertidor.detailedDescription3",
+    titleDescription4: "convertidor.titleDescription4",
+    detailedDescription4: "convertidor.detailedDescription4",
 
     image: "/assets/convertidor.webp",
     techStack: [
