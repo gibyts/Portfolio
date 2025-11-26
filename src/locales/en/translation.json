@@ -103,7 +103,8 @@
     "description": "Desktop application to convert plain text (TXT) files to tabulated format (CSV).",
     "detailedDescription1": "",
     "titleDescription3": "Features",
-    "titleDescription4": "Results"
+    "titleDescription4": "Results",
+    "detailedDescription4": [" "]
   },
 
 

@@ -101,10 +101,12 @@
 
   "convertidor":{
     "title": "Convertidor",
-    "description": "Aplicación de escritorio para convertir archivos de texto plano (TXT) a formato tabulado (CSV).",
+    "description": "Aplicativo de escritorio en Python con Tkinter que transforma archivos de texto plano de boletas electrónicas en reportes Excel estructurados por cliente.",
     "detailedDescription1": "",
     "titleDescription3": "Características",
-    "titleDescription4": "Resultados"
+    "detailedDescription3": [ "Carga de archivos mediante botón, permitiendo seleccionar fácilmente el archivo TXT a procesar","Procesamiento automático del contenido utilizando expresiones regulares para extraer datos clave.","Interfaz simple y funcional con Tkinter.","Generación de reportes Excel listos para análisis o almacenamiento." ],
+    "titleDescription4": "Resultados",
+    "detailedDescription4": [ "Reducción significativa del tiempo de procesamiento de boletas electrónicas.","Eliminación de tareas manuales repetitivas y propensas a error.","Reportes más claros, estructurados y fáciles de analizar.", "Flujo de trabajo más eficiente gracias a un proceso automatizado y accesible." ]
   },
 
 
