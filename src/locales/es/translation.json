@@ -101,8 +101,8 @@
 
   "convertidor":{
     "title": "Convertidor",
-    "description": "Aplicativo de escritorio en Python con Tkinter que transforma archivos de texto plano de boletas electrónicas en reportes Excel estructurados por cliente.",
-    "detailedDescription1": "",
+    "description": "Aplicativo de escritorio que transforma archivos de texto plano de boletas electrónicas en reportes Excel estructurados por cliente.",
+    "detailedDescription1": "El sistema automatiza la lectura y procesamiento de los archivos utilizando expresiones regulares y técnicas de tabulación, facilitando la generación rápida y ordenada de información.",
     "titleDescription3": "Características",
     "detailedDescription3": [ "Carga de archivos mediante botón, permitiendo seleccionar fácilmente el archivo TXT a procesar","Procesamiento automático del contenido utilizando expresiones regulares para extraer datos clave.","Interfaz simple y funcional con Tkinter.","Generación de reportes Excel listos para análisis o almacenamiento." ],
     "titleDescription4": "Resultados",

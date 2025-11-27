@@ -100,11 +100,12 @@
 
   "convertidor":{
     "title": "Converter",
-    "description": "Desktop application to convert plain text (TXT) files to tabulated format (CSV).",
-    "detailedDescription1": "",
+    "description": "Desktop application that transforms plain text files of electronic receipts into Excel reports structured by client.",
+    "detailedDescription1": "The system automates the reading and processing of files using regular expressions and tabulation techniques, facilitating the quick and orderly generation of information.",
     "titleDescription3": "Features",
+    "detailedDescription3": [ "File loading via button, allowing easy selection of the TXT file to be processed.","Automatic processing of content using regular expressions to extract key data.","Simple and functional interface.","Generation of Excel reports ready for analysis or storage." ],
     "titleDescription4": "Results",
-    "detailedDescription4": [" "]
+    "detailedDescription4": [ "Significant reduction in time spent on data organization and report generation.","Minimization of human errors in data transcription.","User-friendly interface that simplifies the conversion process for users of all levels." ]
   },
 
 
