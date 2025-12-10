@@ -38,9 +38,9 @@ const NavBar = () => {
     document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   };
 
-// ⭐⭐⭐ Swipe para cerrar menú móvil ⭐⭐⭐
+// ⭐⭐⭐ Swipe desde el borde DERECHO hacia la IZQUIERDA para cerrar ⭐⭐⭐
 useEffect(() => {
-  if (!isOpen) return;
+  if (!isOpen) return; // Solo funciona si el menú está abierto
 
   let touchStartX = 0;
   let touchEndX = 0;
@@ -53,9 +53,16 @@ useEffect(() => {
     touchEndX = e.changedTouches[0].clientX;
 
     const swipeDistance = touchEndX - touchStartX;
+    const screenWidth = window.innerWidth;
 
-    // Swipe desde borde izquierdo (>60px)
-    if (touchStartX < 40 && swipeDistance > 60) {
+    // 1️⃣ El dedo DEBE comenzar en los últimos 40px del lado derecho
+    const startOnRightEdge = touchStartX > screenWidth - 40;
+
+    // 2️⃣ Debe deslizarse hacia la izquierda (negativo)
+    const swipeLeft = swipeDistance < -60; // -60px o más
+
+    // 3️⃣ Entonces se cierra el menú
+    if (startOnRightEdge && swipeLeft) {
       setIsOpen(false);
     }
   };
@@ -68,6 +75,7 @@ useEffect(() => {
     document.removeEventListener("touchend", handleTouchEnd);
   };
 }, [isOpen]);
+
 
 
 
