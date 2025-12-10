@@ -39,65 +39,6 @@ const NavBar = () => {
   };
 
 
-
-
-useEffect(() => {
-  if (!isOpen) return;
-
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  const handleTouchStart = (e) => {
-    touchStartX = e.changedTouches[0].clientX;
-
-    const screenWidth = window.innerWidth;
-
-    // Si tocó el borde derecho cuando el menú está abierto
-    if (touchStartX > screenWidth - 40) {
-      // ⚠️ Bloqueamos gesto del navegador
-      e.preventDefault();
-    }
-  };
-
-  const handleTouchMove = (e) => {
-    const screenWidth = window.innerWidth;
-
-    // Bloquear retroceso del sistema mientras el dedo esté en el borde derecho
-    if (touchStartX > screenWidth - 40) {
-      e.preventDefault();
-    }
-  };
-
-  const handleTouchEnd = (e) => {
-    touchEndX = e.changedTouches[0].clientX;
-
-    const swipeDistance = touchEndX - touchStartX;
-    const screenWidth = window.innerWidth;
-
-    const startOnRight = touchStartX > screenWidth - 40;
-    const swipeLeft = swipeDistance < -60;
-
-    if (startOnRight && swipeLeft) {
-      setIsOpen(false);
-    }
-  };
-
-  document.addEventListener("touchstart", handleTouchStart, { passive: false });
-  document.addEventListener("touchmove", handleTouchMove, { passive: false });
-  document.addEventListener("touchend", handleTouchEnd, { passive: false });
-
-  return () => {
-    document.removeEventListener("touchstart", handleTouchStart);
-    document.removeEventListener("touchmove", handleTouchMove);
-    document.removeEventListener("touchend", handleTouchEnd);
-  };
-}, [isOpen]);
-
-
-
-
-
-
   // 👁️ Detectar sección visible (Scroll Spy)
   useEffect(() => {
     const observer = new IntersectionObserver(
