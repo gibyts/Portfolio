@@ -38,15 +38,34 @@ const NavBar = () => {
     document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   };
 
-// ⭐⭐⭐ Swipe desde el borde DERECHO hacia la IZQUIERDA para cerrar ⭐⭐⭐
+
+
+
 useEffect(() => {
-  if (!isOpen) return; // Solo funciona si el menú está abierto
+  if (!isOpen) return;
 
   let touchStartX = 0;
   let touchEndX = 0;
 
   const handleTouchStart = (e) => {
     touchStartX = e.changedTouches[0].clientX;
+
+    const screenWidth = window.innerWidth;
+
+    // Si tocó el borde derecho cuando el menú está abierto
+    if (touchStartX > screenWidth - 40) {
+      // ⚠️ Bloqueamos gesto del navegador
+      e.preventDefault();
+    }
+  };
+
+  const handleTouchMove = (e) => {
+    const screenWidth = window.innerWidth;
+
+    // Bloquear retroceso del sistema mientras el dedo esté en el borde derecho
+    if (touchStartX > screenWidth - 40) {
+      e.preventDefault();
+    }
   };
 
   const handleTouchEnd = (e) => {
@@ -55,26 +74,25 @@ useEffect(() => {
     const swipeDistance = touchEndX - touchStartX;
     const screenWidth = window.innerWidth;
 
-    // 1️⃣ El dedo DEBE comenzar en los últimos 40px del lado derecho
-    const startOnRightEdge = touchStartX > screenWidth - 40;
+    const startOnRight = touchStartX > screenWidth - 40;
+    const swipeLeft = swipeDistance < -60;
 
-    // 2️⃣ Debe deslizarse hacia la izquierda (negativo)
-    const swipeLeft = swipeDistance < -60; // -60px o más
-
-    // 3️⃣ Entonces se cierra el menú
-    if (startOnRightEdge && swipeLeft) {
+    if (startOnRight && swipeLeft) {
       setIsOpen(false);
     }
   };
 
-  document.addEventListener("touchstart", handleTouchStart);
-  document.addEventListener("touchend", handleTouchEnd);
+  document.addEventListener("touchstart", handleTouchStart, { passive: false });
+  document.addEventListener("touchmove", handleTouchMove, { passive: false });
+  document.addEventListener("touchend", handleTouchEnd, { passive: false });
 
   return () => {
     document.removeEventListener("touchstart", handleTouchStart);
+    document.removeEventListener("touchmove", handleTouchMove);
     document.removeEventListener("touchend", handleTouchEnd);
   };
 }, [isOpen]);
+
 
 
 
