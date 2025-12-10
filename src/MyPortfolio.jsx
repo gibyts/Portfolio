@@ -76,7 +76,7 @@ const MyPortfolio = () => {
           <img
             src="/assets/photo_profile.webp"
             alt="Gibran Tarrillo"
-            className="rounded-full shadow-lg w-24 h-24 md:w-40 md:h-40"
+            className="rounded-full shadow-lg w-32 h-32 md:w-40 md:h-40"
           />
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-center md:text-left">
             Gibran Tarrillo
