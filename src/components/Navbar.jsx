@@ -38,6 +38,40 @@ const NavBar = () => {
     document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   };
 
+// ⭐⭐⭐ Swipe para cerrar menú móvil ⭐⭐⭐
+useEffect(() => {
+  if (!isOpen) return;
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const handleTouchStart = (e) => {
+    touchStartX = e.changedTouches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+
+    const swipeDistance = touchEndX - touchStartX;
+
+    // Swipe desde borde izquierdo (>60px)
+    if (touchStartX < 40 && swipeDistance > 60) {
+      setIsOpen(false);
+    }
+  };
+
+  document.addEventListener("touchstart", handleTouchStart);
+  document.addEventListener("touchend", handleTouchEnd);
+
+  return () => {
+    document.removeEventListener("touchstart", handleTouchStart);
+    document.removeEventListener("touchend", handleTouchEnd);
+  };
+}, [isOpen]);
+
+
+
+
   // 👁️ Detectar sección visible (Scroll Spy)
   useEffect(() => {
     const observer = new IntersectionObserver(
