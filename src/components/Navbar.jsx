@@ -214,7 +214,7 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-20 left-0 w-full bg-gray-900 rounded-b-2xl shadow-lg flex flex-col items-center space-y-4 py-6 text-gray-300 text-lg min-[1130px]:hidden">
+        <div className="absolute top-20 left-0 w-full min-[490px]:left-auto min-[490px]:w-[400px] min-[490px]:right-0  bg-gray-900 rounded-b-2xl shadow-lg flex flex-col items-center space-y-4 py-6 text-gray-300 text-lg min-[1130px]:hidden">
           {sections.map((section) => (
             <button
               key={section.id}
