@@ -206,9 +206,11 @@ const NavBar = () => {
             />
           </button>
 
-          <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-            {isOpen ? "Cerrar" : "Menú"}
-          </span>
+          {!isOpen && (
+            <span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-max text-sm text-white bg-black/80 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+              Menú
+            </span>
+          )}
         </div>
       </div>
 
