@@ -10,7 +10,9 @@
   "contact": "Contact",
 
   "home_section": {
-    "profession": "Software Engineering",
+    "profession1": "Software Engineering",
+    "profession2": "Data Engineer",
+    "profession3": "Full Stack Developer",
     "workAvailable": "Available for work"
   },
 

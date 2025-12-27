@@ -18,6 +18,7 @@ import projectsData from "./components/projectsData";
 import ContactSection from "./components/ContactSection";
 import Section from "./components/Section";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import TextType from "./components/TextType";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -83,9 +84,19 @@ const MyPortfolio = () => {
           </h1>
         </div>
 
-        <h2 className="py-6 text-3xl sm:text-5xl md:text-6xl lg:text-5xl font-bold text-center md:text-left">
-          {t("home_section.profession")}
-        </h2>
+<TextType
+  text={[
+    t("home_section.profession1"),
+    t("home_section.profession2"),
+    t("home_section.profession3")
+  ]}
+  typingSpeed={90}
+  pauseDuration={1500}
+  deletingSpeed={40}
+  className="py-6 text-3xl sm:text-5xl md:text-6xl lg:text-5xl font-bold text-center md:text-left"
+  cursorCharacter="_"
+/>
+
         <div className="mb-3 py-2">
           <button
             onClick={() => {
