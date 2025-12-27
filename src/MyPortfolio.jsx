@@ -84,18 +84,18 @@ const MyPortfolio = () => {
           </h1>
         </div>
 
-<TextType
-  text={[
-    t("home_section.profession1"),
-    t("home_section.profession2"),
-    t("home_section.profession3")
-  ]}
-  typingSpeed={90}
-  pauseDuration={1500}
-  deletingSpeed={40}
-  className="py-6 text-3xl sm:text-5xl md:text-6xl lg:text-5xl font-bold text-center md:text-left"
-  cursorCharacter="_"
-/>
+        <TextType
+          text={[
+            t("home_section.profession1"),
+            t("home_section.profession2"),
+            t("home_section.profession3"),
+          ]}
+          typingSpeed={90}
+          pauseDuration={1500}
+          deletingSpeed={40}
+          className="py-6 text-3xl sm:text-5xl md:text-6xl lg:text-5xl font-bold text-center md:text-left"
+          cursorCharacter="_"
+        />
 
         <div className="mb-3 py-2">
           <button
@@ -239,37 +239,32 @@ const MyPortfolio = () => {
                 </h3>
               </div>
               <div className="grid grid-cols-3 gap-4 px-6">
-                {[
-                  "html",
-                  "css",
-                  "javascript",
-                  "python",
-                  "sql",
-                  "C++",
-                ].map((tech, index) => {
-                  const techExtension = ".svg";
-                  const techName = tech.replace("-", " ").toUpperCase();
-                  return (
-                    <div
-                      key={index}
-                      className="relative group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-3 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
-                    >
-                      <img
-                        src={`/assets/${tech}${techExtension}`}
-                        alt={techName}
-                        className="self-center aspect-square"
-                        width={45} // más chico
-                        height={90}
-                      />
-                      <span
-                        aria-hidden="true"
-                        className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center"
+                {["html", "css", "javascript", "python", "sql", "C++"].map(
+                  (tech, index) => {
+                    const techExtension = ".svg";
+                    const techName = tech.replace("-", " ").toUpperCase();
+                    return (
+                      <div
+                        key={index}
+                        className="relative group flex flex-col items-center gap-2 rounded-md border border-neutral-700 p-3 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
                       >
-                        {techName}
-                      </span>
-                    </div>
-                  );
-                })}
+                        <img
+                          src={`/assets/${tech}${techExtension}`}
+                          alt={techName}
+                          className="self-center aspect-square"
+                          width={45} // más chico
+                          height={90}
+                        />
+                        <span
+                          aria-hidden="true"
+                          className="absolute -top-7 text-xs text-white bg-[#ff3131] rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center"
+                        >
+                          {techName}
+                        </span>
+                      </div>
+                    );
+                  }
+                )}
               </div>
             </div>
 
